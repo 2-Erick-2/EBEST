@@ -99,8 +99,10 @@ namespace EBEST
 
                 command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha,modelo) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtmodelo.Text + "')";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Cliente guardado");
                 connection.Close();
+                MessageBox.Show("Cliente guardado");
+
+
             }
             catch (Exception ex)
             {

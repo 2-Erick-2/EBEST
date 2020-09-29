@@ -108,29 +108,20 @@ namespace EBEST
                             command.Connection = connection;
                             command.CommandText = "insert into pedidos (orden,tipopedido,nombre,numero,observaciones,horayfecha,importe,abono,pagorequerido,espera) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtcosto.Text + "','" + txtabono.Text + "','" + txtrestante.Text + "','" + espera + "')";
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Datos Guardados");
-                            connection.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error " + ex);
-                        }
-
-
-                        try
-                        {
-                            connection.Open();
-                            OleDbCommand command = new OleDbCommand();
-                            command.Connection = connection;
                             command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "')";
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Datos Guardados");
                             connection.Close();
+                            MessageBox.Show("Datos Guardados");
+
+
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("Error " + ex);
                         }
+
+
+                       
                         String todo = "";
                         String destino = "erick.tadeo@hotmail.com";
                         string salto = "    Numero:  ";
