@@ -55,7 +55,7 @@ namespace EBEST
                 MessageBox.Show("Contraseña correcta");
                 //txtordenprueba.Text = "Reer548621579";
                 inicio ini = new inicio();
-                Login lo = new Login();
+               // Login lo = new Login();
                 //lo.Hide();
                 ini.usuarios = usuario;
                 ini.Show();

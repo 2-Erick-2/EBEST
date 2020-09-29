@@ -21,9 +21,9 @@ namespace EBEST
 
         string espera = "";
         private OleDbConnection connection = new OleDbConnection();
-        private const string TEMPLATE_DIRECTORY = @"C:\Program Files\Brother bPAC3 SDK\Templates\"; // Template file path
-        private const string TEMPLATE_SIMPLE = "NamePlate1.LBX";    // Template file name
-        private const string TEMPLATE_FRAME = "NamePlate2.LBX";		// Template file name
+        //private const string TEMPLATE_DIRECTORY = @"C:\Program Files\Brother bPAC3 SDK\Templates\"; // Template file path
+        //private const string TEMPLATE_SIMPLE = "NamePlate1.LBX";    // Template file name
+        //private const string TEMPLATE_FRAME = "NamePlate2.LBX";		// Template file name
         Correo c = new Correo();
         public crearcotizacion()
         {
