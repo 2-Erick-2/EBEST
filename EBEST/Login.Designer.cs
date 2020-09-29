@@ -63,6 +63,7 @@
             this.txtrevisar.Name = "txtrevisar";
             this.txtrevisar.Size = new System.Drawing.Size(100, 20);
             this.txtrevisar.TabIndex = 2;
+            this.txtrevisar.Text = "nada";
             this.txtrevisar.Visible = false;
             // 
             // pictureBox1
