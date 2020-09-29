@@ -158,7 +158,7 @@
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="zxing">
-      <HintPath>..\..\..\..\..\Desktop\Nueva-version-wpp-ebest\EBEST\EBEST\bin\x86\Debug\zxing.dll</HintPath>
+      <HintPath>..\zxing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
