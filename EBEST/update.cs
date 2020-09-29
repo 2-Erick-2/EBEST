@@ -1706,13 +1706,11 @@ namespace EBEST
         {
             Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
 
-            float x = 100.0F;
-            float y = 100.0F;
+           
             printDocument1.PrinterSettings.PrinterName = "TM-T20II";
 
             // Create rectangle for source image.
             RectangleF srcRect = new RectangleF(100.0F, 100.0F, 150.0F, 150.0F);
-            GraphicsUnit units = GraphicsUnit.Pixel;
             e.Graphics.DrawImage(newImage, 30, 2);
 
             //e.Graphics.DrawImageUnscaledAndClipped(newImage,new Point(10,10));
