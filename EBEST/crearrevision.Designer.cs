@@ -399,7 +399,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "crearrevision";
-            this.Text = "crearrevision";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.crearrevision_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.crearrevision_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
