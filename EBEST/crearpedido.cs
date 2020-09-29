@@ -151,21 +151,23 @@ namespace EBEST
 
 
 
-                        if (txtparte1.Visible == true && txtparte2.Visible == false)
-                        {
-                            String asunto2 = "Pedido";
-                            String todo2 = salto + txtnumero.Text + "\n    Hora y Fecha:   \n" + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
-                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text,todo2, asunto2, destino);
+                        
 
-                        }
-
-                        else if (txtparte1.Visible ==true && txtparte2.Visible == true)
-                        {
-                            String asunto3 = "Pedido";
-                            String todo3 = salto + txtnumero.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
+                        
+                            String asunto3 = "Pedido"+ "Orden: "+ txtorden.Text;
+                            String todo3 = salto + txtnumero.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "Parte 2: " + txtparte2.Text + "\n Precio parte 2: " + txtprecioparte2.Text + "Parte 3: " + txtparte3.Text + "\n Precio parte 3: " + txtparteprecio3.Text + "Parte 4: " + txtparte4.Text + "\n Precio parte 4: " + txtparteprecio4.Text + "Parte 5: " + txtparte5.Text + "\n Precio parte 5: " + txtparteprecio5.Text + "Parte 6: " + txtparte6.Text + "\n Precio parte 6: " + txtparteprecio6.Text +"\n Importe: "+txtcosto.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, destino);
 
-                        }
+
+                //BrotherPrintThis();
+                printPreviewDialog1.Document = printDocument1;
+
+                //printDocument1.Print();
+                //printDocument1.Print();
+
+                printPreviewDialog1.Show();
+
+
 
 
 
