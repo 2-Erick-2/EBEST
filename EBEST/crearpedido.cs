@@ -1,0 +1,792 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.OleDb;
+using bpac;
+
+namespace EBEST
+{
+    public partial class crearpedido : Form
+    {
+        string espera = "";
+        private OleDbConnection connection = new OleDbConnection();
+        private const string TEMPLATE_DIRECTORY = @"C:\Program Files\Brother bPAC3 SDK\Templates\"; // Template file path
+        private const string TEMPLATE_SIMPLE = "NamePlate1.LBX";    // Template file name
+        private const string TEMPLATE_FRAME = "NamePlate2.LBX";		// Template file name
+        Correo c = new Correo();
+        public crearpedido()
+        {
+            InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source= \\TADEOEBEST\basededatoscompartida\Dulceria_be.mdb; Persist Security Info=False;";
+            timer1.Enabled = true;
+        }
+
+        private void crearpedido_Load(object sender, EventArgs e)
+        {
+            txtEmisor.Text = "ebestprueba@gmail.com";
+            txtPassword.Text = "ebest1234";
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txthorayfecha.Text = DateTime.Now.ToString();
+
+        }
+        String pedido = "";
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            sincopia:
+            string Name = txtnombre.Text;
+            var rand = new Random();
+
+
+            pedido = "Pedido";
+            //checkBoxcotizacion.Checked = false;
+           ///checkBoxrevision.Checked = false;
+
+            string firstfour = Name.Substring(0, 2);
+            txtorden2.Text = firstfour;
+
+            string iniciodepedidos = pedido.Substring(0, 2);
+
+
+
+            //generacion  de numero aleatorio de orden
+            var guid = Guid.NewGuid();
+            var justNumbers = new String(guid.ToString().Where(Char.IsDigit).ToArray());
+            var seed = int.Parse(justNumbers.Substring(0, 9));
+            var random = new Random(seed);
+
+            txtpruibea.Text = seed.ToString();
+
+            txtorden.Text = iniciodepedidos + firstfour + seed.ToString();
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select * from revisiones Where orden like ('" + txtorden.Text + "%')";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtrepetidos.Text = Convert.ToString(reader["orden"]);
+
+
+                    reader.Close();
+
+                }
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
+            if (txtorden.Text == txtrepetidos.Text)
+            {
+                MessageBox.Show("Se repitio la orden");
+                //txtorden.Text = "Reer548621579";
+                goto sincopia;
+
+            }
+            else
+            {
+
+                        try
+                        {
+                            connection.Open();
+                            OleDbCommand command = new OleDbCommand();
+                            command.Connection = connection;
+                            command.CommandText = "insert into pedidos (orden,tipopedido,nombre,numero,observaciones,horayfecha,importe,abono,pagorequerido,espera) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtcosto.Text + "','" + txtabono.Text + "','" + txtrestante.Text + "','" + espera + "')";
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Datos Guardados");
+                            connection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error " + ex);
+                        }
+
+
+                        try
+                        {
+                            connection.Open();
+                            OleDbCommand command = new OleDbCommand();
+                            command.Connection = connection;
+                            command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "')";
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Datos Guardados");
+                            connection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error " + ex);
+                        }
+                        String todo = "";
+                        String destino = "erick.tadeo@hotmail.com";
+                        string salto = "    Numero:  ";
+                        String obser = " \n   Observaciones:  ";
+
+
+                        todo = salto + txtnumero.Text + obser +  "\n    Hora y Fecha:   " + txthorayfecha.Text;
+                        Console.WriteLine(todo);
+                        string asunto = txtnombre.Text + "   " + pedido + " Orden: " + txtorden.Text;
+                        //c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
+                        /*txtnombre.Text = "";
+                        txtnumero.Text = "";
+                        txtobservaciones.Text = "";
+                        txtorden.Text = "";
+                        checkBoxpedido.Checked = false;
+                        checkBoxcotizacion.Checked = false;
+                        checkBoxrevision.Checked = false;*/
+
+
+
+                        if (txtparte1.Visible == true && txtparte2.Visible == false)
+                        {
+                            String asunto2 = "Pedido";
+                            String todo2 = salto + txtnumero.Text + "\n    Hora y Fecha:   \n" + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
+                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text,todo2, asunto2, destino);
+
+                        }
+
+                        else if (txtparte1.Visible ==true && txtparte2.Visible == true)
+                        {
+                            String asunto3 = "Pedido";
+                            String todo3 = salto + txtnumero.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
+                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, destino);
+
+                        }
+
+
+
+
+
+            }
+
+            
+        }
+
+        private void btnimprimir2_Click(object sender, EventArgs e)
+        {
+
+            BrotherPrintThis();
+            Imprimirrecibo();
+            txtnombre.Text = "";
+            txtnumero.Text = "";
+            txtobservaciones.Text = "";
+            txtorden.Text = "";
+        }
+
+        public void BrotherPrintThis()
+        {
+            try
+            {
+                string path = @"D:\EBEST\cartaebest.lbx";
+
+                bpac.Document doc = new bpac.Document();
+                doc.Open(path);
+                bool test = doc.SetPrinter("Brother QL - 800", true);
+                string pedido2 = "Tipo pedido: " + pedido;
+                string nombre = "Nombre: " + txtnombre.Text;
+                string numero = "Numero: " + txtnumero.Text;
+                string obser = "Obs.: " + txtobservaciones.Text;
+                string orden = "Numero orden: " + txtorden.Text;
+                string orden2 = txtorden.Text;
+                doc.GetObject("pedido").Text = pedido2;
+                doc.GetObject("nombre").Text = nombre;
+                doc.GetObject("numero").Text = numero;
+                doc.GetObject("obser").Text = obser;
+                //doc.GetObject("orden").Text = orden;
+                doc.GetObject("codigo").Text = orden2;
+                doc.GetObject("tiempo").Text = espera;
+                doc.StartPrint("", bpac.PrintOptionConstants.bpoDefault);
+                doc.PrintOut(1, bpac.PrintOptionConstants.bpoDefault);
+                doc.EndPrint();
+                doc.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+
+            }
+        }
+
+        public void Imprimirrecibo()
+        {
+            try
+            {
+                CreaTicket Ticket1 = new CreaTicket();
+                Ticket1.AbreCajon();  //abre el cajon
+                Ticket1.TextoCentro("PEDIDO"); // imprime en el centro "Venta mostrador"
+
+                Ticket1.LineasIgual();
+                Ticket1.TextoCentro("E-BEST"); // imprime en el centro "Venta mostrador"
+                Ticket1.TextoCentro("Servicio y solucion en tecnologia"); // imprime en el centro "Venta mostrador"
+
+                Ticket1.LineasIgual();
+
+                Ticket1.TextoCentro("GUGE900514C70"); // imprime en el centro "Venta mostrador"
+                Ticket1.TextoCentro("Calle Pedro J. Mendez No.  1082-A OTE."); // imprime en el centro "Venta mostrador"
+                Ticket1.TextoCentro("Reynosa Tamaulipas"); // imprime en el centro "Venta mostrador"
+                Ticket1.TextoCentro("88500"); // imprime en el centro "Venta mostrador"
+                Ticket1.TextoCentro("e-best@live.com.mx"); // imprime en el centro "Venta mostrador"
+                Ticket1.TextoCentro("8999222312"); // imprime en el centro "Venta mostrador"
+                Ticket1.LineasGuion(); // imprime una linea de guiones
+                Ticket1.TextoIzquierda("Fecha: " + txthorayfecha.Text);
+                Ticket1.TextoIzquierda("Nombre: " + txtnombre.Text);
+
+                //Ticket1.TextoIzquierda("Cantidad: " + txtcantidad.Text);
+                Ticket1.TextoIzquierda("Descripcion: " + txtobservaciones.Text);
+                Ticket1.TextoIzquierda("Importe: " + txtcosto.Text);
+                Ticket1.TextoIzquierda("Abono: " + txtabono.Text);
+                Ticket1.TextoIzquierda("Total: " + txtrestante.Text);
+                Ticket1.TextoCentro("Tiempo de espera: " + espera);
+                Ticket1.LineasIgual();
+                Ticket1.TextoCentro("Orden: " + txtorden.Text);
+                Ticket1.LineasIgual();
+                     Ticket1.LineasIgual();
+                Ticket1.TextoCentro("No es un comprobante fiscal ");
+                Ticket1.LineasIgual();
+
+
+
+
+                //Ticket1.TextoIzquierda("Numero: " + txtnumero.Text);
+                //Ticket1.LineasGuion(); // imprime una linea de guiones
+                //Ticket1.TextoIzquierda("Fecha: " + txthorayfecha.Text);
+                //Ticket1.LineasGuion(); // imprime una linea de guiones
+                //Ticket1.EncabezadoVenta(); // imprime encabezados
+                // Ticket1.AgregaArticulo(descripcion, cantidad, precio, total); //imprime una linea de descripcion
+                ;
+
+
+                //Ticket1.LineasTotales(); // imprime linea
+                //Ticket1.AgregaTotales("Total", total); // imprime linea con total
+                Ticket1.CortaTicket(); // corta el ticket
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error:" + ex.Message);
+            }
+        }
+
+        private void txtabono_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtcosto.Text != null && txtabono.Text != null)
+                {
+                    int a = Convert.ToInt32(txtcosto.Text);
+                    int b = Convert.ToInt32(txtabono.Text);
+                    int c = a - b;
+                    txtrestante.Text = c.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void txtrestante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcosto_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtcosto.Text != null && txtabono.Text != null)
+                {
+                    int a = Convert.ToInt32(txtcosto.Text);
+                    int b = Convert.ToInt32(txtabono.Text);
+                    int c = a - b;
+                    txtrestante.Text = c.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpruibea_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtorden_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txthorayfecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtobservaciones_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblhorayfecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblobservaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                checkBox2.Checked = false;
+                espera = "3-4 dias";
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                checkBox1.Checked = false;
+                espera = "7-15 dias";
+            }
+        }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                label9.Visible = true;
+                label10.Visible = true;
+                txtparte2.Visible = true;
+                txtprecioparte2.Visible = true;
+
+
+
+            }
+            else
+            {
+                label9.Visible = false;
+                label10.Visible = false;
+                txtparte2.Visible = false;
+                txtprecioparte2.Visible = false;
+                reecalcular();
+                //txtabono_TextChanged(sender, e);
+                txtparte2.Text = "";
+                txtprecioparte2.Text = "0";
+            }
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true && checkBox4.Checked == true)
+            {
+                label11.Visible = true;
+                label12.Visible = true;
+                txtparte3.Visible = true;
+                txtparteprecio3.Visible = true;
+            }
+            else if (checkBox3.Checked == false && checkBox4.Checked == true)
+            {
+                checkBox4.Checked = false;
+                txtparte3.Text = "";
+                txtparteprecio3.Text = "0";
+
+            }
+            else
+            {
+                label11.Visible = false;
+                label12.Visible = false;
+                txtparte3.Visible = false;
+                txtparteprecio3.Visible = false;
+                txtparte3.Text = "";
+
+                txtparteprecio3.Text = "0";
+
+            }
+
+
+
+
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true && checkBox4.Checked == true && checkBox5.Checked == true)
+            {
+                label13.Visible = true;
+                label14.Visible = true;
+                txtparte4.Visible = true;
+                txtparteprecio4.Visible = true;
+            }
+            else if (checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == true)
+            {
+                checkBox5.Checked = false;
+                txtparte4.Text = "";
+                txtparteprecio4.Text = "0";
+            }
+            else if (checkBox3.Checked == true && checkBox4.Checked == false && checkBox5.Checked == true)
+            {
+                checkBox5.Checked = false;
+                txtparte4.Text = "";
+
+                txtparteprecio4.Text = "0";
+
+            }
+
+            else
+            {
+                label13.Visible = false;
+                label14.Visible = false;
+                txtparte4.Visible = false;
+                txtparteprecio4.Visible = false;
+                txtparte4.Text = "";
+
+                txtparteprecio4.Text = "0";
+
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true && checkBox4.Checked == true && checkBox5.Checked == true && checkBox6.Checked == true)
+            {
+                label15.Visible = true;
+                label16.Visible = true;
+                txtparte5.Visible = true;
+                txtparteprecio5.Visible = true;
+            }
+            else if (checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == true)
+            {
+                checkBox6.Checked = false;
+                txtparte5.Text = "";
+
+                txtparteprecio5.Text = "0";
+            }
+            else if (checkBox3.Checked == true && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == true)
+            {
+                checkBox6.Checked = false;
+                txtparte5.Text = "";
+
+                txtparteprecio5.Text = "0";
+
+            }
+
+            else
+            {
+                label15.Visible = false;
+                label16.Visible = false;
+                txtparte5.Visible = false;
+                txtparteprecio5.Visible = false;
+                txtparte5.Text = "";
+
+                txtparteprecio5.Text = "0";
+
+            }
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true && checkBox4.Checked == true && checkBox5.Checked == true && checkBox6.Checked == true && checkBox7.Checked == true)
+            {
+                label17.Visible = true;
+                label18.Visible = true;
+                txtparte6.Visible = true;
+                txtparteprecio6.Visible = true;
+            }
+            else if (checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == true && checkBox7.Checked == true)
+            {
+                checkBox7.Checked = false;
+                txtparte6.Text = "";
+
+                txtparteprecio6.Text = "0";
+            }
+            else if (checkBox3.Checked == true && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == false && checkBox7.Checked == true)
+            {
+                checkBox7.Checked = false;
+                txtparte6.Text = "";
+
+                txtparteprecio6.Text = "0";
+
+            }
+
+            else
+            {
+                label17.Visible = false;
+                label18.Visible = false;
+                txtparte6.Visible = false;
+                txtparteprecio6.Visible = false;
+                txtparte6.Text = "";
+
+                txtparteprecio6.Text = "0";
+
+            }
+        }
+
+        private void txtprecioparte1_TextChanged(object sender, EventArgs e)
+        {
+            txtcosto.Text = txtprecioparte1.Text.ToString();
+        }
+
+        private void txtprecioparte2_TextChanged(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                if (txtprecioparte1.Text != null && txtprecioparte2.Text != null)
+                {
+                    int suma1 = Convert.ToInt32(txtprecioparte1.Text);
+
+                    if(txtprecioparte2.Text == "")
+                    {
+                        MessageBox.Show("Introduce una cantidad");
+                        txtprecioparte2.Text = "0";
+
+                    }
+                    else
+                    {
+                        int suma2 = Convert.ToInt32(txtprecioparte2.Text);
+                        int res1 = suma1 + suma2;
+                        txtcosto.Text = res1.ToString();
+                    }
+
+                    
+                }
+               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+            
+
+
+
+            
+        }
+
+        private void txtparteprecio3_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtprecioparte1.Text != null && txtprecioparte2.Text != null && txtparteprecio3.Text != null)
+                {
+                    int suma1 = Convert.ToInt32(txtprecioparte1.Text);
+
+                    if ( txtparteprecio3.Text == "" )
+                    {
+                        MessageBox.Show("Introduce una cantidad");
+                        txtparteprecio3.Text = "0";
+
+                    }
+                    else
+                    {
+                        int suma2 = Convert.ToInt32(txtprecioparte2.Text);
+                        int suma3 = Convert.ToInt32(txtparteprecio3.Text);
+
+                        int res1 = suma1 + suma2 + suma3;
+                        txtcosto.Text = res1.ToString();
+                    }
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+
+        private void txtparteprecio4_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtprecioparte1.Text != null && txtprecioparte2.Text != null && txtparteprecio3.Text != null  && txtparteprecio4.Text != null)
+                {
+                    int suma1 = Convert.ToInt32(txtprecioparte1.Text);
+
+                    if (txtparteprecio4.Text == "")
+                    {
+                        MessageBox.Show("Introduce una cantidad");
+                        txtparteprecio4.Text = "0";
+
+                    }
+                    else
+                    {
+                        int suma2 = Convert.ToInt32(txtprecioparte2.Text);
+                        int suma3 = Convert.ToInt32(txtparteprecio3.Text);
+                        int suma4 = Convert.ToInt32(txtparteprecio4.Text);
+
+
+                        int res1 = suma1 + suma2 + suma3 + suma4;
+                        txtcosto.Text = res1.ToString();
+                    }
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+
+        private void txtparteprecio5_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtprecioparte1.Text != null && txtprecioparte2.Text != null && txtparteprecio3.Text != null && txtparteprecio4.Text != null && txtparteprecio5.Text != null)
+                {
+                    int suma1 = Convert.ToInt32(txtprecioparte1.Text);
+
+                    if (txtparteprecio5.Text == "")
+                    {
+                        MessageBox.Show("Introduce una cantidad");
+                        txtparteprecio5.Text = "0";
+
+                    }
+                    else
+                    {
+                        int suma2 = Convert.ToInt32(txtprecioparte2.Text);
+                        int suma3 = Convert.ToInt32(txtparteprecio3.Text);
+                        int suma4 = Convert.ToInt32(txtparteprecio4.Text);
+                        int suma5 = Convert.ToInt32(txtparteprecio5.Text);
+
+
+                        int res1 = suma1 + suma2 + suma3 + suma4 + suma5;
+                        txtcosto.Text = res1.ToString();
+                    }
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+
+        private void txtparteprecio6_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtprecioparte1.Text != null && txtprecioparte2.Text != null && txtparteprecio3.Text != null && txtparteprecio4.Text != null && txtparteprecio5.Text != null && txtparteprecio6.Text !=null)
+                {
+                    int suma1 = Convert.ToInt32(txtprecioparte1.Text);
+
+                    if (txtparteprecio6.Text == "")
+                    {
+                        MessageBox.Show("Introduce una cantidad");
+                        txtparteprecio6.Text = "0";
+
+                    }
+                    else
+                    {
+                        int suma2 = Convert.ToInt32(txtprecioparte2.Text);
+                        int suma3 = Convert.ToInt32(txtparteprecio3.Text);
+                        int suma4 = Convert.ToInt32(txtparteprecio4.Text);
+                        int suma5 = Convert.ToInt32(txtparteprecio5.Text);
+                        int suma6 = Convert.ToInt32(txtparteprecio6.Text);
+
+
+                        int res1 = suma1 + suma2 + suma3 + suma4 + suma5 + suma6;
+                        txtcosto.Text = res1.ToString();
+                    }
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+
+        public void reecalcular()
+        {
+            try
+            {
+                if (txtcosto.Text != null && txtabono.Text != null)
+                {
+                    int a = Convert.ToInt32(txtcosto.Text);
+                    int b = Convert.ToInt32(txtabono.Text);
+                    int c = a - b;
+                    txtrestante.Text = c.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+    }
+}
