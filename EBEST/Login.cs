@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-
+using Tulpep.NotificationWindow;
+using System.Windows.Media.Animation;
+using System.Windows.Controls.Primitives;
 
 namespace EBEST
 {
@@ -19,7 +21,7 @@ namespace EBEST
         public Login()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\TADEOEBEST\basededatoscompartida\Login2_be.accdb;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\Erick\compartida\Login_be.accdb;";
 
         }
 
@@ -31,12 +33,12 @@ namespace EBEST
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "select * from contras Where contrase like ('" + txtcontra.Text + "')";
+                string query = "select * from login Where contraseña like ('" + txtcontra.Text + "')";// aqui va contrase
                 command.CommandText = query;
                 OleDbDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    txtrevisar.Text = Convert.ToString(reader["contrase"]);
+                    txtrevisar.Text = Convert.ToString(reader["contraseña"]);
                     usuario = Convert.ToString(reader["usuario"]);
 
 
@@ -52,7 +54,17 @@ namespace EBEST
             }
             if (txtcontra.Text == txtrevisar.Text)
             {
-                MessageBox.Show("Contraseña correcta");
+                PopupNotifier popup = new PopupNotifier();
+                popup.IsRightToLeft = false;
+                
+               // popup.AnimationDuration = 30000000;
+                
+                popup.TitleText = "Contraseña correcta";
+                popup.Image = Properties.Resources.profile_picture_user_icon_153847;
+                popup.ContentText = "Bienvenid@ " + usuario;
+                popup.Popup();
+
+               // MessageBox.Show("Contraseña correcta");
                 //txtordenprueba.Text = "Reer548621579";
                 inicio ini = new inicio();
                // Login lo = new Login();
@@ -60,6 +72,7 @@ namespace EBEST
                 ini.usuarios = usuario;
                 ini.Show();
                 this.Hide();
+               
             }
             else
             {

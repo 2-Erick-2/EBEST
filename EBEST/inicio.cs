@@ -35,10 +35,11 @@ namespace EBEST
 
         private void inicio_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido " + usuarios);
+            //MessageBox.Show("Bienvenido " + usuarios);
             if(usuarios == "erick")
             {
                 btninicio.Enabled = false;
+                btnupdate.Enabled = false;
             }
            
             /*//AbrirFormEnPanel(new Form1());
