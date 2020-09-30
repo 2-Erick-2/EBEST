@@ -85,6 +85,7 @@
             // txtnumero
             // 
             this.txtnumero.Location = new System.Drawing.Point(333, 190);
+            this.txtnumero.MaxLength = 10;
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(310, 20);
             this.txtnumero.TabIndex = 92;

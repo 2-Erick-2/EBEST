@@ -245,6 +245,7 @@
             // txtnumero
             // 
             this.txtnumero.Location = new System.Drawing.Point(308, 154);
+            this.txtnumero.MaxLength = 10;
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(310, 20);
             this.txtnumero.TabIndex = 34;
@@ -391,6 +392,8 @@
             this.txtprecioparte1.TabIndex = 55;
             this.txtprecioparte1.Text = "0";
             this.txtprecioparte1.TextChanged += new System.EventHandler(this.txtprecioparte1_TextChanged);
+            this.txtprecioparte1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte1_KeyPress);
+            this.txtprecioparte1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtprecioparte1_KeyUp);
             // 
             // label8
             // 
@@ -424,6 +427,7 @@
             this.txtprecioparte2.Text = "0";
             this.txtprecioparte2.Visible = false;
             this.txtprecioparte2.TextChanged += new System.EventHandler(this.txtprecioparte2_TextChanged);
+            this.txtprecioparte2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte2_KeyPress);
             // 
             // txtparte2
             // 
@@ -466,6 +470,7 @@
             this.txtparteprecio3.Text = "0";
             this.txtparteprecio3.Visible = false;
             this.txtparteprecio3.TextChanged += new System.EventHandler(this.txtparteprecio3_TextChanged);
+            this.txtparteprecio3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio3_KeyPress);
             // 
             // txtparte3
             // 
@@ -508,6 +513,7 @@
             this.txtparteprecio4.Text = "0";
             this.txtparteprecio4.Visible = false;
             this.txtparteprecio4.TextChanged += new System.EventHandler(this.txtparteprecio4_TextChanged);
+            this.txtparteprecio4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio4_KeyPress);
             // 
             // txtparte4
             // 
@@ -550,6 +556,7 @@
             this.txtparteprecio5.Text = "0";
             this.txtparteprecio5.Visible = false;
             this.txtparteprecio5.TextChanged += new System.EventHandler(this.txtparteprecio5_TextChanged);
+            this.txtparteprecio5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio5_KeyPress);
             // 
             // txtparte5
             // 
@@ -592,6 +599,7 @@
             this.txtparteprecio6.Text = "0";
             this.txtparteprecio6.Visible = false;
             this.txtparteprecio6.TextChanged += new System.EventHandler(this.txtparteprecio6_TextChanged);
+            this.txtparteprecio6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio6_KeyPress);
             // 
             // txtparte6
             // 

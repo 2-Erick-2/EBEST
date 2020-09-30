@@ -121,6 +121,7 @@
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(304, 20);
             this.txtnumero.TabIndex = 57;
+            this.txtnumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumero_KeyPress);
             // 
             // txtobservaciones
             // 

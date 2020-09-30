@@ -636,11 +636,16 @@ namespace EBEST
                                 MessageBox.Show("Error " + ex);
                             }
                     c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Actualizacion de cotizacion a pedido. Orden: " + txtorden3.Text, "erick.tadeo@hotmail.com");
+                    printPreviewDialog2.Document = printDocument2;
+
+                    //printDocument1.Print();
+                    //printDocument1.Print();
+
+                    printPreviewDialog2.Show();
 
 
 
-
-                            label25.Visible = false;
+                    label25.Visible = false;
                             checkBox1.Visible = false;
                             checkBox2.Visible = false;
 
@@ -1301,7 +1306,73 @@ namespace EBEST
             {
                 MessageBox.Show("Error " + ex);
             }
+
+            label25.Visible = false;
+            checkBox1.Visible = false;
+            checkBox2.Visible = false;
+
+
+            label24.Visible = false;
+            txtrequerido.Visible = false;
+
+            btnabonar.Visible = false;
+            label21.Visible = false;
+            txtcosto2.Visible = false;
+            label22.Visible = false;
+            label23.Visible = false;
+            txtabono.Visible = false;
+            txtrestante.Visible = false;
+
+
+            label20.Visible = false;
+            txtcosto.Visible = false;
+
+
+
+            btnpagado.Visible = false;
+            //btnpagado.Text = "Pagado";
+            label7.Visible = false;
+            label8.Visible = false;
+            txtparte1.Visible = false;
+            txtprecioparte1.Visible = false;
+
+            label9.Visible = false;
+            label10.Visible = false;
+            txtparte2.Visible = false;
+            txtprecioparte2.Visible = false;
+
+            label11.Visible = false;
+            label12.Visible = false;
+            txtparte3.Visible = false;
+            txtparteprecio3.Visible = false;
+
+            label13.Visible = false;
+            label14.Visible = false;
+            txtparte4.Visible = false;
+            txtparteprecio4.Visible = false;
+
+            label15.Visible = false;
+            label16.Visible = false;
+            txtparte5.Visible = false;
+            txtparteprecio5.Visible = false;
+
+            label17.Visible = false;
+            label18.Visible = false;
+            txtparte6.Visible = false;
+            txtparteprecio6.Visible = false;
+            txtbusqueda.Text = "";
             timer2.Enabled = true;
+
+
+
+
+
+
+
+
+
+
+            //timer2.Enabled = true;
 
         }
 
