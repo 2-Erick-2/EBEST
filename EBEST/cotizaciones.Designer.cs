@@ -97,10 +97,11 @@
             // 
             this.comboBoxbusqueda.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxbusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxbusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxbusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxbusqueda.FormattingEnabled = true;
             this.comboBoxbusqueda.Items.AddRange(new object[] {
-            "Orden",
+            "Orden-SKU",
             "Numero",
             "Nombre",
             "Fecha"});

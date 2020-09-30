@@ -90,7 +90,7 @@ namespace EBEST
         private void AbrirFormulario<T>() where T : Form, new()
         {
             Form formulario = panel_contenedor.Controls.OfType<T>().FirstOrDefault();
-            if(panel_contenedor.Controls.Count >=1)
+            if(panel_contenedor.Controls.Count >= 1)
             {
                 this.panel_contenedor.Controls.RemoveAt(0);
 

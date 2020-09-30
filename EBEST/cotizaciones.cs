@@ -52,7 +52,7 @@ namespace EBEST
 
         private void cotizaciones_Load(object sender, EventArgs e)
         {
-            comboBoxbusqueda.Text = "Orden";
+            comboBoxbusqueda.Text = "Orden-SKU";
 
             try
             {
@@ -144,7 +144,7 @@ namespace EBEST
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
 
-            if (comboBoxbusqueda.Text == "Orden")
+            if (comboBoxbusqueda.Text == "Orden-SKU")
             {
                 try
                 {

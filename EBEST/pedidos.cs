@@ -52,7 +52,7 @@ namespace EBEST
 
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
-            if (comboBoxbusqueda.Text == "Orden")
+            if (comboBoxbusqueda.Text == "Orden-SKU")
             {
                 try
                 {
@@ -148,7 +148,7 @@ namespace EBEST
 
         private void pedidos_Load(object sender, EventArgs e)
         {
-            comboBoxbusqueda.Text = "Orden";
+            comboBoxbusqueda.Text = "Orden-SKU";
 
             dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
