@@ -178,6 +178,12 @@
     <Compile Include="actualizacion.Designer.cs">
       <DependentUpon>actualizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bienvenida.Designer.cs">
+      <DependentUpon>bienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="bienvenido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </Compile>
     <EmbeddedResource Include="actualizacion.resx">
       <DependentUpon>actualizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bienvenida.resx">
+      <DependentUpon>bienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bienvenido.resx">
       <DependentUpon>bienvenido.cs</DependentUpon>

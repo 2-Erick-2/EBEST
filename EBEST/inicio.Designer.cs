@@ -37,7 +37,6 @@
             this.btncotizaciones = new System.Windows.Forms.Button();
             this.btncrearrevision = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btninicio = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelcontenedor = new System.Windows.Forms.Panel();
@@ -46,15 +45,16 @@
             this.btnclientes = new System.Windows.Forms.Button();
             this.panel_contenedor = new System.Windows.Forms.Panel();
             this.lblbienvenido = new System.Windows.Forms.Label();
-            this.fotoebest = new System.Windows.Forms.PictureBox();
             this.btncrear = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.fotoebest = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelcontenedor.SuspendLayout();
             this.panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoebest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -167,7 +167,7 @@
             // 
             // btncrearrevision
             // 
-            this.btncrearrevision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btncrearrevision.BackColor = System.Drawing.Color.DarkBlue;
             this.btncrearrevision.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncrearrevision.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btncrearrevision.FlatAppearance.BorderSize = 0;
@@ -177,7 +177,7 @@
             this.btncrearrevision.Location = new System.Drawing.Point(0, 203);
             this.btncrearrevision.Name = "btncrearrevision";
             this.btncrearrevision.Size = new System.Drawing.Size(253, 55);
-            this.btncrearrevision.TabIndex = 9;
+            this.btncrearrevision.TabIndex = 0;
             this.btncrearrevision.Text = "Crear revision";
             this.btncrearrevision.UseVisualStyleBackColor = false;
             this.btncrearrevision.Click += new System.EventHandler(this.btncrearrevision_Click);
@@ -199,19 +199,9 @@
             this.btnupdate.UseVisualStyleBackColor = false;
             this.btnupdate.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EBEST.Properties.Resources.EBESTSINFONDO;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // btninicio
             // 
-            this.btninicio.BackColor = System.Drawing.Color.DarkBlue;
+            this.btninicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btninicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btninicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btninicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -268,7 +258,7 @@
             this.btnclientes.Location = new System.Drawing.Point(0, 543);
             this.btnclientes.Name = "btnclientes";
             this.btnclientes.Size = new System.Drawing.Size(253, 55);
-            this.btnclientes.TabIndex = 0;
+            this.btnclientes.TabIndex = 9;
             this.btnclientes.Text = "Busqueda";
             this.btnclientes.UseVisualStyleBackColor = false;
             this.btnclientes.Click += new System.EventHandler(this.button1_Click);
@@ -299,16 +289,7 @@
             this.lblbienvenido.Size = new System.Drawing.Size(351, 73);
             this.lblbienvenido.TabIndex = 3;
             this.lblbienvenido.Text = "Bienvenido";
-            // 
-            // fotoebest
-            // 
-            this.fotoebest.Image = global::EBEST.Properties.Resources.eBestLogo__transparente_web_03;
-            this.fotoebest.Location = new System.Drawing.Point(174, 45);
-            this.fotoebest.Name = "fotoebest";
-            this.fotoebest.Size = new System.Drawing.Size(444, 458);
-            this.fotoebest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoebest.TabIndex = 2;
-            this.fotoebest.TabStop = false;
+            this.lblbienvenido.Visible = false;
             // 
             // btncrear
             // 
@@ -320,6 +301,27 @@
             this.btncrear.UseVisualStyleBackColor = true;
             this.btncrear.Visible = false;
             // 
+            // fotoebest
+            // 
+            this.fotoebest.Image = global::EBEST.Properties.Resources.eBestLogo__transparente_web_03;
+            this.fotoebest.Location = new System.Drawing.Point(174, 45);
+            this.fotoebest.Name = "fotoebest";
+            this.fotoebest.Size = new System.Drawing.Size(444, 458);
+            this.fotoebest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoebest.TabIndex = 2;
+            this.fotoebest.TabStop = false;
+            this.fotoebest.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EBEST.Properties.Resources.EBESTSINFONDO;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,19 +330,21 @@
             this.ClientSize = new System.Drawing.Size(1033, 807);
             this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.MenuVertical);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "inicio";
             this.Load += new System.EventHandler(this.inicio_Load);
             this.MenuVertical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelcontenedor.ResumeLayout(false);
             this.panel_contenedor.ResumeLayout(false);
             this.panel_contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoebest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

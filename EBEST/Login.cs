@@ -92,10 +92,10 @@ namespace EBEST
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            /*if (e.KeyCode == Keys.Enter)
             {
                 button1_Click(sender, e);
-            }
+            }*/
         }
 
         private void notifyIcon1_Click(object sender, EventArgs e)
@@ -122,6 +122,22 @@ namespace EBEST
         {
             this.Close();
 
+        }
+
+        private void txtcontra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }*/
+        }
+
+        private void txtcontra_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
         }
     }
 }

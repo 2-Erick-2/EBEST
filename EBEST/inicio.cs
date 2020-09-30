@@ -35,6 +35,8 @@ namespace EBEST
 
         private void inicio_Load(object sender, EventArgs e)
         {
+            //AbrirFormEnPanel(new bienvenida());
+            AbrirFormulario<bienvenida>();
             //MessageBox.Show("Bienvenido " + usuarios);
             if(usuarios == "erick")
             {
@@ -90,9 +92,9 @@ namespace EBEST
         private void AbrirFormulario<T>() where T : Form, new()
         {
             Form formulario = panel_contenedor.Controls.OfType<T>().FirstOrDefault();
-            if(panel_contenedor.Controls.Count >= 1)
+            if(panel_contenedor.Controls.Count > 0)
             {
-                this.panel_contenedor.Controls.RemoveAt(0);
+                this.panel_contenedor.Controls.Clear();//.RemoveAt(0);
 
             }
             if (formulario != null)
@@ -366,7 +368,7 @@ namespace EBEST
         private void btncrearrevision_Click(object sender, EventArgs e)
         {
 
-           // AbrirFormEnPanel(new crearrevision());
+            //AbrirFormEnPanel(new crearrevision());
             AbrirFormulario<crearrevision>();
 
             lblbienvenido.Visible = false;
