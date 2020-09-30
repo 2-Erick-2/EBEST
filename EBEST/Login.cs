@@ -76,7 +76,16 @@ namespace EBEST
             }
             else
             {
-                MessageBox.Show("Contraseña incorrecta");
+                PopupNotifier popup = new PopupNotifier();
+                popup.IsRightToLeft = false;
+
+                // popup.AnimationDuration = 30000000;
+
+                popup.TitleText = "Contraseña incorrecta";
+                popup.Image = Properties.Resources.profile_picture_user_icon_153847;
+                popup.ContentText = "Acceso denegado";
+                popup.Popup();
+                //MessageBox.Show("Contraseña incorrecta");
 
             }
         }
