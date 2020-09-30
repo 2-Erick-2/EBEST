@@ -88,5 +88,31 @@ namespace EBEST
                 button1_Click(sender, e);
             }
         }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Hola");
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_BalloonTipClosed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cerrar_DoubleClick(object sender, EventArgs e)
+        {
+            ActiveForm.Close();
+        }
+
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
