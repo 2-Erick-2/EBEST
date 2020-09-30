@@ -57,7 +57,7 @@ namespace EBEST
         private void AbrirFormEnPanel(object formhija)
         {
             if (this.panel_contenedor.Controls.Count > 0)
-                this.panel_contenedor.Controls.RemoveAt(0);
+                this.panel_contenedor.Controls.Clear();
             Form fh = formhija as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;

@@ -89,7 +89,7 @@
             this.btnrevisiones.Location = new System.Drawing.Point(77, 317);
             this.btnrevisiones.Name = "btnrevisiones";
             this.btnrevisiones.Size = new System.Drawing.Size(173, 66);
-            this.btnrevisiones.TabIndex = 8;
+            this.btnrevisiones.TabIndex = 6;
             this.btnrevisiones.Text = "Revisiones";
             this.btnrevisiones.UseVisualStyleBackColor = false;
             this.btnrevisiones.Visible = false;
@@ -107,7 +107,7 @@
             this.btncrearcotizacion.Location = new System.Drawing.Point(0, 275);
             this.btncrearcotizacion.Name = "btncrearcotizacion";
             this.btncrearcotizacion.Size = new System.Drawing.Size(253, 55);
-            this.btncrearcotizacion.TabIndex = 11;
+            this.btncrearcotizacion.TabIndex = 1;
             this.btncrearcotizacion.Text = "Crear cotizacion";
             this.btncrearcotizacion.UseVisualStyleBackColor = false;
             this.btncrearcotizacion.Click += new System.EventHandler(this.btncrearcotizacion_Click);
@@ -124,7 +124,7 @@
             this.btnpedidos.Location = new System.Drawing.Point(44, 264);
             this.btnpedidos.Name = "btnpedidos";
             this.btnpedidos.Size = new System.Drawing.Size(173, 66);
-            this.btnpedidos.TabIndex = 7;
+            this.btnpedidos.TabIndex = 5;
             this.btnpedidos.Text = "Pedidos";
             this.btnpedidos.UseVisualStyleBackColor = false;
             this.btnpedidos.Visible = false;
@@ -142,7 +142,7 @@
             this.btncrearpedido.Location = new System.Drawing.Point(0, 353);
             this.btncrearpedido.Name = "btncrearpedido";
             this.btncrearpedido.Size = new System.Drawing.Size(253, 55);
-            this.btncrearpedido.TabIndex = 10;
+            this.btncrearpedido.TabIndex = 2;
             this.btncrearpedido.Text = "Crear pedido";
             this.btncrearpedido.UseVisualStyleBackColor = false;
             this.btncrearpedido.Click += new System.EventHandler(this.btncrearpedido_Click);
@@ -159,7 +159,7 @@
             this.btncotizaciones.Location = new System.Drawing.Point(80, 389);
             this.btncotizaciones.Name = "btncotizaciones";
             this.btncotizaciones.Size = new System.Drawing.Size(173, 73);
-            this.btncotizaciones.TabIndex = 6;
+            this.btncotizaciones.TabIndex = 7;
             this.btncotizaciones.Text = "Cotizaciones";
             this.btncotizaciones.UseVisualStyleBackColor = false;
             this.btncotizaciones.Visible = false;
@@ -194,7 +194,7 @@
             this.btnupdate.Location = new System.Drawing.Point(0, 749);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(253, 59);
-            this.btnupdate.TabIndex = 5;
+            this.btnupdate.TabIndex = 4;
             this.btnupdate.Text = "Update";
             this.btnupdate.UseVisualStyleBackColor = false;
             this.btnupdate.Click += new System.EventHandler(this.button4_Click);
@@ -208,7 +208,7 @@
             this.btninicio.Location = new System.Drawing.Point(0, 118);
             this.btninicio.Name = "btninicio";
             this.btninicio.Size = new System.Drawing.Size(253, 55);
-            this.btninicio.TabIndex = 3;
+            this.btninicio.TabIndex = 8;
             this.btninicio.Text = "Whatsapp";
             this.btninicio.UseVisualStyleBackColor = false;
             this.btninicio.Click += new System.EventHandler(this.button3_Click);
@@ -258,7 +258,7 @@
             this.btnclientes.Location = new System.Drawing.Point(0, 543);
             this.btnclientes.Name = "btnclientes";
             this.btnclientes.Size = new System.Drawing.Size(253, 55);
-            this.btnclientes.TabIndex = 9;
+            this.btnclientes.TabIndex = 3;
             this.btnclientes.Text = "Busqueda";
             this.btnclientes.UseVisualStyleBackColor = false;
             this.btnclientes.Click += new System.EventHandler(this.button1_Click);

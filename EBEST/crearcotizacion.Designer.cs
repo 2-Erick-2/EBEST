@@ -120,7 +120,7 @@
             this.txtnumero.MaxLength = 10;
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(304, 20);
-            this.txtnumero.TabIndex = 57;
+            this.txtnumero.TabIndex = 56;
             this.txtnumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumero_KeyPress);
             // 
             // txtobservaciones
@@ -274,7 +274,7 @@
             this.btnimprimir.Location = new System.Drawing.Point(188, 681);
             this.btnimprimir.Name = "btnimprimir";
             this.btnimprimir.Size = new System.Drawing.Size(425, 53);
-            this.btnimprimir.TabIndex = 61;
+            this.btnimprimir.TabIndex = 71;
             this.btnimprimir.Text = "Cerrar cotizacion";
             this.btnimprimir.UseVisualStyleBackColor = false;
             this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
@@ -299,7 +299,7 @@
             this.txtmodelo.Location = new System.Drawing.Point(331, 206);
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(304, 20);
-            this.txtmodelo.TabIndex = 69;
+            this.txtmodelo.TabIndex = 57;
             // 
             // label2
             // 
@@ -394,7 +394,7 @@
             this.txtparteprecio6.Location = new System.Drawing.Point(549, 443);
             this.txtparteprecio6.Name = "txtparteprecio6";
             this.txtparteprecio6.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio6.TabIndex = 104;
+            this.txtparteprecio6.TabIndex = 69;
             this.txtparteprecio6.Text = "0";
             this.txtparteprecio6.Visible = false;
             this.txtparteprecio6.Click += new System.EventHandler(this.txtparteprecio6_Click);
@@ -406,7 +406,7 @@
             this.txtparte6.Location = new System.Drawing.Point(334, 444);
             this.txtparte6.Name = "txtparte6";
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
-            this.txtparte6.TabIndex = 103;
+            this.txtparte6.TabIndex = 68;
             this.txtparte6.Visible = false;
             // 
             // label18
@@ -438,7 +438,7 @@
             this.txtparteprecio5.Location = new System.Drawing.Point(548, 403);
             this.txtparteprecio5.Name = "txtparteprecio5";
             this.txtparteprecio5.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio5.TabIndex = 100;
+            this.txtparteprecio5.TabIndex = 67;
             this.txtparteprecio5.Text = "0";
             this.txtparteprecio5.Visible = false;
             this.txtparteprecio5.Click += new System.EventHandler(this.txtparteprecio5_Click);
@@ -450,7 +450,7 @@
             this.txtparte5.Location = new System.Drawing.Point(333, 404);
             this.txtparte5.Name = "txtparte5";
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
-            this.txtparte5.TabIndex = 99;
+            this.txtparte5.TabIndex = 66;
             this.txtparte5.Visible = false;
             // 
             // label16
@@ -482,7 +482,7 @@
             this.txtparteprecio4.Location = new System.Drawing.Point(547, 367);
             this.txtparteprecio4.Name = "txtparteprecio4";
             this.txtparteprecio4.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio4.TabIndex = 96;
+            this.txtparteprecio4.TabIndex = 65;
             this.txtparteprecio4.Text = "0";
             this.txtparteprecio4.Visible = false;
             this.txtparteprecio4.Click += new System.EventHandler(this.txtparteprecio4_Click);
@@ -494,7 +494,7 @@
             this.txtparte4.Location = new System.Drawing.Point(332, 368);
             this.txtparte4.Name = "txtparte4";
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
-            this.txtparte4.TabIndex = 95;
+            this.txtparte4.TabIndex = 64;
             this.txtparte4.Visible = false;
             // 
             // label14
@@ -526,7 +526,7 @@
             this.txtparteprecio3.Location = new System.Drawing.Point(548, 331);
             this.txtparteprecio3.Name = "txtparteprecio3";
             this.txtparteprecio3.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio3.TabIndex = 92;
+            this.txtparteprecio3.TabIndex = 63;
             this.txtparteprecio3.Text = "0";
             this.txtparteprecio3.Visible = false;
             this.txtparteprecio3.Click += new System.EventHandler(this.txtparteprecio3_Click);
@@ -538,7 +538,7 @@
             this.txtparte3.Location = new System.Drawing.Point(333, 332);
             this.txtparte3.Name = "txtparte3";
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
-            this.txtparte3.TabIndex = 91;
+            this.txtparte3.TabIndex = 62;
             this.txtparte3.Visible = false;
             // 
             // label12
@@ -570,7 +570,7 @@
             this.txtprecioparte2.Location = new System.Drawing.Point(547, 288);
             this.txtprecioparte2.Name = "txtprecioparte2";
             this.txtprecioparte2.Size = new System.Drawing.Size(93, 20);
-            this.txtprecioparte2.TabIndex = 88;
+            this.txtprecioparte2.TabIndex = 61;
             this.txtprecioparte2.Text = "0";
             this.txtprecioparte2.Visible = false;
             this.txtprecioparte2.Click += new System.EventHandler(this.txtprecioparte2_Click);
@@ -582,7 +582,7 @@
             this.txtparte2.Location = new System.Drawing.Point(332, 289);
             this.txtparte2.Name = "txtparte2";
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
-            this.txtparte2.TabIndex = 87;
+            this.txtparte2.TabIndex = 60;
             this.txtparte2.Visible = false;
             // 
             // label10
@@ -613,7 +613,7 @@
             this.txtprecioparte1.Location = new System.Drawing.Point(547, 247);
             this.txtprecioparte1.Name = "txtprecioparte1";
             this.txtprecioparte1.Size = new System.Drawing.Size(93, 20);
-            this.txtprecioparte1.TabIndex = 84;
+            this.txtprecioparte1.TabIndex = 59;
             this.txtprecioparte1.Text = "0";
             this.txtprecioparte1.Click += new System.EventHandler(this.txtprecioparte1_Click);
             this.txtprecioparte1.TextChanged += new System.EventHandler(this.txtprecioparte1_TextChanged);
@@ -624,7 +624,7 @@
             this.txtparte1.Location = new System.Drawing.Point(332, 248);
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
-            this.txtparte1.TabIndex = 83;
+            this.txtparte1.TabIndex = 58;
             // 
             // label7
             // 
@@ -700,7 +700,7 @@
             this.checkBox8.Location = new System.Drawing.Point(149, 564);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(146, 24);
-            this.checkBox8.TabIndex = 117;
+            this.checkBox8.TabIndex = 70;
             this.checkBox8.Text = "Mostrar en ticket";
             this.checkBox8.UseVisualStyleBackColor = false;
             // 

@@ -370,7 +370,8 @@ namespace EBEST
             }
             else if(checkBox2.Checked == false && checkBox3.Checked == false)
             {
-                combodias.Visible = false;
+                checkBox2.Checked = true;
+                combodias.Visible = true;
                 combohoras.Visible = false;
             }
             else
@@ -391,8 +392,10 @@ namespace EBEST
             }
             else if (checkBox2.Checked == false && checkBox3.Checked == false)
             {
-                combodias.Visible = false;
+                checkBox2.Checked = true;
+                combodias.Visible = true;
                 combohoras.Visible = false;
+
             }
             else
             {

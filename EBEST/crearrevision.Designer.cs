@@ -94,7 +94,7 @@
             // 
             // txtobservaciones
             // 
-            this.txtobservaciones.Location = new System.Drawing.Point(333, 321);
+            this.txtobservaciones.Location = new System.Drawing.Point(323, 321);
             this.txtobservaciones.Multiline = true;
             this.txtobservaciones.Name = "txtobservaciones";
             this.txtobservaciones.Size = new System.Drawing.Size(310, 54);
@@ -231,7 +231,7 @@
             this.btnimprimir.Location = new System.Drawing.Point(189, 678);
             this.btnimprimir.Name = "btnimprimir";
             this.btnimprimir.Size = new System.Drawing.Size(425, 55);
-            this.btnimprimir.TabIndex = 95;
+            this.btnimprimir.TabIndex = 96;
             this.btnimprimir.Text = "Cerrar revision";
             this.btnimprimir.UseVisualStyleBackColor = false;
             this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
@@ -332,7 +332,7 @@
             this.checkBox1.Location = new System.Drawing.Point(145, 442);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(146, 24);
-            this.checkBox1.TabIndex = 111;
+            this.checkBox1.TabIndex = 95;
             this.checkBox1.Text = "Mostrar en ticket";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 

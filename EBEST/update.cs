@@ -31,62 +31,63 @@ namespace EBEST
 
         private void update_Load(object sender, EventArgs e)
         {
-            
+            combodias.Text = "1 dia";
+            combohoras.Text = "1 hora";
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-           /* timer1.Enabled = true;
-            comboBoxbusqueda.Text = "Orden";
-            try
-            {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select * from clientes";
-                command.CommandText = query;
+            /* timer1.Enabled = true;
+             comboBoxbusqueda.Text = "Orden";
+             try
+             {
+                 connection.Open();
+                 OleDbCommand command = new OleDbCommand();
+                 command.Connection = connection;
+                 string query = "select * from clientes";
+                 command.CommandText = query;
 
-                OleDbDataAdapter da = new OleDbDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                 OleDbDataAdapter da = new OleDbDataAdapter(command);
+                 DataTable dt = new DataTable();
+                 da.Fill(dt);
+                 dataGridView1.DataSource = dt;
 
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex);
-            }
+                 connection.Close();
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Error " + ex);
+             }
 
-            dataGridView1.RowHeadersVisible = false;
-
-
-            dataGridView1.Columns[0].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.LightYellow;
-
-            dataGridView1.Columns[1].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[1].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[2].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[2].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[3].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[3].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[4].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[4].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[5].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[5].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[6].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[6].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[7].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
+             dataGridView1.RowHeadersVisible = false;
 
 
-            dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;*/
+             dataGridView1.Columns[0].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.LightYellow;
+
+             dataGridView1.Columns[1].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[1].DefaultCellStyle.BackColor = Color.LightBlue;
+
+             dataGridView1.Columns[2].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[2].DefaultCellStyle.BackColor = Color.LightBlue;
+
+             dataGridView1.Columns[3].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[3].DefaultCellStyle.BackColor = Color.LightBlue;
+
+             dataGridView1.Columns[4].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[4].DefaultCellStyle.BackColor = Color.LightBlue;
+
+             dataGridView1.Columns[5].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[5].DefaultCellStyle.BackColor = Color.LightBlue;
+
+             dataGridView1.Columns[6].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[6].DefaultCellStyle.BackColor = Color.LightBlue;
+
+             dataGridView1.Columns[7].HeaderCell.Style.BackColor = Color.White;
+             dataGridView1.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
+
+
+             dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+             dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;*/
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -2134,6 +2135,52 @@ namespace EBEST
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 815));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 830));
                 // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                checkBox3.Checked = false;
+                combodias.Visible = true;
+                combohoras.Visible = false;
+            }
+            else if (checkBox4.Checked == false && checkBox3.Checked == false)
+            {
+
+                checkBox4.Checked = true;
+                combodias.Visible = true;
+                combohoras.Visible = false;
+            }
+            else
+            {
+                checkBox4.Checked = false;
+                combodias.Visible = false;
+                combohoras.Visible = true;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                checkBox4.Checked = false;
+                combodias.Visible = false;
+                combohoras.Visible = true;
+            }
+            else if (checkBox4.Checked == false && checkBox3.Checked == false)
+            {
+
+                checkBox4.Checked = true;
+                combodias.Visible = true;
+                combohoras.Visible = false;
+            }
+            else
+            {
+                checkBox3.Checked = false;
+                combodias.Visible = true;
+                combohoras.Visible = false;
             }
         }
     }

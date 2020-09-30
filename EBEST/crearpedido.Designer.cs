@@ -143,7 +143,7 @@
             this.txtabono.Location = new System.Drawing.Point(310, 487);
             this.txtabono.Name = "txtabono";
             this.txtabono.Size = new System.Drawing.Size(308, 20);
-            this.txtabono.TabIndex = 43;
+            this.txtabono.TabIndex = 47;
             this.txtabono.Text = "0";
             this.txtabono.TextChanged += new System.EventHandler(this.txtabono_TextChanged);
             // 
@@ -237,7 +237,7 @@
             this.btnimprimir.Location = new System.Drawing.Point(191, 679);
             this.btnimprimir.Name = "btnimprimir";
             this.btnimprimir.Size = new System.Drawing.Size(419, 57);
-            this.btnimprimir.TabIndex = 35;
+            this.btnimprimir.TabIndex = 50;
             this.btnimprimir.Text = "Cerrar pedido";
             this.btnimprimir.UseVisualStyleBackColor = false;
             this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
@@ -248,7 +248,7 @@
             this.txtnumero.MaxLength = 10;
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(310, 20);
-            this.txtnumero.TabIndex = 34;
+            this.txtnumero.TabIndex = 33;
             // 
             // txtobservaciones
             // 
@@ -348,7 +348,7 @@
             this.checkBox1.Location = new System.Drawing.Point(319, 548);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(117, 33);
-            this.checkBox1.TabIndex = 51;
+            this.checkBox1.TabIndex = 48;
             this.checkBox1.Text = "3-4 dias";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -361,7 +361,7 @@
             this.checkBox2.Location = new System.Drawing.Point(480, 548);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(130, 33);
-            this.checkBox2.TabIndex = 52;
+            this.checkBox2.TabIndex = 49;
             this.checkBox2.Text = "7-15 dias";
             this.checkBox2.UseVisualStyleBackColor = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
@@ -382,14 +382,14 @@
             this.txtparte1.Location = new System.Drawing.Point(308, 227);
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
-            this.txtparte1.TabIndex = 54;
+            this.txtparte1.TabIndex = 35;
             // 
             // txtprecioparte1
             // 
             this.txtprecioparte1.Location = new System.Drawing.Point(523, 226);
             this.txtprecioparte1.Name = "txtprecioparte1";
             this.txtprecioparte1.Size = new System.Drawing.Size(93, 20);
-            this.txtprecioparte1.TabIndex = 55;
+            this.txtprecioparte1.TabIndex = 36;
             this.txtprecioparte1.Text = "0";
             this.txtprecioparte1.TextChanged += new System.EventHandler(this.txtprecioparte1_TextChanged);
             this.txtprecioparte1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte1_KeyPress);
@@ -423,7 +423,7 @@
             this.txtprecioparte2.Location = new System.Drawing.Point(523, 267);
             this.txtprecioparte2.Name = "txtprecioparte2";
             this.txtprecioparte2.Size = new System.Drawing.Size(93, 20);
-            this.txtprecioparte2.TabIndex = 59;
+            this.txtprecioparte2.TabIndex = 38;
             this.txtprecioparte2.Text = "0";
             this.txtprecioparte2.Visible = false;
             this.txtprecioparte2.TextChanged += new System.EventHandler(this.txtprecioparte2_TextChanged);
@@ -434,7 +434,7 @@
             this.txtparte2.Location = new System.Drawing.Point(308, 268);
             this.txtparte2.Name = "txtparte2";
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
-            this.txtparte2.TabIndex = 58;
+            this.txtparte2.TabIndex = 37;
             this.txtparte2.Visible = false;
             // 
             // label10
@@ -466,7 +466,7 @@
             this.txtparteprecio3.Location = new System.Drawing.Point(524, 310);
             this.txtparteprecio3.Name = "txtparteprecio3";
             this.txtparteprecio3.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio3.TabIndex = 63;
+            this.txtparteprecio3.TabIndex = 40;
             this.txtparteprecio3.Text = "0";
             this.txtparteprecio3.Visible = false;
             this.txtparteprecio3.TextChanged += new System.EventHandler(this.txtparteprecio3_TextChanged);
@@ -477,7 +477,7 @@
             this.txtparte3.Location = new System.Drawing.Point(309, 311);
             this.txtparte3.Name = "txtparte3";
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
-            this.txtparte3.TabIndex = 62;
+            this.txtparte3.TabIndex = 39;
             this.txtparte3.Visible = false;
             // 
             // label12
@@ -509,7 +509,7 @@
             this.txtparteprecio4.Location = new System.Drawing.Point(523, 346);
             this.txtparteprecio4.Name = "txtparteprecio4";
             this.txtparteprecio4.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio4.TabIndex = 67;
+            this.txtparteprecio4.TabIndex = 42;
             this.txtparteprecio4.Text = "0";
             this.txtparteprecio4.Visible = false;
             this.txtparteprecio4.TextChanged += new System.EventHandler(this.txtparteprecio4_TextChanged);
@@ -520,7 +520,7 @@
             this.txtparte4.Location = new System.Drawing.Point(308, 347);
             this.txtparte4.Name = "txtparte4";
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
-            this.txtparte4.TabIndex = 66;
+            this.txtparte4.TabIndex = 41;
             this.txtparte4.Visible = false;
             // 
             // label14
@@ -552,7 +552,7 @@
             this.txtparteprecio5.Location = new System.Drawing.Point(524, 382);
             this.txtparteprecio5.Name = "txtparteprecio5";
             this.txtparteprecio5.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio5.TabIndex = 71;
+            this.txtparteprecio5.TabIndex = 44;
             this.txtparteprecio5.Text = "0";
             this.txtparteprecio5.Visible = false;
             this.txtparteprecio5.TextChanged += new System.EventHandler(this.txtparteprecio5_TextChanged);
@@ -563,7 +563,7 @@
             this.txtparte5.Location = new System.Drawing.Point(309, 383);
             this.txtparte5.Name = "txtparte5";
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
-            this.txtparte5.TabIndex = 70;
+            this.txtparte5.TabIndex = 43;
             this.txtparte5.Visible = false;
             // 
             // label16
@@ -595,7 +595,7 @@
             this.txtparteprecio6.Location = new System.Drawing.Point(525, 422);
             this.txtparteprecio6.Name = "txtparteprecio6";
             this.txtparteprecio6.Size = new System.Drawing.Size(93, 20);
-            this.txtparteprecio6.TabIndex = 75;
+            this.txtparteprecio6.TabIndex = 46;
             this.txtparteprecio6.Text = "0";
             this.txtparteprecio6.Visible = false;
             this.txtparteprecio6.TextChanged += new System.EventHandler(this.txtparteprecio6_TextChanged);
@@ -606,7 +606,7 @@
             this.txtparte6.Location = new System.Drawing.Point(310, 423);
             this.txtparte6.Name = "txtparte6";
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
-            this.txtparte6.TabIndex = 74;
+            this.txtparte6.TabIndex = 45;
             this.txtparte6.Visible = false;
             // 
             // label18
@@ -691,7 +691,7 @@
             this.txtmodelo.Location = new System.Drawing.Point(308, 190);
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(310, 20);
-            this.txtmodelo.TabIndex = 83;
+            this.txtmodelo.TabIndex = 34;
             // 
             // label5
             // 
