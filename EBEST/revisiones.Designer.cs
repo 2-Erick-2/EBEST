@@ -153,6 +153,7 @@
             this.txtactu.Name = "txtactu";
             this.txtactu.Size = new System.Drawing.Size(100, 20);
             this.txtactu.TabIndex = 31;
+            this.txtactu.Visible = false;
             // 
             // timer1
             // 

@@ -710,6 +710,7 @@
             this.txtrepetidos.Name = "txtrepetidos";
             this.txtrepetidos.Size = new System.Drawing.Size(100, 20);
             this.txtrepetidos.TabIndex = 114;
+            this.txtrepetidos.Visible = false;
             // 
             // printDocument1
             // 
