@@ -144,7 +144,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 636);
+            this.dataGridView1.Size = new System.Drawing.Size(782, 656);
             this.dataGridView1.TabIndex = 30;
             // 
             // txtactu
