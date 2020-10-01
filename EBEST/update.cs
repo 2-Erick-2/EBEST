@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using ZXing;
+using IronBarCode;
 
 
 namespace EBEST
@@ -483,10 +484,12 @@ namespace EBEST
                                     MessageBox.Show("Error " + ex);
                                 }
                             c.enviarCorreo("ebestprueba@gmail.com", "ebest1234","Nombre: "+txtnombre.Text+"\n Numero: "+txtnumero.Text+"\n Hora y fecha: "+txthorayfecha.Text, "Actualizacion de revision a cotizacion. Orden: "+txtorden3.Text,"erick.tadeo@hotmail.com");
-                    BarcodeWriter br = new BarcodeWriter();
-                    br.Format = BarcodeFormat.QR_CODE;
-                    Bitmap bm = new Bitmap(br.Write("http:sexto-a.epizy.com/" + txtorden.Text), 150, 150);
-                    pictureBox1.Image = bm;
+                    GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden3.Text, BarcodeWriterEncoding.Code128);
+                    MyBarCode.ResizeTo(150, 50).SetMargins(0);
+                    Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+
+                    //pictureBox1.Image = MyBarCodeBitmap;
+                    pictureBox1.Image = MyBarCode.Image;
 
                     printPreviewDialog1.Document = printDocument1;
 
@@ -1849,7 +1852,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 590));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 615));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
-                e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 680);
 
             }
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text == "" && txtparte5.Text == "" && txtparte6.Text == "")
@@ -1870,7 +1873,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 655));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 720);
             }
 
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text == "" && txtparte6.Text == "")
@@ -1894,7 +1897,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 695));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 760);
             }
 
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != ""  && txtparte5.Text != "" && txtparte6.Text == "")
@@ -1919,7 +1922,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 730));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 800);
             }
 
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != ""  && txtparte5.Text != "" && txtparte6.Text != "")
@@ -1946,7 +1949,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 775));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 840);
             }
         }
 
@@ -2002,7 +2005,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 590));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 615));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
-                //e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 680);
             }
 
 
@@ -2025,7 +2028,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 655));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
-                //e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 720);
 
             }
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text == "" && txtparte5.Text == "" && txtparte6.Text == "")
@@ -2049,7 +2052,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 695));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 760);
             }
 
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text == "" && txtparte6.Text == "")
@@ -2076,7 +2079,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 735));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 800);
             }
 
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text != "" && txtparte6.Text == "")
@@ -2104,7 +2107,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 770));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 840);
             }
 
             else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text != "" && txtparte6.Text != "")
@@ -2134,7 +2137,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 815));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 830));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 880);
             }
         }
 
