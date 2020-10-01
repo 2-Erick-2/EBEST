@@ -640,6 +640,18 @@ namespace EBEST
                                 MessageBox.Show("Error " + ex);
                             }
                     c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Actualizacion de cotizacion a pedido. Orden: " + txtorden3.Text, "erick.tadeo@hotmail.com");
+                    GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden3.Text, BarcodeWriterEncoding.Code128);
+                    MyBarCode.ResizeTo(150, 50).SetMargins(0);
+                    Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+
+                    //pictureBox1.Image = MyBarCodeBitmap;
+                    pictureBox1.Image = MyBarCode.Image;
+
+
+
+
+
+
                     printPreviewDialog2.Document = printDocument2;
 
                     //printDocument1.Print();
