@@ -94,14 +94,14 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.combohoras = new System.Windows.Forms.ComboBox();
-            this.combodias = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.combohoras = new System.Windows.Forms.ComboBox();
+            this.combodias = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -771,48 +771,14 @@
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.BackColor = System.Drawing.Color.White;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.Location = new System.Drawing.Point(44, 593);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(146, 24);
+            this.checkBox5.Size = new System.Drawing.Size(165, 28);
             this.checkBox5.TabIndex = 153;
             this.checkBox5.Text = "Mostrar en ticket";
             this.checkBox5.UseVisualStyleBackColor = false;
             this.checkBox5.Visible = false;
-            // 
-            // combohoras
-            // 
-            this.combohoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combohoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combohoras.FormattingEnabled = true;
-            this.combohoras.Items.AddRange(new object[] {
-            "1 hora",
-            "2 horas",
-            "3 horas",
-            "4 horas",
-            "5 horas"});
-            this.combohoras.Location = new System.Drawing.Point(381, 570);
-            this.combohoras.Name = "combohoras";
-            this.combohoras.Size = new System.Drawing.Size(121, 28);
-            this.combohoras.TabIndex = 152;
-            this.combohoras.Visible = false;
-            // 
-            // combodias
-            // 
-            this.combodias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combodias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combodias.FormattingEnabled = true;
-            this.combodias.Items.AddRange(new object[] {
-            "1 dia",
-            "2 dias",
-            "3 dias",
-            "4 dias",
-            "5 dias"});
-            this.combodias.Location = new System.Drawing.Point(232, 570);
-            this.combodias.Name = "combodias";
-            this.combodias.Size = new System.Drawing.Size(121, 28);
-            this.combodias.TabIndex = 151;
-            this.combodias.Visible = false;
             // 
             // label2
             // 
@@ -863,6 +829,46 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
+            // combohoras
+            // 
+            this.combohoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.combohoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combohoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.combohoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combohoras.ForeColor = System.Drawing.Color.White;
+            this.combohoras.FormattingEnabled = true;
+            this.combohoras.Items.AddRange(new object[] {
+            "1 hora",
+            "2 horas",
+            "3 horas",
+            "4 horas",
+            "5 horas"});
+            this.combohoras.Location = new System.Drawing.Point(399, 570);
+            this.combohoras.Name = "combohoras";
+            this.combohoras.Size = new System.Drawing.Size(121, 28);
+            this.combohoras.TabIndex = 158;
+            this.combohoras.Visible = false;
+            // 
+            // combodias
+            // 
+            this.combodias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.combodias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combodias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.combodias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combodias.ForeColor = System.Drawing.Color.White;
+            this.combodias.FormattingEnabled = true;
+            this.combodias.Items.AddRange(new object[] {
+            "1 dia",
+            "2 dias",
+            "3 dias",
+            "4 dias",
+            "5 dias"});
+            this.combodias.Location = new System.Drawing.Point(227, 571);
+            this.combodias.Name = "combodias";
+            this.combodias.Size = new System.Drawing.Size(121, 28);
+            this.combodias.TabIndex = 157;
+            this.combodias.Visible = false;
+            // 
             // update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -870,12 +876,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::EBEST.Properties.Resources.fondoupdate2;
             this.ClientSize = new System.Drawing.Size(780, 792);
+            this.Controls.Add(this.combohoras);
+            this.Controls.Add(this.combodias);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.combohoras);
-            this.Controls.Add(this.combodias);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtrepetidos);
             this.Controls.Add(this.checkBox2);
@@ -1009,13 +1015,13 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.ComboBox combohoras;
-        private System.Windows.Forms.ComboBox combodias;
         private System.Windows.Forms.Label label2;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
+        private System.Windows.Forms.ComboBox combohoras;
+        private System.Windows.Forms.ComboBox combodias;
     }
 }

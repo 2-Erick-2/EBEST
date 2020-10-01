@@ -125,7 +125,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(123, 547);
+            this.label4.Location = new System.Drawing.Point(123, 545);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 24);
             this.label4.TabIndex = 45;
@@ -155,7 +155,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(123, 512);
+            this.label3.Location = new System.Drawing.Point(123, 515);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 24);
             this.label3.TabIndex = 42;
@@ -247,7 +247,7 @@
             // 
             // txtnumero
             // 
-            this.txtnumero.Location = new System.Drawing.Point(308, 154);
+            this.txtnumero.Location = new System.Drawing.Point(308, 162);
             this.txtnumero.MaxLength = 10;
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(310, 20);
@@ -265,7 +265,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(309, 119);
+            this.txtnombre.Location = new System.Drawing.Point(309, 130);
             this.txtnombre.Multiline = true;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(309, 20);
@@ -300,7 +300,7 @@
             this.lblnumero.AutoSize = true;
             this.lblnumero.BackColor = System.Drawing.Color.White;
             this.lblnumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnumero.Location = new System.Drawing.Point(123, 154);
+            this.lblnumero.Location = new System.Drawing.Point(123, 162);
             this.lblnumero.Name = "lblnumero";
             this.lblnumero.Size = new System.Drawing.Size(79, 24);
             this.lblnumero.TabIndex = 29;
@@ -311,7 +311,7 @@
             this.lblnombre.AutoSize = true;
             this.lblnombre.BackColor = System.Drawing.Color.White;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.Location = new System.Drawing.Point(122, 114);
+            this.lblnombre.Location = new System.Drawing.Point(122, 125);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(79, 24);
             this.lblnombre.TabIndex = 28;
@@ -697,7 +697,7 @@
             // 
             // txtmodelo
             // 
-            this.txtmodelo.Location = new System.Drawing.Point(308, 190);
+            this.txtmodelo.Location = new System.Drawing.Point(308, 194);
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(310, 20);
             this.txtmodelo.TabIndex = 34;
@@ -707,7 +707,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(123, 190);
+            this.label5.Location = new System.Drawing.Point(123, 194);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 24);
             this.label5.TabIndex = 82;
@@ -740,7 +740,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(304, 219);
+            this.label19.Location = new System.Drawing.Point(304, 222);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(208, 24);
             this.label19.TabIndex = 121;
@@ -748,7 +748,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 200);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, 359);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 178);
             this.pictureBox1.TabIndex = 122;
