@@ -13,6 +13,9 @@ using System.Globalization;
 using ZXing;
 using System.Net.Http.Headers;
 
+using IronBarCode;
+
+
 namespace EBEST
 {
     public partial class crearrevision : Form
@@ -110,26 +113,38 @@ namespace EBEST
             }
                 c.enviarCorreo(txtEmisor.Text, txtPassword.Text, "Hora: " + txthorayfecha.Text +"\nNumero: "+ txtnumero.Text+"\nModelo: "+ txtmodelo.Text+"\n Descripcion: "+txtobservaciones.Text+"\n Orden: "+txtorden.Text,txtnombre.Text + " " +txtmodelo.Text + " "+ txtorden.Text , "erick.tadeo@hotmail.com");
 
-                BarcodeWriter br = new BarcodeWriter();
+                ZXing.BarcodeWriter br = new ZXing.BarcodeWriter();
                 br.Format = BarcodeFormat.QR_CODE;
                 Bitmap bm = new Bitmap(br.Write("http:sexto-a.epizy.com/"+txtorden.Text), 150, 150);
                 pictureBox1.Image = bm;
 
 
-                BarcodeWriter bre = new BarcodeWriter();
+                ZXing.BarcodeWriter bre = new ZXing.BarcodeWriter();
                 bre.Format = BarcodeFormat.CODE_128;
-                Bitmap bm2 = new Bitmap(bre.Write(txtorden.Text), 170, 90);
-                pictureBox2.Image = bm2;
-
                 
+                Bitmap bm2 = new Bitmap(bre.Write(txtorden.Text), 150, 50);
+                //pictureBox2.Image = bm2;
+
+
+
+
+                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
+                MyBarCode.ResizeTo(150, 50).SetMargins(0);
+                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+
+                //pictureBox1.Image = MyBarCodeBitmap;
+                pictureBox2.Image = MyBarCode.Image;
+
+
                 //Imprimirrecibo();
-                
-                printPreviewDialog1.Document = printDocument1;
-                
-                //printDocument1.Print();
-                
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Document = printDocument1;
+                
+                printDocument1.Print();
+             
+
+
+                //printPreviewDialog1.Show();
 
                 BrotherPrintThis();
                 //printDocument1.Print();
