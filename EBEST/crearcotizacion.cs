@@ -140,13 +140,14 @@ namespace EBEST
                 checkBoxrevision.Checked = false;*/
 
 
-                //BrotherPrintThis();
-                printPreviewDialog1.Document = printDocument1;
+                BrotherPrintThis();
 
-                //printDocument1.Print();
+                //printPreviewDialog1.Document = printDocument1;
+
+                printDocument1.Print();
                 //printDocument1.Print();
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Show();
 
 
 

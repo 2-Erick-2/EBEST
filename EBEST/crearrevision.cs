@@ -115,18 +115,26 @@ namespace EBEST
                 Bitmap bm = new Bitmap(br.Write("http:sexto-a.epizy.com/"+txtorden.Text), 150, 150);
                 pictureBox1.Image = bm;
 
-                br.Format = BarcodeFormat.CODE_128;
-                Bitmap bm2 = new Bitmap(br.Write(txtorden.Text), 120, 80);
+
+                BarcodeWriter bre = new BarcodeWriter();
+                bre.Format = BarcodeFormat.CODE_128;
+                Bitmap bm2 = new Bitmap(bre.Write(txtorden.Text), 170, 90);
                 pictureBox2.Image = bm2;
 
+                
                 //Imprimirrecibo();
+                
                 printPreviewDialog1.Document = printDocument1;
                 
                 //printDocument1.Print();
-                //printDocument1.Print();
+                
 
                 printPreviewDialog1.Show();
-                //BrotherPrintThis();
+
+                BrotherPrintThis();
+                //printDocument1.Print();
+
+
             }
 
 
@@ -317,7 +325,7 @@ namespace EBEST
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 450));
             e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 490));
-            e.Graphics.DrawImage(pictureBox1.Image, 70, 530);
+            e.Graphics.DrawImage(pictureBox2.Image, 70, 550);
 
            // e.Graphics.DrawImage(pictureBox1.Image, 70, 600);
             

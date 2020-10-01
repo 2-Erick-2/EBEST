@@ -150,13 +150,13 @@ namespace EBEST
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, destino);
 
 
-                //BrotherPrintThis();
-                printPreviewDialog1.Document = printDocument1;
+                BrotherPrintThis();
+                //printPreviewDialog1.Document = printDocument1;
 
-                //printDocument1.Print();
-                //printDocument1.Print();
+                printDocument1.Print();
+                printDocument1.Print();
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Show();
 
 
 

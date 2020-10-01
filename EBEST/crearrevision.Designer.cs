@@ -275,10 +275,9 @@
             // 
             this.pictureBox2.Location = new System.Drawing.Point(6, 310);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(62, 96);
+            this.pictureBox2.Size = new System.Drawing.Size(244, 176);
             this.pictureBox2.TabIndex = 105;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
             // 
             // label2
             // 
