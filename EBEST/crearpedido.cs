@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using bpac;
+using IronBarCode;
 
 namespace EBEST
 {
@@ -23,7 +24,7 @@ namespace EBEST
         public crearpedido()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source= \\TADEOEBEST\basededatoscompartida\Dulceria_be.mdb; Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source= \\TADEOEBEST\basededatoscompartida\Ebest_be.accdb; Persist Security Info=False;";
             timer1.Enabled = true;
         }
 
@@ -149,7 +150,12 @@ namespace EBEST
                             String todo3 = salto + txtnumero.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "Parte 2: " + txtparte2.Text + "\n Precio parte 2: " + txtprecioparte2.Text + "Parte 3: " + txtparte3.Text + "\n Precio parte 3: " + txtparteprecio3.Text + "Parte 4: " + txtparte4.Text + "\n Precio parte 4: " + txtparteprecio4.Text + "Parte 5: " + txtparte5.Text + "\n Precio parte 5: " + txtparteprecio5.Text + "Parte 6: " + txtparte6.Text + "\n Precio parte 6: " + txtparteprecio6.Text +"\n Importe: "+txtcosto.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, destino);
 
+                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
+                MyBarCode.ResizeTo(150, 50).SetMargins(0);
+                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
 
+                //pictureBox1.Image = MyBarCodeBitmap;
+                pictureBox1.Image = MyBarCode.Image;
                 BrotherPrintThis();
                 //printPreviewDialog1.Document = printDocument1;
 
@@ -590,8 +596,7 @@ namespace EBEST
 
                     if(txtprecioparte2.Text == "")
                     {
-                        MessageBox.Show("Introduce una cantidad");
-                        txtprecioparte2.Text = "0";
+                        
 
                     }
                     else
@@ -627,8 +632,7 @@ namespace EBEST
 
                     if ( txtparteprecio3.Text == "" )
                     {
-                        MessageBox.Show("Introduce una cantidad");
-                        txtparteprecio3.Text = "0";
+                       
 
                     }
                     else
@@ -661,8 +665,7 @@ namespace EBEST
 
                     if (txtparteprecio4.Text == "")
                     {
-                        MessageBox.Show("Introduce una cantidad");
-                        txtparteprecio4.Text = "0";
+                      
 
                     }
                     else
@@ -697,8 +700,7 @@ namespace EBEST
 
                     if (txtparteprecio5.Text == "")
                     {
-                        MessageBox.Show("Introduce una cantidad");
-                        txtparteprecio5.Text = "0";
+                       
 
                     }
                     else
@@ -734,8 +736,7 @@ namespace EBEST
 
                     if (txtparteprecio6.Text == "")
                     {
-                        MessageBox.Show("Introduce una cantidad");
-                        txtparteprecio6.Text = "0";
+                     
 
                     }
                     else
@@ -834,7 +835,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 590));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 615));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
-                //e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 680);
             }
 
 
@@ -857,7 +858,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 655));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
-                //e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 720);
 
             }
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == false && checkBox6.Checked == false && checkBox7.Checked == false)
@@ -881,7 +882,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 695));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 760);
             }
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == false && checkBox7.Checked == false)
@@ -908,7 +909,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 735));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 800);
             }
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == true && txtparte5.Text != "" && checkBox7.Checked == false)
@@ -936,7 +937,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 770));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 840);
             }
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == true && txtparte5.Text != "" && checkBox7.Checked == true && txtparte6.Text != "")
@@ -966,7 +967,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 815));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 830));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox1.Image, 70, 880);
             }
         }
 
@@ -1069,6 +1070,41 @@ namespace EBEST
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtprecioparte1_Click(object sender, EventArgs e)
+        {
+            txtprecioparte1.Text = "";
+        }
+
+        private void txtprecioparte2_Click(object sender, EventArgs e)
+        {
+            txtprecioparte2.Text = "";
+
+        }
+
+        private void txtparteprecio3_Click(object sender, EventArgs e)
+        {
+            txtparteprecio3.Text = "";
+
+        }
+
+        private void txtparteprecio4_Click(object sender, EventArgs e)
+        {
+            txtparteprecio4.Text = "";
+
+        }
+
+        private void txtparteprecio5_Click(object sender, EventArgs e)
+        {
+            txtparteprecio5.Text = "";
+
+        }
+
+        private void txtparteprecio6_Click(object sender, EventArgs e)
+        {
+            txtparteprecio6.Text = "";
+
         }
     }
 }

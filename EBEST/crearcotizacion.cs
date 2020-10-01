@@ -12,6 +12,7 @@ using System.Globalization;
 using bpac;
 using ZXing;
 using System.Net.Http.Headers;
+using IronBarCode;
 
 namespace EBEST
 {
@@ -131,6 +132,14 @@ namespace EBEST
                             Console.WriteLine(todo);
                             string asunto = txtnombre.Text + "   " + pedido + " Orden: " + txtorden.Text;
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
+
+
+                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
+                MyBarCode.ResizeTo(150, 50).SetMargins(0);
+                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+
+                //pictureBox1.Image = MyBarCodeBitmap;
+                pictureBox2.Image = MyBarCode.Image;
                 /*txtnombre.Text = "";
                 txtnumero.Text = "";
                 txtobservaciones.Text = "";
@@ -854,7 +863,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 550));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 575));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 595));
-                e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 640);
             }
 
                
@@ -872,7 +881,7 @@ namespace EBEST
              e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 590));
              e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 615));
              e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
-             e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+             e.Graphics.DrawImage(pictureBox2.Image, 70, 680);
 
             }
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == false && checkBox6.Checked == false && checkBox7.Checked == false)
@@ -893,7 +902,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 655));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
-               // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 720);
             }
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == false && checkBox7.Checked == false)
@@ -917,7 +926,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 695));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 760);
             }
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == true && txtparte5.Text != "" && checkBox7.Checked == false)
@@ -942,7 +951,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 730));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 800);
             }
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == true && txtparte5.Text != "" && checkBox7.Checked == true && txtparte6.Text != "")
@@ -969,7 +978,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 775));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
-                // e.Graphics.DrawImage(pictureBox1.Image, 70, 640);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 840);
             }
 
 

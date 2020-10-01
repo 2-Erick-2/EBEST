@@ -91,6 +91,8 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmisor
@@ -392,6 +394,7 @@
             this.txtprecioparte1.Size = new System.Drawing.Size(93, 20);
             this.txtprecioparte1.TabIndex = 36;
             this.txtprecioparte1.Text = "0";
+            this.txtprecioparte1.Click += new System.EventHandler(this.txtprecioparte1_Click);
             this.txtprecioparte1.TextChanged += new System.EventHandler(this.txtprecioparte1_TextChanged);
             this.txtprecioparte1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte1_KeyPress);
             this.txtprecioparte1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtprecioparte1_KeyUp);
@@ -427,6 +430,7 @@
             this.txtprecioparte2.TabIndex = 38;
             this.txtprecioparte2.Text = "0";
             this.txtprecioparte2.Visible = false;
+            this.txtprecioparte2.Click += new System.EventHandler(this.txtprecioparte2_Click);
             this.txtprecioparte2.TextChanged += new System.EventHandler(this.txtprecioparte2_TextChanged);
             this.txtprecioparte2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte2_KeyPress);
             // 
@@ -470,6 +474,7 @@
             this.txtparteprecio3.TabIndex = 40;
             this.txtparteprecio3.Text = "0";
             this.txtparteprecio3.Visible = false;
+            this.txtparteprecio3.Click += new System.EventHandler(this.txtparteprecio3_Click);
             this.txtparteprecio3.TextChanged += new System.EventHandler(this.txtparteprecio3_TextChanged);
             this.txtparteprecio3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio3_KeyPress);
             // 
@@ -513,6 +518,7 @@
             this.txtparteprecio4.TabIndex = 42;
             this.txtparteprecio4.Text = "0";
             this.txtparteprecio4.Visible = false;
+            this.txtparteprecio4.Click += new System.EventHandler(this.txtparteprecio4_Click);
             this.txtparteprecio4.TextChanged += new System.EventHandler(this.txtparteprecio4_TextChanged);
             this.txtparteprecio4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio4_KeyPress);
             // 
@@ -556,6 +562,7 @@
             this.txtparteprecio5.TabIndex = 44;
             this.txtparteprecio5.Text = "0";
             this.txtparteprecio5.Visible = false;
+            this.txtparteprecio5.Click += new System.EventHandler(this.txtparteprecio5_Click);
             this.txtparteprecio5.TextChanged += new System.EventHandler(this.txtparteprecio5_TextChanged);
             this.txtparteprecio5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio5_KeyPress);
             // 
@@ -599,6 +606,7 @@
             this.txtparteprecio6.TabIndex = 46;
             this.txtparteprecio6.Text = "0";
             this.txtparteprecio6.Visible = false;
+            this.txtparteprecio6.Click += new System.EventHandler(this.txtparteprecio6_Click);
             this.txtparteprecio6.TextChanged += new System.EventHandler(this.txtparteprecio6_TextChanged);
             this.txtparteprecio6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio6_KeyPress);
             // 
@@ -738,12 +746,22 @@
             this.label19.TabIndex = 121;
             this.label19.Text = "PARTES EN PEDIDO";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 200);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 178);
+            this.pictureBox1.TabIndex = 122;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // crearpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EBEST.Properties.Resources.fondocrearrevision2;
             this.ClientSize = new System.Drawing.Size(780, 807);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtrepetidos);
             this.Controls.Add(this.txtmodelo);
@@ -805,6 +823,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "crearpedido";
             this.Load += new System.EventHandler(this.crearpedido_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -872,5 +891,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
