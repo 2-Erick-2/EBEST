@@ -294,6 +294,7 @@
             // combodias
             // 
             this.combodias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combodias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combodias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combodias.FormattingEnabled = true;
             this.combodias.Items.AddRange(new object[] {
@@ -310,6 +311,7 @@
             // combohoras
             // 
             this.combohoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combohoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combohoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combohoras.FormattingEnabled = true;
             this.combohoras.Items.AddRange(new object[] {
