@@ -36,7 +36,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EBEST.Properties.Resources.EBESTSINFONDO;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 68);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(666, 296);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
