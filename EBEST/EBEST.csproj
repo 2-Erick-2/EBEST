@@ -428,6 +428,7 @@
     <Content Include="icono2ebe3st %281%29.ico" />
     <Content Include="icono2ebe3st.ico" />
     <Content Include="iconoebest.ico" />
+    <None Include="Resources\fondobienvenida.jpg" />
     <None Include="Resources\profile_picture_user_icon_153847.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\fondoactualizacion.jpg" />

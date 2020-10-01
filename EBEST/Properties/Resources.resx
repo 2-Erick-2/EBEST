@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo2ebest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo2ebest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondoactualizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondoactualizacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoebest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoebest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondoebest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondoebest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,17 +133,17 @@
   <data name="fondocrearrevision2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondocrearrevision2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondoactualizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondoactualizacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondocrearrevision" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondocrearrevision.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo2ebest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo2ebest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EBESTSINFONDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EBESTSINFONDO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoebest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoebest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondocrearrevision" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondocrearrevision.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile_picture_user_icon_153847" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile_picture_user_icon_153847.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondoupdate2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondoupdate2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,7 +154,7 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profile_picture_user_icon_153847" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile_picture_user_icon_153847.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondobienvenida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondobienvenida.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

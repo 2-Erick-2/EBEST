@@ -93,6 +93,16 @@ namespace EBEST.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondobienvenida {
+            get {
+                object obj = ResourceManager.GetObject("fondobienvenida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondocrearrevision {
             get {
                 object obj = ResourceManager.GetObject("fondocrearrevision", resourceCulture);
