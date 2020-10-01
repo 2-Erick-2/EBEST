@@ -90,6 +90,7 @@
             this.txtrepetidos = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtEmisor
@@ -110,7 +111,7 @@
             // 
             // txtrestante
             // 
-            this.txtrestante.Location = new System.Drawing.Point(310, 517);
+            this.txtrestante.Location = new System.Drawing.Point(310, 547);
             this.txtrestante.Name = "txtrestante";
             this.txtrestante.ReadOnly = true;
             this.txtrestante.Size = new System.Drawing.Size(308, 20);
@@ -122,7 +123,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(123, 517);
+            this.label4.Location = new System.Drawing.Point(123, 547);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 24);
             this.label4.TabIndex = 45;
@@ -131,7 +132,7 @@
             // 
             // txtcosto
             // 
-            this.txtcosto.Location = new System.Drawing.Point(310, 457);
+            this.txtcosto.Location = new System.Drawing.Point(310, 487);
             this.txtcosto.Name = "txtcosto";
             this.txtcosto.ReadOnly = true;
             this.txtcosto.Size = new System.Drawing.Size(308, 20);
@@ -140,7 +141,7 @@
             // 
             // txtabono
             // 
-            this.txtabono.Location = new System.Drawing.Point(310, 487);
+            this.txtabono.Location = new System.Drawing.Point(310, 517);
             this.txtabono.Name = "txtabono";
             this.txtabono.Size = new System.Drawing.Size(308, 20);
             this.txtabono.TabIndex = 47;
@@ -152,7 +153,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(123, 482);
+            this.label3.Location = new System.Drawing.Point(123, 512);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 24);
             this.label3.TabIndex = 42;
@@ -164,7 +165,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(123, 457);
+            this.label2.Location = new System.Drawing.Point(123, 487);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 24);
             this.label2.TabIndex = 41;
@@ -207,7 +208,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 627);
+            this.label1.Location = new System.Drawing.Point(125, 644);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 25);
             this.label1.TabIndex = 37;
@@ -219,7 +220,7 @@
             this.txthorayfecha.AutoSize = true;
             this.txthorayfecha.BackColor = System.Drawing.Color.White;
             this.txthorayfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthorayfecha.Location = new System.Drawing.Point(301, 594);
+            this.txthorayfecha.Location = new System.Drawing.Point(314, 611);
             this.txthorayfecha.Name = "txthorayfecha";
             this.txthorayfecha.Size = new System.Drawing.Size(60, 24);
             this.txthorayfecha.TabIndex = 36;
@@ -273,7 +274,7 @@
             this.lblhorayfecha.AutoSize = true;
             this.lblhorayfecha.BackColor = System.Drawing.Color.White;
             this.lblhorayfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhorayfecha.Location = new System.Drawing.Point(118, 594);
+            this.lblhorayfecha.Location = new System.Drawing.Point(126, 611);
             this.lblhorayfecha.Name = "lblhorayfecha";
             this.lblhorayfecha.Size = new System.Drawing.Size(124, 24);
             this.lblhorayfecha.TabIndex = 31;
@@ -323,7 +324,7 @@
             this.txtorden.AutoSize = true;
             this.txtorden.BackColor = System.Drawing.Color.White;
             this.txtorden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtorden.Location = new System.Drawing.Point(305, 632);
+            this.txtorden.Location = new System.Drawing.Point(318, 649);
             this.txtorden.Name = "txtorden";
             this.txtorden.Size = new System.Drawing.Size(52, 24);
             this.txtorden.TabIndex = 49;
@@ -334,7 +335,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(123, 548);
+            this.label6.Location = new System.Drawing.Point(123, 576);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 24);
             this.label6.TabIndex = 50;
@@ -345,7 +346,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.White;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(319, 548);
+            this.checkBox1.Location = new System.Drawing.Point(319, 574);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(117, 33);
             this.checkBox1.TabIndex = 48;
@@ -358,7 +359,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.White;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(480, 548);
+            this.checkBox2.Location = new System.Drawing.Point(480, 574);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(130, 33);
             this.checkBox2.TabIndex = 49;
@@ -371,7 +372,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(125, 222);
+            this.label7.Location = new System.Drawing.Point(125, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 53;
@@ -379,14 +380,14 @@
             // 
             // txtparte1
             // 
-            this.txtparte1.Location = new System.Drawing.Point(308, 227);
+            this.txtparte1.Location = new System.Drawing.Point(308, 256);
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
             this.txtparte1.TabIndex = 35;
             // 
             // txtprecioparte1
             // 
-            this.txtprecioparte1.Location = new System.Drawing.Point(523, 226);
+            this.txtprecioparte1.Location = new System.Drawing.Point(523, 255);
             this.txtprecioparte1.Name = "txtprecioparte1";
             this.txtprecioparte1.Size = new System.Drawing.Size(93, 20);
             this.txtprecioparte1.TabIndex = 36;
@@ -400,7 +401,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(438, 222);
+            this.label8.Location = new System.Drawing.Point(438, 251);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 24);
             this.label8.TabIndex = 56;
@@ -411,7 +412,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(438, 263);
+            this.label9.Location = new System.Drawing.Point(438, 292);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 24);
             this.label9.TabIndex = 60;
@@ -420,7 +421,7 @@
             // 
             // txtprecioparte2
             // 
-            this.txtprecioparte2.Location = new System.Drawing.Point(523, 267);
+            this.txtprecioparte2.Location = new System.Drawing.Point(523, 296);
             this.txtprecioparte2.Name = "txtprecioparte2";
             this.txtprecioparte2.Size = new System.Drawing.Size(93, 20);
             this.txtprecioparte2.TabIndex = 38;
@@ -431,7 +432,7 @@
             // 
             // txtparte2
             // 
-            this.txtparte2.Location = new System.Drawing.Point(308, 268);
+            this.txtparte2.Location = new System.Drawing.Point(308, 297);
             this.txtparte2.Name = "txtparte2";
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
             this.txtparte2.TabIndex = 37;
@@ -442,7 +443,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(125, 263);
+            this.label10.Location = new System.Drawing.Point(125, 292);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 24);
             this.label10.TabIndex = 57;
@@ -454,7 +455,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(439, 306);
+            this.label11.Location = new System.Drawing.Point(439, 335);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 24);
             this.label11.TabIndex = 64;
@@ -463,7 +464,7 @@
             // 
             // txtparteprecio3
             // 
-            this.txtparteprecio3.Location = new System.Drawing.Point(524, 310);
+            this.txtparteprecio3.Location = new System.Drawing.Point(524, 339);
             this.txtparteprecio3.Name = "txtparteprecio3";
             this.txtparteprecio3.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio3.TabIndex = 40;
@@ -474,7 +475,7 @@
             // 
             // txtparte3
             // 
-            this.txtparte3.Location = new System.Drawing.Point(309, 311);
+            this.txtparte3.Location = new System.Drawing.Point(309, 340);
             this.txtparte3.Name = "txtparte3";
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
             this.txtparte3.TabIndex = 39;
@@ -485,7 +486,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(126, 306);
+            this.label12.Location = new System.Drawing.Point(126, 335);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 24);
             this.label12.TabIndex = 61;
@@ -497,7 +498,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(438, 342);
+            this.label13.Location = new System.Drawing.Point(438, 371);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 24);
             this.label13.TabIndex = 68;
@@ -506,7 +507,7 @@
             // 
             // txtparteprecio4
             // 
-            this.txtparteprecio4.Location = new System.Drawing.Point(523, 346);
+            this.txtparteprecio4.Location = new System.Drawing.Point(523, 375);
             this.txtparteprecio4.Name = "txtparteprecio4";
             this.txtparteprecio4.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio4.TabIndex = 42;
@@ -517,7 +518,7 @@
             // 
             // txtparte4
             // 
-            this.txtparte4.Location = new System.Drawing.Point(308, 347);
+            this.txtparte4.Location = new System.Drawing.Point(308, 376);
             this.txtparte4.Name = "txtparte4";
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
             this.txtparte4.TabIndex = 41;
@@ -528,7 +529,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(125, 342);
+            this.label14.Location = new System.Drawing.Point(125, 371);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 24);
             this.label14.TabIndex = 65;
@@ -540,7 +541,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(439, 378);
+            this.label15.Location = new System.Drawing.Point(439, 407);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(79, 24);
             this.label15.TabIndex = 72;
@@ -549,7 +550,7 @@
             // 
             // txtparteprecio5
             // 
-            this.txtparteprecio5.Location = new System.Drawing.Point(524, 382);
+            this.txtparteprecio5.Location = new System.Drawing.Point(524, 411);
             this.txtparteprecio5.Name = "txtparteprecio5";
             this.txtparteprecio5.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio5.TabIndex = 44;
@@ -560,7 +561,7 @@
             // 
             // txtparte5
             // 
-            this.txtparte5.Location = new System.Drawing.Point(309, 383);
+            this.txtparte5.Location = new System.Drawing.Point(309, 412);
             this.txtparte5.Name = "txtparte5";
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
             this.txtparte5.TabIndex = 43;
@@ -571,7 +572,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(126, 378);
+            this.label16.Location = new System.Drawing.Point(126, 407);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(68, 24);
             this.label16.TabIndex = 69;
@@ -583,7 +584,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(440, 418);
+            this.label17.Location = new System.Drawing.Point(440, 447);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 24);
             this.label17.TabIndex = 76;
@@ -592,7 +593,7 @@
             // 
             // txtparteprecio6
             // 
-            this.txtparteprecio6.Location = new System.Drawing.Point(525, 422);
+            this.txtparteprecio6.Location = new System.Drawing.Point(525, 451);
             this.txtparteprecio6.Name = "txtparteprecio6";
             this.txtparteprecio6.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio6.TabIndex = 46;
@@ -603,7 +604,7 @@
             // 
             // txtparte6
             // 
-            this.txtparte6.Location = new System.Drawing.Point(310, 423);
+            this.txtparte6.Location = new System.Drawing.Point(310, 452);
             this.txtparte6.Name = "txtparte6";
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
             this.txtparte6.TabIndex = 45;
@@ -614,7 +615,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(127, 418);
+            this.label18.Location = new System.Drawing.Point(127, 447);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 24);
             this.label18.TabIndex = 73;
@@ -626,7 +627,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.BackColor = System.Drawing.Color.White;
             this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Location = new System.Drawing.Point(640, 270);
+            this.checkBox3.Location = new System.Drawing.Point(640, 299);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(60, 17);
             this.checkBox3.TabIndex = 77;
@@ -639,7 +640,7 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.White;
             this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox4.Location = new System.Drawing.Point(641, 314);
+            this.checkBox4.Location = new System.Drawing.Point(641, 343);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(60, 17);
             this.checkBox4.TabIndex = 78;
@@ -652,7 +653,7 @@
             this.checkBox5.AutoSize = true;
             this.checkBox5.BackColor = System.Drawing.Color.White;
             this.checkBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox5.Location = new System.Drawing.Point(640, 350);
+            this.checkBox5.Location = new System.Drawing.Point(640, 379);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(60, 17);
             this.checkBox5.TabIndex = 79;
@@ -665,7 +666,7 @@
             this.checkBox6.AutoSize = true;
             this.checkBox6.BackColor = System.Drawing.Color.White;
             this.checkBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox6.Location = new System.Drawing.Point(640, 384);
+            this.checkBox6.Location = new System.Drawing.Point(640, 413);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(63, 17);
             this.checkBox6.TabIndex = 80;
@@ -678,7 +679,7 @@
             this.checkBox7.AutoSize = true;
             this.checkBox7.BackColor = System.Drawing.Color.White;
             this.checkBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox7.Location = new System.Drawing.Point(640, 422);
+            this.checkBox7.Location = new System.Drawing.Point(640, 451);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(60, 17);
             this.checkBox7.TabIndex = 81;
@@ -726,12 +727,24 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.White;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(304, 219);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(208, 24);
+            this.label19.TabIndex = 121;
+            this.label19.Text = "PARTES EN PEDIDO";
+            // 
             // crearpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EBEST.Properties.Resources.fondocrearrevision2;
             this.ClientSize = new System.Drawing.Size(780, 807);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.txtrepetidos);
             this.Controls.Add(this.txtmodelo);
             this.Controls.Add(this.label5);
@@ -858,5 +871,6 @@
         private System.Windows.Forms.TextBox txtrepetidos;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label label19;
     }
 }
