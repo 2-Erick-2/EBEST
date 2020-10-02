@@ -19,7 +19,7 @@ namespace EBEST
         public actualizacion()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source= \\TADEOEBEST\basededatoscompartida\Dulceria_be.mdb; Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source= \\TADEOEBEST\basededatoscompartida\Ebest_be.accdb; Persist Security Info=False;";
 
         }
 
