@@ -109,9 +109,9 @@ namespace EBEST
                             connection.Open();
                             OleDbCommand command = new OleDbCommand();
                             command.Connection = connection;
-                            command.CommandText = "insert into pedidos (orden,tipopedido,nombre,numero,observaciones,horayfecha,importe,abono,pagorequerido,espera) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtcosto.Text + "','" + txtabono.Text + "','" + txtrestante.Text + "','" + espera + "')";
+                            command.CommandText = "insert into pedidos (orden,tipopedido,nombre,numero,observaciones,horayfecha,importe,abono,pagorequerido,espera,parte1,precio1,parte2,precio2,parte3,precio3,parte4,precio4,parte5,precio5,parte6,precio6,modelo) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtcosto.Text + "','" + txtabono.Text + "','" + txtrestante.Text + "','" + espera + "','" + txtparte1.Text + "','" + txtprecioparte1.Text + "','" + txtparte2.Text + "','" + txtprecioparte2.Text + "','" + txtparte3.Text + "','" + txtparteprecio3.Text + "','" + txtparte4.Text + "','" + txtparteprecio4.Text + "','" + txtparte5.Text + "','" + txtparteprecio5.Text + "','" + txtparte6.Text + "','" + txtparteprecio6.Text + "','" + txtmodelo.Text + "')";
                             command.ExecuteNonQuery();
-                            command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "')";
+                            command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha,modelo) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','"+ txtmodelo.Text+"')";
                             command.ExecuteNonQuery();
                             connection.Close();
                             MessageBox.Show("Datos Guardados");

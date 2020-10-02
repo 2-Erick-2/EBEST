@@ -491,6 +491,146 @@ namespace EBEST
                     //pictureBox1.Image = MyBarCodeBitmap;
                     pictureBox2.Image = MyBarCode.Image;
 
+                    int lonp1 = txtprecioparte1.Text.Length;
+                    int lonp2 = txtprecioparte2.Text.Length;
+                    int lonp3 = txtparteprecio3.Text.Length;
+                    int lonp4 = txtparteprecio4.Text.Length;
+                    int lonp5 = txtparteprecio5.Text.Length;
+                    int lonp6 = txtparteprecio6.Text.Length;
+                    int loncosto = txtcosto.Text.Length;
+
+                    if (lonp1 == 1)
+                    {
+                        txtprecioparte1.Text = "        " + txtprecioparte1.Text;
+                    }
+                    else if (lonp1 == 2)
+                    {
+                        txtprecioparte1.Text = "      " + txtprecioparte1.Text;
+                    }
+                    else if (lonp1 == 3)
+                    {
+                        txtprecioparte1.Text = "    " + txtprecioparte1.Text;
+                    }
+                    else if (lonp1 == 4)
+                    {
+                        txtprecioparte1.Text = "  " + txtprecioparte1.Text;
+                    }
+
+
+
+                    if (lonp2 == 1)
+                    {
+                        txtprecioparte2.Text = "        " + txtprecioparte2.Text;
+                    }
+                    else if (lonp2 == 2)
+                    {
+                        txtprecioparte2.Text = "      " + txtprecioparte2.Text;
+                    }
+                    else if (lonp2 == 3)
+                    {
+                        txtprecioparte2.Text = "    " + txtprecioparte2.Text;
+                    }
+                    else if (lonp2 == 4)
+                    {
+                        txtprecioparte2.Text = "  " + txtprecioparte2.Text;
+                    }
+
+
+                    if (lonp3 == 1)
+                    {
+                        txtparteprecio3.Text = "        " + txtparteprecio3.Text;
+                    }
+                    else if (lonp3 == 2)
+                    {
+                        txtparteprecio3.Text = "      " + txtparteprecio3.Text;
+                    }
+                    else if (lonp3 == 3)
+                    {
+                        txtparteprecio3.Text = "    " + txtparteprecio3.Text;
+                    }
+                    else if (lonp3 == 4)
+                    {
+                        txtparteprecio3.Text = "  " + txtparteprecio3.Text;
+                    }
+
+
+                    if (lonp4 == 1)
+                    {
+                        txtparteprecio4.Text = "        " + txtparteprecio4.Text;
+                    }
+                    else if (lonp4 == 2)
+                    {
+                        txtparteprecio4.Text = "      " + txtparteprecio4.Text;
+                    }
+                    else if (lonp4 == 3)
+                    {
+                        txtparteprecio4.Text = "    " + txtparteprecio4.Text;
+                    }
+                    else if (lonp4 == 4)
+                    {
+                        txtparteprecio4.Text = "  " + txtparteprecio4.Text;
+                    }
+
+                    if (lonp5 == 1)
+                    {
+                        txtparteprecio5.Text = "        " + txtparteprecio5.Text;
+                    }
+                    else if (lonp5 == 2)
+                    {
+                        txtparteprecio5.Text = "      " + txtparteprecio5.Text;
+                    }
+                    else if (lonp5 == 3)
+                    {
+                        txtparteprecio5.Text = "    " + txtparteprecio5.Text;
+                    }
+                    else if (lonp5 == 4)
+                    {
+                        txtparteprecio5.Text = "  " + txtparteprecio5.Text;
+                    }
+
+
+                    if (lonp6 == 1)
+                    {
+                        txtparteprecio6.Text = "        " + txtparteprecio6.Text;
+                    }
+                    else if (lonp6 == 2)
+                    {
+                        txtparteprecio6.Text = "      " + txtparteprecio6.Text;
+                    }
+                    else if (lonp6 == 3)
+                    {
+                        txtparteprecio6.Text = "    " + txtparteprecio6.Text;
+                    }
+                    else if (lonp6 == 4)
+                    {
+                        txtparteprecio6.Text = "  " + txtparteprecio6.Text;
+                    }
+
+                    if (loncosto == 1)
+                    {
+                        txtcosto.Text = "        " + txtcosto.Text;
+                    }
+                    else if (loncosto == 2)
+                    {
+                        txtcosto.Text = "      " + txtcosto.Text;
+                    }
+                    else if (loncosto == 3)
+                    {
+                        txtcosto.Text = "    " + txtcosto.Text;
+                    }
+                    else if (loncosto == 4)
+                    {
+                        txtcosto.Text = "  " + txtcosto.Text;
+                    }
+
+
+
+
+
+
+
+
+
                     printPreviewDialog1.Document = printDocument1;
 
                     //printDocument1.Print();
@@ -552,6 +692,7 @@ namespace EBEST
                                 txtparte6.Visible = false;
                                 txtparteprecio6.Visible = false;
                                 txtbusqueda.Text = "";
+                    
                     label2.Visible = false;
                     checkBox4.Visible = false;
                     checkBox3.Visible = false;
@@ -649,6 +790,178 @@ namespace EBEST
 
 
 
+                    int lonp1 = txtprecioparte1.Text.Length;
+                    int lonp2 = txtprecioparte2.Text.Length;
+                    int lonp3 = txtparteprecio3.Text.Length;
+                    int lonp4 = txtparteprecio4.Text.Length;
+                    int lonp5 = txtparteprecio5.Text.Length;
+                    int lonp6 = txtparteprecio6.Text.Length;
+                    int loncosto = txtcosto.Text.Length;
+                    int lonabo = txtabono.Text.Length;
+                    int lonres = txtrestante.Text.Length;
+
+                    if (lonp1 == 1)
+                    {
+                        txtprecioparte1.Text = "        " + txtprecioparte1.Text;
+                    }
+                    else if (lonp1 == 2)
+                    {
+                        txtprecioparte1.Text = "      " + txtprecioparte1.Text;
+                    }
+                    else if (lonp1 == 3)
+                    {
+                        txtprecioparte1.Text = "    " + txtprecioparte1.Text;
+                    }
+                    else if (lonp1 == 4)
+                    {
+                        txtprecioparte1.Text = "  " + txtprecioparte1.Text;
+                    }
+
+
+
+                    if (lonp2 == 1)
+                    {
+                        txtprecioparte2.Text = "        " + txtprecioparte2.Text;
+                    }
+                    else if (lonp2 == 2)
+                    {
+                        txtprecioparte2.Text = "      " + txtprecioparte2.Text;
+                    }
+                    else if (lonp2 == 3)
+                    {
+                        txtprecioparte2.Text = "    " + txtprecioparte2.Text;
+                    }
+                    else if (lonp2 == 4)
+                    {
+                        txtprecioparte2.Text = "  " + txtprecioparte2.Text;
+                    }
+
+
+                    if (lonp3 == 1)
+                    {
+                        txtparteprecio3.Text = "        " + txtparteprecio3.Text;
+                    }
+                    else if (lonp3 == 2)
+                    {
+                        txtparteprecio3.Text = "      " + txtparteprecio3.Text;
+                    }
+                    else if (lonp3 == 3)
+                    {
+                        txtparteprecio3.Text = "    " + txtparteprecio3.Text;
+                    }
+                    else if (lonp3 == 4)
+                    {
+                        txtparteprecio3.Text = "  " + txtparteprecio3.Text;
+                    }
+
+
+                    if (lonp4 == 1)
+                    {
+                        txtparteprecio4.Text = "        " + txtparteprecio4.Text;
+                    }
+                    else if (lonp4 == 2)
+                    {
+                        txtparteprecio4.Text = "      " + txtparteprecio4.Text;
+                    }
+                    else if (lonp4 == 3)
+                    {
+                        txtparteprecio4.Text = "    " + txtparteprecio4.Text;
+                    }
+                    else if (lonp4 == 4)
+                    {
+                        txtparteprecio4.Text = "  " + txtparteprecio4.Text;
+                    }
+
+                    if (lonp5 == 1)
+                    {
+                        txtparteprecio5.Text = "        " + txtparteprecio5.Text;
+                    }
+                    else if (lonp5 == 2)
+                    {
+                        txtparteprecio5.Text = "      " + txtparteprecio5.Text;
+                    }
+                    else if (lonp5 == 3)
+                    {
+                        txtparteprecio5.Text = "    " + txtparteprecio5.Text;
+                    }
+                    else if (lonp5 == 4)
+                    {
+                        txtparteprecio5.Text = "  " + txtparteprecio5.Text;
+                    }
+
+
+                    if (lonp6 == 1)
+                    {
+                        txtparteprecio6.Text = "        " + txtparteprecio6.Text;
+                    }
+                    else if (lonp6 == 2)
+                    {
+                        txtparteprecio6.Text = "      " + txtparteprecio6.Text;
+                    }
+                    else if (lonp6 == 3)
+                    {
+                        txtparteprecio6.Text = "    " + txtparteprecio6.Text;
+                    }
+                    else if (lonp6 == 4)
+                    {
+                        txtparteprecio6.Text = "  " + txtparteprecio6.Text;
+                    }
+
+                    if (loncosto == 1)
+                    {
+                        txtcosto.Text = "        " + txtcosto.Text;
+                    }
+                    else if (loncosto == 2)
+                    {
+                        txtcosto.Text = "      " + txtcosto.Text;
+                    }
+                    else if (loncosto == 3)
+                    {
+                        txtcosto.Text = "    " + txtcosto.Text;
+                    }
+                    else if (loncosto == 4)
+                    {
+                        txtcosto.Text = "  " + txtcosto.Text;
+                    }
+
+
+                    if (lonabo == 1)
+                    {
+                        txtabono.Text = "        " + txtabono.Text;
+                    }
+                    else if (lonabo == 2)
+                    {
+                        txtabono.Text = "      " + txtabono.Text;
+                    }
+                    else if (lonabo == 3)
+                    {
+                        txtabono.Text = "    " + txtabono.Text;
+                    }
+                    else if (lonabo == 4)
+                    {
+                        txtabono.Text = "  " + txtabono.Text;
+                    }
+
+
+                    if (lonres == 1)
+                    {
+                        txtrestante.Text = "        " + txtrestante.Text;
+                    }
+                    else if (lonres == 2)
+                    {
+                        txtrestante.Text = "      " + txtrestante.Text;
+                    }
+                    else if (lonres == 3)
+                    {
+                        txtrestante.Text = "    " + txtrestante.Text;
+                    }
+                    else if (lonres == 4)
+                    {
+                        txtrestante.Text = "  " + txtrestante.Text;
+                    }
+
+
+
 
 
 
@@ -715,6 +1028,7 @@ namespace EBEST
                             txtparte6.Visible = false;
                             txtparteprecio6.Visible = false;
                             txtbusqueda.Text = "";
+                    txtabono.Text = "0";
                     timer2.Enabled = true;
 
 
@@ -756,6 +1070,206 @@ namespace EBEST
                     MessageBox.Show("Error " + ex);
                 }
                 c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Pagado. Orden: " + txtorden.Text, "erick.tadeo@hotmail.com");
+
+
+
+
+                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
+                MyBarCode.ResizeTo(150, 50).SetMargins(0);
+                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+
+                //pictureBox1.Image = MyBarCodeBitmap;
+                pictureBox2.Image = MyBarCode.Image;
+
+
+                int lonp1 = txtprecioparte1.Text.Length;
+                int lonp2 = txtprecioparte2.Text.Length;
+                int lonp3 = txtparteprecio3.Text.Length;
+                int lonp4 = txtparteprecio4.Text.Length;
+                int lonp5 = txtparteprecio5.Text.Length;
+                int lonp6 = txtparteprecio6.Text.Length;
+                int loncosto = txtcosto.Text.Length;
+                int lonabo = txtabono.Text.Length;
+                int lonres = txtrestante.Text.Length;
+
+                if (lonp1 == 1)
+                {
+                    txtprecioparte1.Text = "        " + txtprecioparte1.Text;
+                }
+                else if (lonp1 == 2)
+                {
+                    txtprecioparte1.Text = "      " + txtprecioparte1.Text;
+                }
+                else if (lonp1 == 3)
+                {
+                    txtprecioparte1.Text = "    " + txtprecioparte1.Text;
+                }
+                else if (lonp1 == 4)
+                {
+                    txtprecioparte1.Text = "  " + txtprecioparte1.Text;
+                }
+
+
+
+                if (lonp2 == 1)
+                {
+                    txtprecioparte2.Text = "        " + txtprecioparte2.Text;
+                }
+                else if (lonp2 == 2)
+                {
+                    txtprecioparte2.Text = "      " + txtprecioparte2.Text;
+                }
+                else if (lonp2 == 3)
+                {
+                    txtprecioparte2.Text = "    " + txtprecioparte2.Text;
+                }
+                else if (lonp2 == 4)
+                {
+                    txtprecioparte2.Text = "  " + txtprecioparte2.Text;
+                }
+
+
+                if (lonp3 == 1)
+                {
+                    txtparteprecio3.Text = "        " + txtparteprecio3.Text;
+                }
+                else if (lonp3 == 2)
+                {
+                    txtparteprecio3.Text = "      " + txtparteprecio3.Text;
+                }
+                else if (lonp3 == 3)
+                {
+                    txtparteprecio3.Text = "    " + txtparteprecio3.Text;
+                }
+                else if (lonp3 == 4)
+                {
+                    txtparteprecio3.Text = "  " + txtparteprecio3.Text;
+                }
+
+
+                if (lonp4 == 1)
+                {
+                    txtparteprecio4.Text = "        " + txtparteprecio4.Text;
+                }
+                else if (lonp4 == 2)
+                {
+                    txtparteprecio4.Text = "      " + txtparteprecio4.Text;
+                }
+                else if (lonp4 == 3)
+                {
+                    txtparteprecio4.Text = "    " + txtparteprecio4.Text;
+                }
+                else if (lonp4 == 4)
+                {
+                    txtparteprecio4.Text = "  " + txtparteprecio4.Text;
+                }
+
+                if (lonp5 == 1)
+                {
+                    txtparteprecio5.Text = "        " + txtparteprecio5.Text;
+                }
+                else if (lonp5 == 2)
+                {
+                    txtparteprecio5.Text = "      " + txtparteprecio5.Text;
+                }
+                else if (lonp5 == 3)
+                {
+                    txtparteprecio5.Text = "    " + txtparteprecio5.Text;
+                }
+                else if (lonp5 == 4)
+                {
+                    txtparteprecio5.Text = "  " + txtparteprecio5.Text;
+                }
+
+
+                if (lonp6 == 1)
+                {
+                    txtparteprecio6.Text = "        " + txtparteprecio6.Text;
+                }
+                else if (lonp6 == 2)
+                {
+                    txtparteprecio6.Text = "      " + txtparteprecio6.Text;
+                }
+                else if (lonp6 == 3)
+                {
+                    txtparteprecio6.Text = "    " + txtparteprecio6.Text;
+                }
+                else if (lonp6 == 4)
+                {
+                    txtparteprecio6.Text = "  " + txtparteprecio6.Text;
+                }
+
+                if (loncosto == 1)
+                {
+                    txtcosto.Text = "        " + txtcosto.Text;
+                }
+                else if (loncosto == 2)
+                {
+                    txtcosto.Text = "      " + txtcosto.Text;
+                }
+                else if (loncosto == 3)
+                {
+                    txtcosto.Text = "    " + txtcosto.Text;
+                }
+                else if (loncosto == 4)
+                {
+                    txtcosto.Text = "  " + txtcosto.Text;
+                }
+
+
+                if (lonabo == 1)
+                {
+                    txtabono.Text = "        " + txtabono.Text;
+                }
+                else if (lonabo == 2)
+                {
+                    txtabono.Text = "      " + txtabono.Text;
+                }
+                else if (lonabo == 3)
+                {
+                    txtabono.Text = "    " + txtabono.Text;
+                }
+                else if (lonabo == 4)
+                {
+                    txtabono.Text = "  " + txtabono.Text;
+                }
+
+
+                if (lonres == 1)
+                {
+                    txtrestante.Text = "        " + txtrestante.Text;
+                }
+                else if (lonres == 2)
+                {
+                    txtrestante.Text = "      " + txtrestante.Text;
+                }
+                else if (lonres == 3)
+                {
+                    txtrestante.Text = "    " + txtrestante.Text;
+                }
+                else if (lonres == 4)
+                {
+                    txtrestante.Text = "  " + txtrestante.Text;
+                }
+
+
+
+
+                printPreviewDialog3.Document = printDocument3;
+
+                //printDocument1.Print();
+                //printDocument1.Print();
+
+                printPreviewDialog3.Show();
+
+
+
+
+
+
+
+
+
 
 
 
@@ -968,7 +1482,7 @@ namespace EBEST
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    string query = "select * from pedidos Where orden like ('" + txtorden.Text + "%')";
+                    string query = "select * from pedidos Where orden like ('" + txtorden.Text + "')";
                     command.CommandText = query;
                     OleDbDataReader reader = command.ExecuteReader();
                     if (reader.Read())
@@ -1135,7 +1649,7 @@ namespace EBEST
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    string query = "select * from cotizaciones Where orden like ('" + txtorden.Text + "%')";
+                    string query = "select * from cotizaciones Where orden like ('" + txtorden.Text + "')";
                     command.CommandText = query;
                     OleDbDataReader reader = command.ExecuteReader();
                     if (reader.Read())
@@ -1805,7 +2319,7 @@ namespace EBEST
             e.Graphics.DrawImage(newImage, 30, 2);
 
             //e.Graphics.DrawImageUnscaledAndClipped(newImage,new Point(10,10));
-            e.Graphics.DrawString("  Equipo en  cotización", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
+            e.Graphics.DrawString("    Equipo en cotizacion", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 150));
             e.Graphics.DrawString("                    GUGE900514C70", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 180));
             e.Graphics.DrawString("     Calle Pedro J. Mendez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
@@ -1817,17 +2331,7 @@ namespace EBEST
             e.Graphics.DrawString("      Fecha: " + txthorayfecha.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 330));
             e.Graphics.DrawString("      Nombre: " + txtnombre.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 350));
             e.Graphics.DrawString("      Modelo: " + txtmodelo.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 370));
-            if (checkBox5.Checked == true && checkBox4.Checked == true)
-            {
-                e.Graphics.DrawString("      Tiempo de espera: " + combodias.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 390));
-
-            }
-            else if (checkBox5.Checked == true && checkBox3.Checked == true)
-            {
-                e.Graphics.DrawString("      Tiempo de espera: " + combohoras.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 390));
-
-            }
-
+            
 
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 405));
 
@@ -2615,6 +3119,394 @@ namespace EBEST
                 combodias.Visible = true;
                 combohoras.Visible = false;
             }
+        }
+
+        private void printDocument3_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
+
+
+            printDocument1.PrinterSettings.PrinterName = "TM-T20II";
+
+            // Create rectangle for source image.
+            RectangleF srcRect = new RectangleF(100.0F, 100.0F, 150.0F, 150.0F);
+            e.Graphics.DrawImage(newImage, 30, 2);
+
+            //e.Graphics.DrawImageUnscaledAndClipped(newImage,new Point(10,10));
+            e.Graphics.DrawString("             Garantía", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
+            e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 150));
+            e.Graphics.DrawString("                    GUGE900514C70", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 180));
+            e.Graphics.DrawString("     Calle Pedro J. Mendez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
+            e.Graphics.DrawString("                  Reynosa Tamaulipas", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 220));
+            e.Graphics.DrawString("                             88500", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 240));
+            e.Graphics.DrawString("                  e-best@live.com.mx", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 260));
+            e.Graphics.DrawString("                         8999222312", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 280));
+            e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 300));
+            e.Graphics.DrawString("      Fecha: " + txthorayfecha.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 330));
+            e.Graphics.DrawString("      Nombre: " + txtnombre.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 350));
+            e.Graphics.DrawString("      Modelo: " + txtmodelo.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 370));
+           
+
+
+            e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 405));
+
+
+
+            if (txtparte1.Text != "" && txtparte2.Text == "" && txtparte3.Text == "" && txtparte4.Text == "" && txtparte5.Text == "" && txtparte6.Text == "")
+            {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                            Total: " + "$" + txtcosto2.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 500));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 520));
+                e.Graphics.DrawString("          30 dias de garantía en defecto", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 545));
+                e.Graphics.DrawString("                       de fábrica", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 565));
+
+
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 585));
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 630);
+
+
+
+                /* e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                 e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+
+                 e.Graphics.DrawString("      Importe: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                 e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 535));
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 575));
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 595));
+                 e.Graphics.DrawImage(pictureBox1.Image, 70, 640);*/
+            }
+
+
+            else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text == "" && txtparte4.Text == "" && txtparte5.Text == "" && txtparte6.Text == "")
+            {
+
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+
+
+                e.Graphics.DrawString("    " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+
+
+
+
+
+                e.Graphics.DrawString("                                            Total: " + "$" + txtcosto2.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 520));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 540));
+                e.Graphics.DrawString("          30 dias de garantía en defecto", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 565));
+                e.Graphics.DrawString("                       de fábrica ", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
+
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 605));
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 650);
+
+
+
+
+
+
+                /* e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                 e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                 e.Graphics.DrawString("      Parte 2: " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                 e.Graphics.DrawString("      Importe: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                 e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 575));
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 590));
+                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 615));
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
+                 e.Graphics.DrawImage(pictureBox2.Image, 70, 680);*/
+
+            }
+            else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text == "" && txtparte5.Text == "" && txtparte6.Text == "")
+            {
+
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+
+
+                e.Graphics.DrawString("    " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+
+                e.Graphics.DrawString("    " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+
+
+
+
+
+
+                e.Graphics.DrawString("                                            Total: " + "$" + txtcosto2.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 540));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 560));
+                e.Graphics.DrawString("          30 dias de garantía en defecto", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
+                e.Graphics.DrawString("                       de fábrica ", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
+
+
+
+
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 625));
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 670);
+
+
+
+
+
+
+
+                /*   e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                   e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
+                   e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                   e.Graphics.DrawString("      Parte 2: " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                   e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                   e.Graphics.DrawString("      Parte 3: " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                   e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+
+
+                   e.Graphics.DrawString("      Importe: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 570));
+
+                   e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 590));
+                   e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 615));
+                   e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
+                   e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 655));
+                   e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
+                   e.Graphics.DrawImage(pictureBox2.Image, 70, 720);*/
+            }
+
+            else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text == "" && txtparte6.Text == "")
+            {
+
+
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+
+
+                e.Graphics.DrawString("    " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+
+                e.Graphics.DrawString("    " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+
+
+
+                e.Graphics.DrawString("    " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+
+
+
+
+
+
+
+
+
+                e.Graphics.DrawString("                                            Total: " + "$" + txtcosto2.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 560));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 580));
+                e.Graphics.DrawString("          30 dias de garantía en defecto", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
+                e.Graphics.DrawString("                       de fábrica ", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
+
+
+
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 645));
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 690);
+
+
+
+
+
+
+
+
+                /* e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                 e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                 e.Graphics.DrawString("      Parte 2: " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                 e.Graphics.DrawString("      Parte 3: " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                 e.Graphics.DrawString("      Parte 4: " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 570));
+                 e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 590));
+
+
+
+                 e.Graphics.DrawString("      Importe: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 610));
+
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 630));
+                 e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 655));
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
+                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 695));
+                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
+                 e.Graphics.DrawImage(pictureBox2.Image, 70, 760);*/
+            }
+
+            else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text != "" && txtparte6.Text == "")
+            {
+
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+
+
+                e.Graphics.DrawString("    " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+
+                e.Graphics.DrawString("    " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+
+
+
+                e.Graphics.DrawString("    " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+
+
+
+                e.Graphics.DrawString("    " + txtparte5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+
+
+
+
+
+
+
+
+                e.Graphics.DrawString("                                            Total: " + "$" + txtcosto2.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 580));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 600));
+                e.Graphics.DrawString("          30 dias de garantía en defecto", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
+                e.Graphics.DrawString("                       de fábrica ", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 665));
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 710);
+
+
+
+
+
+
+
+                /*  e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                  e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                  e.Graphics.DrawString("      Parte 2: " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                  e.Graphics.DrawString("      Parte 3: " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                  e.Graphics.DrawString("      Parte 4: " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 570));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 590));
+                  e.Graphics.DrawString("      Parte 5: " + txtparte5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 610));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 630));
+
+
+                  e.Graphics.DrawString("      Importe: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 650));
+
+                  e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 670));
+                  e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 695));
+                  e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
+                  e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 730));
+                  e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
+                  e.Graphics.DrawImage(pictureBox2.Image, 70, 800);*/
+            }
+
+            else if (txtparte1.Text != "" && txtparte2.Text != "" && txtparte3.Text != "" && txtparte4.Text != "" && txtparte5.Text != "" && txtparte6.Text != "")
+            {
+
+
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
+                e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+
+
+                e.Graphics.DrawString("    " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                e.Graphics.DrawString("                                                      $" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+
+                e.Graphics.DrawString("    " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+
+
+                e.Graphics.DrawString("    " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+
+
+
+                e.Graphics.DrawString("    " + txtparte5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+
+
+                e.Graphics.DrawString("    " + txtparte6.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 570));
+                e.Graphics.DrawString("                                                      $" + txtparteprecio6.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 570));
+
+
+
+
+
+
+
+
+                e.Graphics.DrawString("                                            Total: " + "$" + txtcosto2.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 600));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 620));
+                e.Graphics.DrawString("          30 dias de garantía en defecto", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
+                e.Graphics.DrawString("                       de fábrica ", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 665));
+                e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 685));
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 730);
+
+
+
+
+
+
+
+
+
+
+                /* e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+                  e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+                  e.Graphics.DrawString("      Parte 2: " + txtparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 490));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtprecioparte2.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 510));
+                  e.Graphics.DrawString("      Parte 3: " + txtparte3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio3.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 550));
+                  e.Graphics.DrawString("      Parte 4: " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 570));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 590));
+                  e.Graphics.DrawString("      Parte 5: " + txtparte5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 610));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio5.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 630));
+                  e.Graphics.DrawString("      Parte 6: " + txtparte6.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 650));
+                  e.Graphics.DrawString("      Precio: " + "$" + txtparteprecio6.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 670));
+
+
+                  e.Graphics.DrawString("      Importe: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 690));
+
+                  e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 710));
+                  e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 730));
+                  e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 750));
+                  e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 775));
+                  e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 790));
+                  e.Graphics.DrawImage(pictureBox2.Image, 70, 840);*/
+            }
+        }
+
+        private void txtorden_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

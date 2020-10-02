@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(update));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtorden = new System.Windows.Forms.TextBox();
@@ -102,6 +102,8 @@
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.combohoras = new System.Windows.Forms.ComboBox();
             this.combodias = new System.Windows.Forms.ComboBox();
+            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -114,23 +116,23 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(1, 78);
             this.dataGridView1.Name = "dataGridView1";
@@ -153,6 +155,7 @@
             this.txtorden.TabIndex = 1;
             this.txtorden.Text = "sin datos";
             this.txtorden.Visible = false;
+            this.txtorden.TextChanged += new System.EventHandler(this.txtorden_TextChanged);
             // 
             // txtobser
             // 
@@ -246,7 +249,7 @@
             // 
             // txttipo
             // 
-            this.txttipo.Location = new System.Drawing.Point(299, 739);
+            this.txttipo.Location = new System.Drawing.Point(289, 648);
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(73, 20);
             this.txttipo.TabIndex = 28;
@@ -652,7 +655,7 @@
             // 
             this.btnabonar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btnabonar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnabonar.Location = new System.Drawing.Point(407, 709);
+            this.btnabonar.Location = new System.Drawing.Point(407, 703);
             this.btnabonar.Name = "btnabonar";
             this.btnabonar.Size = new System.Drawing.Size(156, 44);
             this.btnabonar.TabIndex = 143;
@@ -869,6 +872,20 @@
             this.combodias.TabIndex = 157;
             this.combodias.Visible = false;
             // 
+            // printDocument3
+            // 
+            this.printDocument3.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument3_PrintPage);
+            // 
+            // printPreviewDialog3
+            // 
+            this.printPreviewDialog3.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog3.Enabled = true;
+            this.printPreviewDialog3.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog3.Icon")));
+            this.printPreviewDialog3.Name = "printPreviewDialog3";
+            this.printPreviewDialog3.Visible = false;
+            // 
             // update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1023,5 +1040,7 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Windows.Forms.ComboBox combohoras;
         private System.Windows.Forms.ComboBox combodias;
+        private System.Drawing.Printing.PrintDocument printDocument3;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog3;
     }
 }
