@@ -274,9 +274,9 @@
             this.btnimprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnimprimir.ForeColor = System.Drawing.Color.White;
-            this.btnimprimir.Location = new System.Drawing.Point(188, 681);
+            this.btnimprimir.Location = new System.Drawing.Point(188, 683);
             this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(425, 53);
+            this.btnimprimir.Size = new System.Drawing.Size(425, 47);
             this.btnimprimir.TabIndex = 71;
             this.btnimprimir.Text = "Cerrar cotizacion";
             this.btnimprimir.UseVisualStyleBackColor = false;

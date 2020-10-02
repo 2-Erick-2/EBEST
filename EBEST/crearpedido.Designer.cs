@@ -148,6 +148,7 @@
             this.txtabono.Size = new System.Drawing.Size(308, 20);
             this.txtabono.TabIndex = 47;
             this.txtabono.Text = "0";
+            this.txtabono.Click += new System.EventHandler(this.txtabono_Click);
             this.txtabono.TextChanged += new System.EventHandler(this.txtabono_TextChanged);
             // 
             // label3
@@ -270,6 +271,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(309, 20);
             this.txtnombre.TabIndex = 32;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // lblhorayfecha
             // 
@@ -386,6 +388,7 @@
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
             this.txtparte1.TabIndex = 35;
+            this.txtparte1.TextChanged += new System.EventHandler(this.txtparte1_TextChanged);
             // 
             // txtprecioparte1
             // 
@@ -441,6 +444,7 @@
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
             this.txtparte2.TabIndex = 37;
             this.txtparte2.Visible = false;
+            this.txtparte2.TextChanged += new System.EventHandler(this.txtparte2_TextChanged);
             // 
             // label10
             // 
@@ -485,6 +489,7 @@
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
             this.txtparte3.TabIndex = 39;
             this.txtparte3.Visible = false;
+            this.txtparte3.TextChanged += new System.EventHandler(this.txtparte3_TextChanged);
             // 
             // label12
             // 
@@ -529,6 +534,7 @@
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
             this.txtparte4.TabIndex = 41;
             this.txtparte4.Visible = false;
+            this.txtparte4.TextChanged += new System.EventHandler(this.txtparte4_TextChanged);
             // 
             // label14
             // 
@@ -573,6 +579,7 @@
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
             this.txtparte5.TabIndex = 43;
             this.txtparte5.Visible = false;
+            this.txtparte5.TextChanged += new System.EventHandler(this.txtparte5_TextChanged);
             // 
             // label16
             // 
@@ -617,6 +624,7 @@
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
             this.txtparte6.TabIndex = 45;
             this.txtparte6.Visible = false;
+            this.txtparte6.TextChanged += new System.EventHandler(this.txtparte6_TextChanged);
             // 
             // label18
             // 
@@ -701,6 +709,7 @@
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(310, 20);
             this.txtmodelo.TabIndex = 34;
+            this.txtmodelo.TextChanged += new System.EventHandler(this.txtmodelo_TextChanged);
             // 
             // label5
             // 

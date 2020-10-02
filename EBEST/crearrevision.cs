@@ -35,6 +35,7 @@ namespace EBEST
         private void btnimprimir_Click(object sender, EventArgs e)
         {
             //Clipboard.SetText(txtnombre.Text);
+            //System.IO.File.Copy(@"\\TADEOEBEST\basededatoscompartida\Ebest_be.accdb", @"C:\Users\Windows 10\Desktop\respaldo\Ebest_be.accdb",true);
             sincopia:
             string Name = txtnombre.Text;
             var rand = new Random();
@@ -427,5 +428,7 @@ namespace EBEST
                 combohoras.Visible = false;
             }
         }
+
+      
     }
 }

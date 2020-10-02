@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using bpac;
 using IronBarCode;
+using System.Globalization;
+
 
 namespace EBEST
 {
@@ -473,10 +475,23 @@ namespace EBEST
             {
                 if (txtcosto.Text != null && txtabono.Text != null)
                 {
-                    int a = Convert.ToInt32(txtcosto.Text);
+                    if (txtabono.Text == "")
+                    {
+
+                    }
+                    else
+                    { 
+                        int a = Convert.ToInt32(txtcosto.Text);
                     int b = Convert.ToInt32(txtabono.Text);
                     int c = a - b;
                     txtrestante.Text = c.ToString();
+
+                    }
+
+
+
+
+                   
                 }
 
             }
@@ -969,6 +984,8 @@ namespace EBEST
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+
+
             Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
 
 
@@ -1005,6 +1022,8 @@ namespace EBEST
 
             if (checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == false && checkBox7.Checked == false)
             {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
+
                 e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
                 e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
                 e.Graphics.DrawString("    " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
@@ -1054,6 +1073,7 @@ namespace EBEST
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == false && checkBox7.Checked == false)
             {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
 
                 e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
                 e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
@@ -1107,6 +1127,7 @@ namespace EBEST
             }
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == false && checkBox6.Checked == false && checkBox7.Checked == false)
             {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
 
 
                 e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
@@ -1168,6 +1189,7 @@ namespace EBEST
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == false && checkBox7.Checked == false)
             {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
 
                 e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
                 e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
@@ -1235,6 +1257,7 @@ namespace EBEST
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == true && txtparte5.Text != "" && checkBox7.Checked == false)
             {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
 
                 e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
                 e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
@@ -1301,6 +1324,7 @@ namespace EBEST
 
             else if (checkBox3.Checked == true && txtparte2.Text != "" && checkBox4.Checked == true && txtparte3.Text != "" && checkBox5.Checked == true && txtparte4.Text != "" && checkBox6.Checked == true && txtparte5.Text != "" && checkBox7.Checked == true && txtparte6.Text != "")
             {
+                e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
 
                 e.Graphics.DrawString("    Descripcion ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
                 e.Graphics.DrawString("                                                      Importe ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 450));
@@ -1507,6 +1531,122 @@ namespace EBEST
         {
             txtparteprecio6.Text = "";
 
+        }
+
+        private void txtmodelo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtmodelo.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtmodelo.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtmodelo.Text = upmodelo;
+                txtmodelo.SelectionStart = txtmodelo.Text.Length;
+            }
+        }
+
+        private void txtparte1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtparte1.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte1.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte1.Text = upmodelo;
+                txtparte1.SelectionStart = txtparte1.Text.Length;
+            }
+        }
+
+        private void txtparte2_TextChanged(object sender, EventArgs e)
+        {
+            if (txtparte2.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte2.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte2.Text = upmodelo;
+                txtparte2.SelectionStart = txtparte2.Text.Length;
+            }
+        }
+
+        private void txtparte3_TextChanged(object sender, EventArgs e)
+        {
+            if (txtparte3.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte3.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte3.Text = upmodelo;
+                txtparte3.SelectionStart = txtparte3.Text.Length;
+            }
+        }
+
+        private void txtparte4_TextChanged(object sender, EventArgs e)
+        {
+            if (txtparte4.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte4.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte4.Text = upmodelo;
+                txtparte4.SelectionStart = txtparte4.Text.Length;
+            }
+        }
+
+        private void txtparte5_TextChanged(object sender, EventArgs e)
+        {
+            if (txtparte5.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte5.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte5.Text = upmodelo;
+                txtparte5.SelectionStart = txtparte5.Text.Length;
+            }
+        }
+
+        private void txtparte6_TextChanged(object sender, EventArgs e)
+        {
+            if (txtparte6.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte6.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte6.Text = upmodelo;
+                txtparte6.SelectionStart = txtparte6.Text.Length;
+            }
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+            txtnombre.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtnombre.Text);
+            txtnombre.SelectionStart = txtnombre.Text.Length;
+        }
+
+        private void txtabono_Click(object sender, EventArgs e)
+        {
+            txtabono.Text = "";
         }
     }
 }
