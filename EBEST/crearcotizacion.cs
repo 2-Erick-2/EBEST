@@ -36,6 +36,7 @@ namespace EBEST
 
         private void btnimprimir_Click(object sender, EventArgs e)
         {
+        
             sincopia:
             string Name = txtnombre.Text;
             var rand = new Random();
@@ -147,6 +148,149 @@ namespace EBEST
                 checkBoxpedido.Checked = false;
                 checkBoxcotizacion.Checked = false;
                 checkBoxrevision.Checked = false;*/
+
+                int lonp1 = txtprecioparte1.Text.Length;
+                int lonp2 = txtprecioparte2.Text.Length;
+                int lonp3 = txtparteprecio3.Text.Length;
+                int lonp4 = txtparteprecio4.Text.Length;
+                int lonp5 = txtparteprecio5.Text.Length;
+                int lonp6 = txtparteprecio6.Text.Length;
+                int loncosto = txtcosto.Text.Length;
+
+                if (lonp1 == 1)
+                {
+                    txtprecioparte1.Text = "        " + txtprecioparte1.Text;
+                }
+                else if (lonp1 == 2)
+                {
+                    txtprecioparte1.Text = "      " + txtprecioparte1.Text;
+                }
+                else if (lonp1 == 3)
+                {
+                    txtprecioparte1.Text = "    " + txtprecioparte1.Text;
+                }
+                else if (lonp1 == 4)
+                {
+                    txtprecioparte1.Text = "  " + txtprecioparte1.Text;
+                }
+
+
+
+                if (lonp2 == 1)
+                {
+                    txtprecioparte2.Text = "        " + txtprecioparte2.Text;
+                }
+                else if (lonp2 == 2)
+                {
+                    txtprecioparte2.Text = "      " + txtprecioparte2.Text;
+                }
+                else if (lonp2 == 3)
+                {
+                    txtprecioparte2.Text = "    " + txtprecioparte2.Text;
+                }
+                else if (lonp2 == 4)
+                {
+                    txtprecioparte2.Text = "  " + txtprecioparte2.Text;
+                }
+
+
+                if (lonp3 == 1)
+                {
+                    txtparteprecio3.Text = "        " + txtparteprecio3.Text;
+                }
+                else if (lonp3 == 2)
+                {
+                    txtparteprecio3.Text = "      " + txtparteprecio3.Text;
+                }
+                else if (lonp3 == 3)
+                {
+                    txtparteprecio3.Text = "    " + txtparteprecio3.Text;
+                }
+                else if (lonp3 == 4)
+                {
+                    txtparteprecio3.Text = "  " + txtparteprecio3.Text;
+                }
+
+
+                if (lonp4 == 1)
+                {
+                    txtparteprecio4.Text = "        " + txtparteprecio4.Text;
+                }
+                else if (lonp4 == 2)
+                {
+                    txtparteprecio4.Text = "      " + txtparteprecio4.Text;
+                }
+                else if (lonp4 == 3)
+                {
+                    txtparteprecio4.Text = "    " + txtparteprecio4.Text;
+                }
+                else if (lonp4 == 4)
+                {
+                    txtparteprecio4.Text = "  " + txtparteprecio4.Text;
+                }
+
+                if (lonp5 == 1)
+                {
+                    txtparteprecio5.Text = "        " + txtparteprecio5.Text;
+                }
+                else if (lonp5 == 2)
+                {
+                    txtparteprecio5.Text = "      " + txtparteprecio5.Text;
+                }
+                else if (lonp5 == 3)
+                {
+                    txtparteprecio5.Text = "    " + txtparteprecio5.Text;
+                }
+                else if (lonp5 == 4)
+                {
+                    txtparteprecio5.Text = "  " + txtparteprecio5.Text;
+                }
+
+
+                if (lonp6 == 1)
+                {
+                    txtparteprecio6.Text = "        " + txtparteprecio6.Text;
+                }
+                else if (lonp6 == 2)
+                {
+                    txtparteprecio6.Text = "      " + txtparteprecio6.Text;
+                }
+                else if (lonp6 == 3)
+                {
+                    txtparteprecio6.Text = "    " + txtparteprecio6.Text;
+                }
+                else if (lonp6 == 4)
+                {
+                    txtparteprecio6.Text = "  " + txtparteprecio6.Text;
+                }
+
+                if (loncosto == 1)
+                {
+                    txtcosto.Text = "        " + txtcosto.Text;
+                }
+                else if (loncosto == 2)
+                {
+                    txtcosto.Text = "      " + txtcosto.Text;
+                }
+                else if (loncosto == 3)
+                {
+                    txtcosto.Text = "    " + txtcosto.Text;
+                }
+                else if (loncosto == 4)
+                {
+                    txtcosto.Text = "  " + txtcosto.Text;
+                }
+
+
+
+
+
+
+
+
+
+
+
 
 
                 BrotherPrintThis();
@@ -1226,9 +1370,19 @@ namespace EBEST
 
         private void txtmodelo_TextChanged(object sender, EventArgs e)
         {
+
+            if(txtmodelo.Text == "")
+            {
+
+            }
+            else
+            {
             string upmodelo = txtmodelo.Text;
             upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
             txtmodelo.Text = upmodelo;
+                txtmodelo.SelectionStart = txtmodelo.Text.Length;
+            }
+            
 
 
 
@@ -1283,10 +1437,19 @@ namespace EBEST
 
         private void txtparte6_TextChanged(object sender, EventArgs e)
         {
+
+            if (txtparte6.Text == "")
+            {
+
+            }
+            else
+            {
             string upmodelo = txtparte6.Text;
             upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
             txtparte6.Text = upmodelo;
             txtparte6.SelectionStart = txtparte6.Text.Length;
+            }
+           
 
         }
     }
