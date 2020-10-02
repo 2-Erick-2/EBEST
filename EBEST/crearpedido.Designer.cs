@@ -91,8 +91,8 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmisor
@@ -746,14 +746,14 @@
             this.label19.TabIndex = 121;
             this.label19.Text = "PARTES EN PEDIDO";
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(-14, 359);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 178);
-            this.pictureBox1.TabIndex = 122;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.pictureBox2.Location = new System.Drawing.Point(-14, 359);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 178);
+            this.pictureBox2.TabIndex = 122;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
             // crearpedido
             // 
@@ -761,7 +761,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EBEST.Properties.Resources.fondocrearrevision2;
             this.ClientSize = new System.Drawing.Size(780, 807);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtrepetidos);
             this.Controls.Add(this.txtmodelo);
@@ -823,7 +823,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "crearpedido";
             this.Load += new System.EventHandler(this.crearpedido_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -891,6 +891,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
