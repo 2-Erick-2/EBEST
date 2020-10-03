@@ -45,10 +45,9 @@
             // 
             this.txtcontra.AcceptsReturn = true;
             this.txtcontra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontra.Location = new System.Drawing.Point(62, 479);
-            this.txtcontra.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtcontra.Location = new System.Drawing.Point(31, 268);
             this.txtcontra.Name = "txtcontra";
-            this.txtcontra.Size = new System.Drawing.Size(506, 55);
+            this.txtcontra.Size = new System.Drawing.Size(255, 31);
             this.txtcontra.TabIndex = 0;
             this.txtcontra.UseSystemPasswordChar = true;
             this.txtcontra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcontra_KeyDown);
@@ -58,10 +57,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(62, 604);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(31, 338);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(510, 146);
+            this.button1.Size = new System.Drawing.Size(255, 76);
             this.button1.TabIndex = 1;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -69,10 +67,9 @@
             // 
             // txtrevisar
             // 
-            this.txtrevisar.Location = new System.Drawing.Point(190, 802);
-            this.txtrevisar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtrevisar.Location = new System.Drawing.Point(100, 436);
             this.txtrevisar.Name = "txtrevisar";
-            this.txtrevisar.Size = new System.Drawing.Size(196, 31);
+            this.txtrevisar.Size = new System.Drawing.Size(100, 20);
             this.txtrevisar.TabIndex = 2;
             this.txtrevisar.Text = "nada";
             this.txtrevisar.Visible = false;
@@ -80,10 +77,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EBEST.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(158, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(388, 383);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -105,29 +101,30 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Cerrar});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 42);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(107, 26);
             // 
             // Cerrar
             // 
             this.Cerrar.Name = "Cerrar";
-            this.Cerrar.Size = new System.Drawing.Size(154, 38);
+            this.Cerrar.Size = new System.Drawing.Size(106, 22);
             this.Cerrar.Text = "Cerrar";
             this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             this.Cerrar.DoubleClick += new System.EventHandler(this.Cerrar_DoubleClick);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(638, 900);
+            this.ClientSize = new System.Drawing.Size(319, 468);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtrevisar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtcontra);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
