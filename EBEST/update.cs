@@ -407,6 +407,180 @@ namespace EBEST
 
         private void btnpagado_Click(object sender, EventArgs e)
         {
+            int lonp1 = txtprecioparte1.Text.Length;
+            int lonp2 = txtprecioparte2.Text.Length;
+            int lonp3 = txtparteprecio3.Text.Length;
+            int lonp4 = txtparteprecio4.Text.Length;
+            int lonp5 = txtparteprecio5.Text.Length;
+            int lonp6 = txtparteprecio6.Text.Length;
+            int loncosto = txtcosto.Text.Length;
+            int lonabo = txtabono.Text.Length;
+            int lonres = txtrestante.Text.Length;
+
+            if (lonp1 == 1)
+            {
+                txtprecioparte1.Text = "        " + txtprecioparte1.Text;
+            }
+            else if (lonp1 == 2)
+            {
+                txtprecioparte1.Text = "      " + txtprecioparte1.Text;
+            }
+            else if (lonp1 == 3)
+            {
+                txtprecioparte1.Text = "    " + txtprecioparte1.Text;
+            }
+            else if (lonp1 == 4)
+            {
+                txtprecioparte1.Text = "  " + txtprecioparte1.Text;
+            }
+
+
+
+            if (lonp2 == 1)
+            {
+                txtprecioparte2.Text = "        " + txtprecioparte2.Text;
+            }
+            else if (lonp2 == 2)
+            {
+                txtprecioparte2.Text = "      " + txtprecioparte2.Text;
+            }
+            else if (lonp2 == 3)
+            {
+                txtprecioparte2.Text = "    " + txtprecioparte2.Text;
+            }
+            else if (lonp2 == 4)
+            {
+                txtprecioparte2.Text = "  " + txtprecioparte2.Text;
+            }
+
+
+            if (lonp3 == 1)
+            {
+                txtparteprecio3.Text = "        " + txtparteprecio3.Text;
+            }
+            else if (lonp3 == 2)
+            {
+                txtparteprecio3.Text = "      " + txtparteprecio3.Text;
+            }
+            else if (lonp3 == 3)
+            {
+                txtparteprecio3.Text = "    " + txtparteprecio3.Text;
+            }
+            else if (lonp3 == 4)
+            {
+                txtparteprecio3.Text = "  " + txtparteprecio3.Text;
+            }
+
+
+            if (lonp4 == 1)
+            {
+                txtparteprecio4.Text = "        " + txtparteprecio4.Text;
+            }
+            else if (lonp4 == 2)
+            {
+                txtparteprecio4.Text = "      " + txtparteprecio4.Text;
+            }
+            else if (lonp4 == 3)
+            {
+                txtparteprecio4.Text = "    " + txtparteprecio4.Text;
+            }
+            else if (lonp4 == 4)
+            {
+                txtparteprecio4.Text = "  " + txtparteprecio4.Text;
+            }
+
+            if (lonp5 == 1)
+            {
+                txtparteprecio5.Text = "        " + txtparteprecio5.Text;
+            }
+            else if (lonp5 == 2)
+            {
+                txtparteprecio5.Text = "      " + txtparteprecio5.Text;
+            }
+            else if (lonp5 == 3)
+            {
+                txtparteprecio5.Text = "    " + txtparteprecio5.Text;
+            }
+            else if (lonp5 == 4)
+            {
+                txtparteprecio5.Text = "  " + txtparteprecio5.Text;
+            }
+
+
+            if (lonp6 == 1)
+            {
+                txtparteprecio6.Text = "        " + txtparteprecio6.Text;
+            }
+            else if (lonp6 == 2)
+            {
+                txtparteprecio6.Text = "      " + txtparteprecio6.Text;
+            }
+            else if (lonp6 == 3)
+            {
+                txtparteprecio6.Text = "    " + txtparteprecio6.Text;
+            }
+            else if (lonp6 == 4)
+            {
+                txtparteprecio6.Text = "  " + txtparteprecio6.Text;
+            }
+
+            if (loncosto == 1)
+            {
+                txtcosto.Text = "        " + txtcosto.Text;
+            }
+            else if (loncosto == 2)
+            {
+                txtcosto.Text = "      " + txtcosto.Text;
+            }
+            else if (loncosto == 3)
+            {
+                txtcosto.Text = "    " + txtcosto.Text;
+            }
+            else if (loncosto == 4)
+            {
+                txtcosto.Text = "  " + txtcosto.Text;
+            }
+
+
+            if (lonabo == 1)
+            {
+                txtabono.Text = "        " + txtabono.Text;
+            }
+            else if (lonabo == 2)
+            {
+                txtabono.Text = "      " + txtabono.Text;
+            }
+            else if (lonabo == 3)
+            {
+                txtabono.Text = "    " + txtabono.Text;
+            }
+            else if (lonabo == 4)
+            {
+                txtabono.Text = "  " + txtabono.Text;
+            }
+
+
+            if (lonres == 1)
+            {
+                txtrestante.Text = "        " + txtrestante.Text;
+            }
+            else if (lonres == 2)
+            {
+                txtrestante.Text = "      " + txtrestante.Text;
+            }
+            else if (lonres == 3)
+            {
+                txtrestante.Text = "    " + txtrestante.Text;
+            }
+            else if (lonres == 4)
+            {
+                txtrestante.Text = "  " + txtrestante.Text;
+            }
+
+
+
+
+
             if (btnpagado.Text == "Pasar revision")
             {
                 sincopia:
@@ -491,137 +665,7 @@ namespace EBEST
                     //pictureBox1.Image = MyBarCodeBitmap;
                     pictureBox2.Image = MyBarCode.Image;
 
-                    int lonp1 = txtprecioparte1.Text.Length;
-                    int lonp2 = txtprecioparte2.Text.Length;
-                    int lonp3 = txtparteprecio3.Text.Length;
-                    int lonp4 = txtparteprecio4.Text.Length;
-                    int lonp5 = txtparteprecio5.Text.Length;
-                    int lonp6 = txtparteprecio6.Text.Length;
-                    int loncosto = txtcosto.Text.Length;
-
-                    if (lonp1 == 1)
-                    {
-                        txtprecioparte1.Text = "        " + txtprecioparte1.Text;
-                    }
-                    else if (lonp1 == 2)
-                    {
-                        txtprecioparte1.Text = "      " + txtprecioparte1.Text;
-                    }
-                    else if (lonp1 == 3)
-                    {
-                        txtprecioparte1.Text = "    " + txtprecioparte1.Text;
-                    }
-                    else if (lonp1 == 4)
-                    {
-                        txtprecioparte1.Text = "  " + txtprecioparte1.Text;
-                    }
-
-
-
-                    if (lonp2 == 1)
-                    {
-                        txtprecioparte2.Text = "        " + txtprecioparte2.Text;
-                    }
-                    else if (lonp2 == 2)
-                    {
-                        txtprecioparte2.Text = "      " + txtprecioparte2.Text;
-                    }
-                    else if (lonp2 == 3)
-                    {
-                        txtprecioparte2.Text = "    " + txtprecioparte2.Text;
-                    }
-                    else if (lonp2 == 4)
-                    {
-                        txtprecioparte2.Text = "  " + txtprecioparte2.Text;
-                    }
-
-
-                    if (lonp3 == 1)
-                    {
-                        txtparteprecio3.Text = "        " + txtparteprecio3.Text;
-                    }
-                    else if (lonp3 == 2)
-                    {
-                        txtparteprecio3.Text = "      " + txtparteprecio3.Text;
-                    }
-                    else if (lonp3 == 3)
-                    {
-                        txtparteprecio3.Text = "    " + txtparteprecio3.Text;
-                    }
-                    else if (lonp3 == 4)
-                    {
-                        txtparteprecio3.Text = "  " + txtparteprecio3.Text;
-                    }
-
-
-                    if (lonp4 == 1)
-                    {
-                        txtparteprecio4.Text = "        " + txtparteprecio4.Text;
-                    }
-                    else if (lonp4 == 2)
-                    {
-                        txtparteprecio4.Text = "      " + txtparteprecio4.Text;
-                    }
-                    else if (lonp4 == 3)
-                    {
-                        txtparteprecio4.Text = "    " + txtparteprecio4.Text;
-                    }
-                    else if (lonp4 == 4)
-                    {
-                        txtparteprecio4.Text = "  " + txtparteprecio4.Text;
-                    }
-
-                    if (lonp5 == 1)
-                    {
-                        txtparteprecio5.Text = "        " + txtparteprecio5.Text;
-                    }
-                    else if (lonp5 == 2)
-                    {
-                        txtparteprecio5.Text = "      " + txtparteprecio5.Text;
-                    }
-                    else if (lonp5 == 3)
-                    {
-                        txtparteprecio5.Text = "    " + txtparteprecio5.Text;
-                    }
-                    else if (lonp5 == 4)
-                    {
-                        txtparteprecio5.Text = "  " + txtparteprecio5.Text;
-                    }
-
-
-                    if (lonp6 == 1)
-                    {
-                        txtparteprecio6.Text = "        " + txtparteprecio6.Text;
-                    }
-                    else if (lonp6 == 2)
-                    {
-                        txtparteprecio6.Text = "      " + txtparteprecio6.Text;
-                    }
-                    else if (lonp6 == 3)
-                    {
-                        txtparteprecio6.Text = "    " + txtparteprecio6.Text;
-                    }
-                    else if (lonp6 == 4)
-                    {
-                        txtparteprecio6.Text = "  " + txtparteprecio6.Text;
-                    }
-
-                    if (loncosto == 1)
-                    {
-                        txtcosto.Text = "        " + txtcosto.Text;
-                    }
-                    else if (loncosto == 2)
-                    {
-                        txtcosto.Text = "      " + txtcosto.Text;
-                    }
-                    else if (loncosto == 3)
-                    {
-                        txtcosto.Text = "    " + txtcosto.Text;
-                    }
-                    else if (loncosto == 4)
-                    {
-                        txtcosto.Text = "  " + txtcosto.Text;
-                    }
+                    
 
 
 
@@ -790,175 +834,7 @@ namespace EBEST
 
 
 
-                    int lonp1 = txtprecioparte1.Text.Length;
-                    int lonp2 = txtprecioparte2.Text.Length;
-                    int lonp3 = txtparteprecio3.Text.Length;
-                    int lonp4 = txtparteprecio4.Text.Length;
-                    int lonp5 = txtparteprecio5.Text.Length;
-                    int lonp6 = txtparteprecio6.Text.Length;
-                    int loncosto = txtcosto.Text.Length;
-                    int lonabo = txtabono.Text.Length;
-                    int lonres = txtrestante.Text.Length;
-
-                    if (lonp1 == 1)
-                    {
-                        txtprecioparte1.Text = "        " + txtprecioparte1.Text;
-                    }
-                    else if (lonp1 == 2)
-                    {
-                        txtprecioparte1.Text = "      " + txtprecioparte1.Text;
-                    }
-                    else if (lonp1 == 3)
-                    {
-                        txtprecioparte1.Text = "    " + txtprecioparte1.Text;
-                    }
-                    else if (lonp1 == 4)
-                    {
-                        txtprecioparte1.Text = "  " + txtprecioparte1.Text;
-                    }
-
-
-
-                    if (lonp2 == 1)
-                    {
-                        txtprecioparte2.Text = "        " + txtprecioparte2.Text;
-                    }
-                    else if (lonp2 == 2)
-                    {
-                        txtprecioparte2.Text = "      " + txtprecioparte2.Text;
-                    }
-                    else if (lonp2 == 3)
-                    {
-                        txtprecioparte2.Text = "    " + txtprecioparte2.Text;
-                    }
-                    else if (lonp2 == 4)
-                    {
-                        txtprecioparte2.Text = "  " + txtprecioparte2.Text;
-                    }
-
-
-                    if (lonp3 == 1)
-                    {
-                        txtparteprecio3.Text = "        " + txtparteprecio3.Text;
-                    }
-                    else if (lonp3 == 2)
-                    {
-                        txtparteprecio3.Text = "      " + txtparteprecio3.Text;
-                    }
-                    else if (lonp3 == 3)
-                    {
-                        txtparteprecio3.Text = "    " + txtparteprecio3.Text;
-                    }
-                    else if (lonp3 == 4)
-                    {
-                        txtparteprecio3.Text = "  " + txtparteprecio3.Text;
-                    }
-
-
-                    if (lonp4 == 1)
-                    {
-                        txtparteprecio4.Text = "        " + txtparteprecio4.Text;
-                    }
-                    else if (lonp4 == 2)
-                    {
-                        txtparteprecio4.Text = "      " + txtparteprecio4.Text;
-                    }
-                    else if (lonp4 == 3)
-                    {
-                        txtparteprecio4.Text = "    " + txtparteprecio4.Text;
-                    }
-                    else if (lonp4 == 4)
-                    {
-                        txtparteprecio4.Text = "  " + txtparteprecio4.Text;
-                    }
-
-                    if (lonp5 == 1)
-                    {
-                        txtparteprecio5.Text = "        " + txtparteprecio5.Text;
-                    }
-                    else if (lonp5 == 2)
-                    {
-                        txtparteprecio5.Text = "      " + txtparteprecio5.Text;
-                    }
-                    else if (lonp5 == 3)
-                    {
-                        txtparteprecio5.Text = "    " + txtparteprecio5.Text;
-                    }
-                    else if (lonp5 == 4)
-                    {
-                        txtparteprecio5.Text = "  " + txtparteprecio5.Text;
-                    }
-
-
-                    if (lonp6 == 1)
-                    {
-                        txtparteprecio6.Text = "        " + txtparteprecio6.Text;
-                    }
-                    else if (lonp6 == 2)
-                    {
-                        txtparteprecio6.Text = "      " + txtparteprecio6.Text;
-                    }
-                    else if (lonp6 == 3)
-                    {
-                        txtparteprecio6.Text = "    " + txtparteprecio6.Text;
-                    }
-                    else if (lonp6 == 4)
-                    {
-                        txtparteprecio6.Text = "  " + txtparteprecio6.Text;
-                    }
-
-                    if (loncosto == 1)
-                    {
-                        txtcosto.Text = "        " + txtcosto.Text;
-                    }
-                    else if (loncosto == 2)
-                    {
-                        txtcosto.Text = "      " + txtcosto.Text;
-                    }
-                    else if (loncosto == 3)
-                    {
-                        txtcosto.Text = "    " + txtcosto.Text;
-                    }
-                    else if (loncosto == 4)
-                    {
-                        txtcosto.Text = "  " + txtcosto.Text;
-                    }
-
-
-                    if (lonabo == 1)
-                    {
-                        txtabono.Text = "        " + txtabono.Text;
-                    }
-                    else if (lonabo == 2)
-                    {
-                        txtabono.Text = "      " + txtabono.Text;
-                    }
-                    else if (lonabo == 3)
-                    {
-                        txtabono.Text = "    " + txtabono.Text;
-                    }
-                    else if (lonabo == 4)
-                    {
-                        txtabono.Text = "  " + txtabono.Text;
-                    }
-
-
-                    if (lonres == 1)
-                    {
-                        txtrestante.Text = "        " + txtrestante.Text;
-                    }
-                    else if (lonres == 2)
-                    {
-                        txtrestante.Text = "      " + txtrestante.Text;
-                    }
-                    else if (lonres == 3)
-                    {
-                        txtrestante.Text = "    " + txtrestante.Text;
-                    }
-                    else if (lonres == 4)
-                    {
-                        txtrestante.Text = "  " + txtrestante.Text;
-                    }
+                    
 
 
 
@@ -1028,7 +904,7 @@ namespace EBEST
                             txtparte6.Visible = false;
                             txtparteprecio6.Visible = false;
                             txtbusqueda.Text = "";
-                    txtabono.Text = "0";
+                    //txtabono.Text = "0";
                     timer2.Enabled = true;
 
 
@@ -1082,175 +958,7 @@ namespace EBEST
                 pictureBox2.Image = MyBarCode.Image;
 
 
-                int lonp1 = txtprecioparte1.Text.Length;
-                int lonp2 = txtprecioparte2.Text.Length;
-                int lonp3 = txtparteprecio3.Text.Length;
-                int lonp4 = txtparteprecio4.Text.Length;
-                int lonp5 = txtparteprecio5.Text.Length;
-                int lonp6 = txtparteprecio6.Text.Length;
-                int loncosto = txtcosto2.Text.Length;
-                int lonabo = txtabono.Text.Length;
-                int lonres = txtrestante.Text.Length;
-
-                if (lonp1 == 1)
-                {
-                    txtprecioparte1.Text = "        " + txtprecioparte1.Text;
-                }
-                else if (lonp1 == 2)
-                {
-                    txtprecioparte1.Text = "      " + txtprecioparte1.Text;
-                }
-                else if (lonp1 == 3)
-                {
-                    txtprecioparte1.Text = "    " + txtprecioparte1.Text;
-                }
-                else if (lonp1 == 4)
-                {
-                    txtprecioparte1.Text = "  " + txtprecioparte1.Text;
-                }
-
-
-
-                if (lonp2 == 1)
-                {
-                    txtprecioparte2.Text = "        " + txtprecioparte2.Text;
-                }
-                else if (lonp2 == 2)
-                {
-                    txtprecioparte2.Text = "      " + txtprecioparte2.Text;
-                }
-                else if (lonp2 == 3)
-                {
-                    txtprecioparte2.Text = "    " + txtprecioparte2.Text;
-                }
-                else if (lonp2 == 4)
-                {
-                    txtprecioparte2.Text = "  " + txtprecioparte2.Text;
-                }
-
-
-                if (lonp3 == 1)
-                {
-                    txtparteprecio3.Text = "        " + txtparteprecio3.Text;
-                }
-                else if (lonp3 == 2)
-                {
-                    txtparteprecio3.Text = "      " + txtparteprecio3.Text;
-                }
-                else if (lonp3 == 3)
-                {
-                    txtparteprecio3.Text = "    " + txtparteprecio3.Text;
-                }
-                else if (lonp3 == 4)
-                {
-                    txtparteprecio3.Text = "  " + txtparteprecio3.Text;
-                }
-
-
-                if (lonp4 == 1)
-                {
-                    txtparteprecio4.Text = "        " + txtparteprecio4.Text;
-                }
-                else if (lonp4 == 2)
-                {
-                    txtparteprecio4.Text = "      " + txtparteprecio4.Text;
-                }
-                else if (lonp4 == 3)
-                {
-                    txtparteprecio4.Text = "    " + txtparteprecio4.Text;
-                }
-                else if (lonp4 == 4)
-                {
-                    txtparteprecio4.Text = "  " + txtparteprecio4.Text;
-                }
-
-                if (lonp5 == 1)
-                {
-                    txtparteprecio5.Text = "        " + txtparteprecio5.Text;
-                }
-                else if (lonp5 == 2)
-                {
-                    txtparteprecio5.Text = "      " + txtparteprecio5.Text;
-                }
-                else if (lonp5 == 3)
-                {
-                    txtparteprecio5.Text = "    " + txtparteprecio5.Text;
-                }
-                else if (lonp5 == 4)
-                {
-                    txtparteprecio5.Text = "  " + txtparteprecio5.Text;
-                }
-
-
-                if (lonp6 == 1)
-                {
-                    txtparteprecio6.Text = "        " + txtparteprecio6.Text;
-                }
-                else if (lonp6 == 2)
-                {
-                    txtparteprecio6.Text = "      " + txtparteprecio6.Text;
-                }
-                else if (lonp6 == 3)
-                {
-                    txtparteprecio6.Text = "    " + txtparteprecio6.Text;
-                }
-                else if (lonp6 == 4)
-                {
-                    txtparteprecio6.Text = "  " + txtparteprecio6.Text;
-                }
-
-                if (loncosto == 1)
-                {
-                    txtcosto2.Text = "        " + txtcosto2.Text;
-                }
-                else if (loncosto == 2)
-                {
-                    txtcosto2.Text = "      " + txtcosto2.Text;
-                }
-                else if (loncosto == 3)
-                {
-                    txtcosto2.Text = "    " + txtcosto2.Text;
-                }
-                else if (loncosto == 4)
-                {
-                    txtcosto2.Text = "  " + txtcosto2.Text;
-                }
-
-
-                if (lonabo == 1)
-                {
-                    txtabono.Text = "        " + txtabono.Text;
-                }
-                else if (lonabo == 2)
-                {
-                    txtabono.Text = "      " + txtabono.Text;
-                }
-                else if (lonabo == 3)
-                {
-                    txtabono.Text = "    " + txtabono.Text;
-                }
-                else if (lonabo == 4)
-                {
-                    txtabono.Text = "  " + txtabono.Text;
-                }
-
-
-                if (lonres == 1)
-                {
-                    txtrestante.Text = "        " + txtrestante.Text;
-                }
-                else if (lonres == 2)
-                {
-                    txtrestante.Text = "      " + txtrestante.Text;
-                }
-                else if (lonres == 3)
-                {
-                    txtrestante.Text = "    " + txtrestante.Text;
-                }
-                else if (lonres == 4)
-                {
-                    txtrestante.Text = "  " + txtrestante.Text;
-                }
+                
 
 
 
@@ -2675,10 +2383,190 @@ namespace EBEST
 
             private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+
+
+            int lonp1 = txtprecioparte1.Text.Length;
+            int lonp2 = txtprecioparte2.Text.Length;
+            int lonp3 = txtparteprecio3.Text.Length;
+            int lonp4 = txtparteprecio4.Text.Length;
+            int lonp5 = txtparteprecio5.Text.Length;
+            int lonp6 = txtparteprecio6.Text.Length;
+            int loncosto = txtcosto.Text.Length;
+            int lonabo = txtabono.Text.Length;
+            int lonres = txtrestante.Text.Length;
+
+            if (lonp1 == 1)
+            {
+                txtprecioparte1.Text = "        " + txtprecioparte1.Text;
+            }
+            else if (lonp1 == 2)
+            {
+                txtprecioparte1.Text = "      " + txtprecioparte1.Text;
+            }
+            else if (lonp1 == 3)
+            {
+                txtprecioparte1.Text = "    " + txtprecioparte1.Text;
+            }
+            else if (lonp1 == 4)
+            {
+                txtprecioparte1.Text = "  " + txtprecioparte1.Text;
+            }
+
+
+
+            if (lonp2 == 1)
+            {
+                txtprecioparte2.Text = "        " + txtprecioparte2.Text;
+            }
+            else if (lonp2 == 2)
+            {
+                txtprecioparte2.Text = "      " + txtprecioparte2.Text;
+            }
+            else if (lonp2 == 3)
+            {
+                txtprecioparte2.Text = "    " + txtprecioparte2.Text;
+            }
+            else if (lonp2 == 4)
+            {
+                txtprecioparte2.Text = "  " + txtprecioparte2.Text;
+            }
+
+
+            if (lonp3 == 1)
+            {
+                txtparteprecio3.Text = "        " + txtparteprecio3.Text;
+            }
+            else if (lonp3 == 2)
+            {
+                txtparteprecio3.Text = "      " + txtparteprecio3.Text;
+            }
+            else if (lonp3 == 3)
+            {
+                txtparteprecio3.Text = "    " + txtparteprecio3.Text;
+            }
+            else if (lonp3 == 4)
+            {
+                txtparteprecio3.Text = "  " + txtparteprecio3.Text;
+            }
+
+
+            if (lonp4 == 1)
+            {
+                txtparteprecio4.Text = "        " + txtparteprecio4.Text;
+            }
+            else if (lonp4 == 2)
+            {
+                txtparteprecio4.Text = "      " + txtparteprecio4.Text;
+            }
+            else if (lonp4 == 3)
+            {
+                txtparteprecio4.Text = "    " + txtparteprecio4.Text;
+            }
+            else if (lonp4 == 4)
+            {
+                txtparteprecio4.Text = "  " + txtparteprecio4.Text;
+            }
+
+            if (lonp5 == 1)
+            {
+                txtparteprecio5.Text = "        " + txtparteprecio5.Text;
+            }
+            else if (lonp5 == 2)
+            {
+                txtparteprecio5.Text = "      " + txtparteprecio5.Text;
+            }
+            else if (lonp5 == 3)
+            {
+                txtparteprecio5.Text = "    " + txtparteprecio5.Text;
+            }
+            else if (lonp5 == 4)
+            {
+                txtparteprecio5.Text = "  " + txtparteprecio5.Text;
+            }
+
+
+            if (lonp6 == 1)
+            {
+                txtparteprecio6.Text = "        " + txtparteprecio6.Text;
+            }
+            else if (lonp6 == 2)
+            {
+                txtparteprecio6.Text = "      " + txtparteprecio6.Text;
+            }
+            else if (lonp6 == 3)
+            {
+                txtparteprecio6.Text = "    " + txtparteprecio6.Text;
+            }
+            else if (lonp6 == 4)
+            {
+                txtparteprecio6.Text = "  " + txtparteprecio6.Text;
+            }
+
+            if (loncosto == 1)
+            {
+                txtcosto.Text = "        " + txtcosto.Text;
+            }
+            else if (loncosto == 2)
+            {
+                txtcosto.Text = "      " + txtcosto.Text;
+            }
+            else if (loncosto == 3)
+            {
+                txtcosto.Text = "    " + txtcosto.Text;
+            }
+            else if (loncosto == 4)
+            {
+                txtcosto.Text = "  " + txtcosto.Text;
+            }
+
+
+            if (lonabo == 1)
+            {
+                txtabono.Text = "        " + txtabono.Text;
+            }
+            else if (lonabo == 2)
+            {
+                txtabono.Text = "      " + txtabono.Text;
+            }
+            else if (lonabo == 3)
+            {
+                txtabono.Text = "    " + txtabono.Text;
+            }
+            else if (lonabo == 4)
+            {
+                txtabono.Text = "  " + txtabono.Text;
+            }
+
+
+            if (lonres == 1)
+            {
+                txtrestante.Text = "        " + txtrestante.Text;
+            }
+            else if (lonres == 2)
+            {
+                txtrestante.Text = "      " + txtrestante.Text;
+            }
+            else if (lonres == 3)
+            {
+                txtrestante.Text = "    " + txtrestante.Text;
+            }
+            else if (lonres == 4)
+            {
+                txtrestante.Text = "  " + txtrestante.Text;
+            }
+
+
+
+
+
+
+
+
+
             Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
 
 
-            printDocument1.PrinterSettings.PrinterName = "TM-T20II";
+            printDocument2.PrinterSettings.PrinterName = "TM-T20II";
 
             // Create rectangle for source image.
             RectangleF srcRect = new RectangleF(100.0F, 100.0F, 150.0F, 150.0F);

@@ -984,7 +984,7 @@ namespace EBEST
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-
+              
 
             Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
 

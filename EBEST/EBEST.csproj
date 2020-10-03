@@ -235,6 +235,7 @@
       <DependentUpon>E-BEST.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensores.cs" />
+    <Compile Include="impresionpedido.cs" />
     <Compile Include="inicio.cs">
       <SubType>Form</SubType>
     </Compile>
