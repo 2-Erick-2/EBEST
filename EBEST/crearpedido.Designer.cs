@@ -124,10 +124,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 545);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 24);
+            this.label4.Size = new System.Drawing.Size(56, 24);
             this.label4.TabIndex = 45;
             this.label4.Text = "Total";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -155,10 +155,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 515);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 24);
+            this.label3.Size = new System.Drawing.Size(72, 24);
             this.label3.TabIndex = 42;
             this.label3.Text = "Abono";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -167,10 +167,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 487);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 24);
+            this.label2.Size = new System.Drawing.Size(80, 24);
             this.label2.TabIndex = 41;
             this.label2.Text = "Importe";
             this.label2.Click += new System.EventHandler(this.label2_Click);

@@ -958,8 +958,16 @@ namespace EBEST
 
         private void txtnombre_TextChanged(object sender, EventArgs e)
         {
-            txtnombre.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtnombre.Text);
+            if (txtnombre.Text == "")
+                {
+
+            }
+            else
+            {
+ txtnombre.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtnombre.Text);
             txtnombre.SelectionStart = txtnombre.Text.Length;
+            }
+           
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
