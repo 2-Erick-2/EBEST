@@ -1149,28 +1149,11 @@ namespace EBEST
                 e.Graphics.DrawString("    " + txtparte4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
                 e.Graphics.DrawString("                                                      $" + txtparteprecio4.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 530));
 
-
-
-
-
-
-
-
-
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 560));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 580));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 625));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 670);
-
-
-
-
-
-
-
-
-
 
                 /* e.Graphics.DrawString("                       PARTES ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(5, 430));
                  e.Graphics.DrawString("      Parte 1: " + txtparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 450));
@@ -1401,46 +1384,81 @@ namespace EBEST
 
         private void txtparte1_TextChanged(object sender, EventArgs e)
         {
-            string upmodelo = txtparte1.Text;
-            upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
-            txtparte1.Text = upmodelo;
-            txtparte1.SelectionStart = txtparte1.Text.Length; 
+            if (txtparte1.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte1.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte1.Text = upmodelo;
+                txtparte1.SelectionStart = txtparte1.Text.Length;
+            }
 
         }
 
         private void txtparte2_TextChanged(object sender, EventArgs e)
         {
-            string upmodelo = txtparte2.Text;
-            upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
-            txtparte2.Text = upmodelo;
-            txtparte2.SelectionStart = txtparte2.Text.Length;
+            if (txtparte2.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte2.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte2.Text = upmodelo;
+                txtparte2.SelectionStart = txtparte2.Text.Length;
+            }
 
         }
 
         private void txtparte3_TextChanged(object sender, EventArgs e)
         {
-            string upmodelo = txtparte3.Text;
-            upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
-            txtparte3.Text = upmodelo;
-            txtparte3.SelectionStart = txtparte3.Text.Length;
+            if (txtparte3.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte3.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte3.Text = upmodelo;
+                txtparte3.SelectionStart = txtparte3.Text.Length;
+            }
 
         }
 
         private void txtparte4_TextChanged(object sender, EventArgs e)
         {
-            string upmodelo = txtparte4.Text;
-            upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
-            txtparte4.Text = upmodelo;
-            txtparte4.SelectionStart = txtparte4.Text.Length;
+            if (txtparte4.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte4.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte4.Text = upmodelo;
+                txtparte4.SelectionStart = txtparte4.Text.Length;
+            }
 
         }
 
         private void txtparte5_TextChanged(object sender, EventArgs e)
         {
-            string upmodelo = txtparte5.Text;
-            upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
-            txtparte5.Text = upmodelo;
-            txtparte5.SelectionStart = txtparte5.Text.Length;
+            if (txtparte5.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtparte5.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtparte5.Text = upmodelo;
+                txtparte5.SelectionStart = txtparte5.Text.Length;
+            }
 
         }
 
