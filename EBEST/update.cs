@@ -1088,7 +1088,7 @@ namespace EBEST
                 int lonp4 = txtparteprecio4.Text.Length;
                 int lonp5 = txtparteprecio5.Text.Length;
                 int lonp6 = txtparteprecio6.Text.Length;
-                int loncosto = txtcosto.Text.Length;
+                int loncosto = txtcosto2.Text.Length;
                 int lonabo = txtabono.Text.Length;
                 int lonres = txtrestante.Text.Length;
 
@@ -1201,19 +1201,19 @@ namespace EBEST
 
                 if (loncosto == 1)
                 {
-                    txtcosto.Text = "        " + txtcosto.Text;
+                    txtcosto2.Text = "        " + txtcosto2.Text;
                 }
                 else if (loncosto == 2)
                 {
-                    txtcosto.Text = "      " + txtcosto.Text;
+                    txtcosto2.Text = "      " + txtcosto2.Text;
                 }
                 else if (loncosto == 3)
                 {
-                    txtcosto.Text = "    " + txtcosto.Text;
+                    txtcosto2.Text = "    " + txtcosto2.Text;
                 }
                 else if (loncosto == 4)
                 {
-                    txtcosto.Text = "  " + txtcosto.Text;
+                    txtcosto2.Text = "  " + txtcosto2.Text;
                 }
 
 
@@ -3126,7 +3126,7 @@ namespace EBEST
             Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
 
 
-            printDocument1.PrinterSettings.PrinterName = "TM-T20II";
+            printDocument3.PrinterSettings.PrinterName = "TM-T20II";
 
             // Create rectangle for source image.
             RectangleF srcRect = new RectangleF(100.0F, 100.0F, 150.0F, 150.0F);
@@ -3507,6 +3507,26 @@ namespace EBEST
         private void txtorden_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtprecioparte1_Click(object sender, EventArgs e)
+        {
+            if (txtprecioparte1.Text == "0")
+            {
+                txtprecioparte1.Text = "";
+
+            }
+        }
+
+        private void txtprecioparte2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtparteprecio3_MouseLeave(object sender, EventArgs e)
+        {
+            /*if (txtparteprecio3.Text == "")
+                txtparteprecio3.Text = "0";*/
         }
     }
 }

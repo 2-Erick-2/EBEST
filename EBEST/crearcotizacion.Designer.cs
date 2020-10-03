@@ -212,8 +212,9 @@
             this.txtorden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtorden.Location = new System.Drawing.Point(331, 642);
             this.txtorden.Name = "txtorden";
-            this.txtorden.Size = new System.Drawing.Size(0, 24);
+            this.txtorden.Size = new System.Drawing.Size(52, 24);
             this.txtorden.TabIndex = 67;
+            this.txtorden.Text = "-------";
             // 
             // btnimprimir2
             // 
@@ -310,7 +311,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(146, 185);
+            this.label2.Location = new System.Drawing.Point(143, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 24);
             this.label2.TabIndex = 68;

@@ -871,33 +871,42 @@ namespace EBEST
 
         private void txtprecioparte1_Click(object sender, EventArgs e)
         {
+            if (txtprecioparte1.Text == "0")
+            {
             txtprecioparte1.Text = "";
+
+            }
         }
 
         private void txtprecioparte2_Click(object sender, EventArgs e)
         {
+            if (txtprecioparte2.Text == "0")
             txtprecioparte2.Text = "";
         }
 
         private void txtparteprecio3_Click(object sender, EventArgs e)
         {
+            if (txtparteprecio3.Text == "0")
             txtparteprecio3.Text = "";
         }
 
         private void txtparteprecio4_Click(object sender, EventArgs e)
         {
+            if (txtparteprecio4.Text == "0")
             txtparteprecio4.Text = "";
 
         }
 
         private void txtparteprecio5_Click(object sender, EventArgs e)
         {
+            if (txtparteprecio5.Text == "0")
             txtparteprecio5.Text = "";
 
         }
 
         private void txtparteprecio6_Click(object sender, EventArgs e)
         {
+            if (txtparteprecio6.Text == "0")
             txtparteprecio6.Text = "";
 
         }
