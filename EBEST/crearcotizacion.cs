@@ -285,14 +285,6 @@ namespace EBEST
 
 
 
-
-
-
-
-
-
-
-
                 BrotherPrintThis();
 
                 printPreviewDialog1.Document = printDocument1;
