@@ -164,7 +164,7 @@
             this.lblnumero.Name = "lblnumero";
             this.lblnumero.Size = new System.Drawing.Size(79, 24);
             this.lblnumero.TabIndex = 53;
-            this.lblnumero.Text = "Numero";
+            this.lblnumero.Text = "Número";
             // 
             // lblnombre
             // 
@@ -254,7 +254,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 25);
             this.label1.TabIndex = 63;
-            this.label1.Text = "Numero de Orden";
+            this.label1.Text = "Número de Orden";
             // 
             // txthorayfecha
             // 
@@ -311,7 +311,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(148, 191);
+            this.label2.Location = new System.Drawing.Point(148, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 24);
             this.label2.TabIndex = 68;
@@ -740,7 +740,13 @@
             "2 horas",
             "3 horas",
             "4 horas",
-            "5 horas"});
+            "5 horas",
+            "6 horas",
+            "7 horas",
+            "9 horas",
+            "10 horas",
+            "11 horas",
+            "12 horas"});
             this.combohoras.Location = new System.Drawing.Point(631, 522);
             this.combohoras.Name = "combohoras";
             this.combohoras.Size = new System.Drawing.Size(121, 28);
@@ -756,11 +762,11 @@
             this.combodias.ForeColor = System.Drawing.Color.White;
             this.combodias.FormattingEnabled = true;
             this.combodias.Items.AddRange(new object[] {
-            "1 dia",
-            "2 dias",
-            "3 dias",
-            "4 dias",
-            "5 dias"});
+            "1 día",
+            "2 días",
+            "3 días",
+            "4 días",
+            "5 días"});
             this.combodias.Location = new System.Drawing.Point(403, 523);
             this.combodias.Name = "combodias";
             this.combodias.Size = new System.Drawing.Size(121, 28);

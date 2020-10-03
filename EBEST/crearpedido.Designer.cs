@@ -215,7 +215,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 25);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Numero de Orden";
+            this.label1.Text = "Número de Orden";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txthorayfecha
@@ -306,7 +306,7 @@
             this.lblnumero.Name = "lblnumero";
             this.lblnumero.Size = new System.Drawing.Size(79, 24);
             this.lblnumero.TabIndex = 29;
-            this.lblnumero.Text = "Numero";
+            this.lblnumero.Text = "Número";
             // 
             // lblnombre
             // 

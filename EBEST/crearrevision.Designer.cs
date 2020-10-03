@@ -119,7 +119,7 @@
             this.lblobservaciones.Name = "lblobservaciones";
             this.lblobservaciones.Size = new System.Drawing.Size(110, 24);
             this.lblobservaciones.TabIndex = 89;
-            this.lblobservaciones.Text = "Descripcion";
+            this.lblobservaciones.Text = "Descripción";
             // 
             // lblnumero
             // 
@@ -130,7 +130,7 @@
             this.lblnumero.Name = "lblnumero";
             this.lblnumero.Size = new System.Drawing.Size(79, 24);
             this.lblnumero.TabIndex = 88;
-            this.lblnumero.Text = "Numero";
+            this.lblnumero.Text = "Número";
             // 
             // lblnombre
             // 
@@ -195,7 +195,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 25);
             this.label1.TabIndex = 97;
-            this.label1.Text = "Numero de Orden";
+            this.label1.Text = "Número de Orden";
             // 
             // txthorayfecha
             // 
@@ -300,11 +300,11 @@
             this.combodias.ForeColor = System.Drawing.Color.White;
             this.combodias.FormattingEnabled = true;
             this.combodias.Items.AddRange(new object[] {
-            "1 dia",
-            "2 dias",
-            "3 dias",
-            "4 dias",
-            "5 dias"});
+            "1 día",
+            "2 días",
+            "3 días",
+            "4 días",
+            "5 días"});
             this.combodias.Location = new System.Drawing.Point(407, 397);
             this.combodias.Name = "combodias";
             this.combodias.Size = new System.Drawing.Size(121, 28);
@@ -323,7 +323,13 @@
             "2 horas",
             "3 horas",
             "4 horas",
-            "5 horas"});
+            "5 horas",
+            "6 horas",
+            "7 horas",
+            "9 horas",
+            "10 horas",
+            "11 horas",
+            "12 horas"});
             this.combohoras.Location = new System.Drawing.Point(614, 396);
             this.combohoras.Name = "combohoras";
             this.combohoras.Size = new System.Drawing.Size(121, 28);

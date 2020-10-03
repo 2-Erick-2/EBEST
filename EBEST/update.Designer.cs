@@ -854,7 +854,13 @@
             "2 horas",
             "3 horas",
             "4 horas",
-            "5 horas"});
+            "5 horas",
+            "6 horas",
+            "7 horas",
+            "9 horas",
+            "10 horas",
+            "11 horas",
+            "12 horas"});
             this.combohoras.Location = new System.Drawing.Point(399, 570);
             this.combohoras.Name = "combohoras";
             this.combohoras.Size = new System.Drawing.Size(121, 28);
