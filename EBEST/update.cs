@@ -405,6 +405,47 @@ namespace EBEST
 
         }
 
+
+        public void BrotherPrintThis()
+        {
+            try
+            {
+                string path = @"D:\EBEST\cartaebest.lbx";
+
+                bpac.Document doc = new bpac.Document();
+                doc.Open(path);
+                bool test = doc.SetPrinter("Brother QL - 800", true);
+                string pedido2 = "Tipo pedido: " + pedido;
+                string nombre = "Nombre: " + txtnombre.Text;
+                string numero = "Numero: " + txtnumero.Text;
+                string obser = "";
+                string orden = "Numero orden: " + txtorden.Text;
+                string orden2 = txtorden3.Text;
+                doc.GetObject("pedido").Text = pedido;
+                doc.GetObject("nombre").Text = nombre;
+                doc.GetObject("numero").Text = numero;
+                doc.GetObject("obser").Text = obser;
+                //doc.GetObject("orden").Text = orden;
+                doc.GetObject("codigo").Text = orden2;
+                doc.GetObject("tiempo").Text = espera;
+                doc.StartPrint("", bpac.PrintOptionConstants.bpoDefault);
+                doc.PrintOut(1, bpac.PrintOptionConstants.bpoDefault);
+                doc.EndPrint();
+                doc.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+
+            }
+        }
+
+
+
+
+
         private void btnpagado_Click(object sender, EventArgs e)
         {
             
@@ -492,22 +533,15 @@ namespace EBEST
                     //pictureBox1.Image = MyBarCodeBitmap;
                     pictureBox2.Image = MyBarCode.Image;
 
-                    
 
 
+                    // printPreviewDialog1.Document = printDocument1;
+                    BrotherPrintThis();
 
-
-
-
-
-
-
-                    printPreviewDialog1.Document = printDocument1;
-
-                    //printDocument1.Print();
+                    printDocument1.Print();
                     //printDocument1.Print();
 
-                    printPreviewDialog1.Show();
+                    //printPreviewDialog1.Show();
 
                     label25.Visible = false;
                                 checkBox1.Visible = false;
@@ -661,19 +695,21 @@ namespace EBEST
 
 
 
-                    
 
 
 
 
 
 
-                    printPreviewDialog2.Document = printDocument2;
+
+                    // printPreviewDialog2.Document = printDocument2;
 
                     //printDocument1.Print();
-                    //printDocument1.Print();
+                    BrotherPrintThis();
 
-                    printPreviewDialog2.Show();
+                    printDocument2.Print();
+
+                    //printPreviewDialog2.Show();
 
 
 
@@ -790,12 +826,12 @@ namespace EBEST
 
 
 
-                printPreviewDialog3.Document = printDocument3;
+                //printPreviewDialog3.Document = printDocument3;
 
-                //printDocument1.Print();
+                printDocument3.Print();
                 //printDocument1.Print();
 
-                printPreviewDialog3.Show();
+                //printPreviewDialog3.Show();
 
 
 
@@ -855,7 +891,7 @@ namespace EBEST
                 label15.Visible = false;
                 label16.Visible = false;
                 txtparte5.Visible = false;
-                txtparteprecio5.Visible = false;
+                txtparteprecio5.Visible = false; 
 
                 label17.Visible = false;
                 label18.Visible = false;
@@ -864,19 +900,7 @@ namespace EBEST
                 txtbusqueda.Text = "";
                 timer2.Enabled = true;
 
-            }
-
-
-
-
-
-
-
-
-
-
-
-
+            } 
             //label1.Visible = false;
             //label2.Visible = false;
             //label3.Visible = false;

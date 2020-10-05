@@ -131,7 +131,7 @@ namespace EBEST
 
 
                             todo = salto + txtnumero.Text + "\n Nombre: " + txtnombre.Text +"\n    Hora y Fecha:   " + txthorayfecha.Text;
-                            Console.WriteLine(todo);
+                            //Console.WriteLine(todo);
                             string asunto = txtnombre.Text + "   " + pedido + " Orden: " + txtorden.Text;
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
 
@@ -288,12 +288,12 @@ namespace EBEST
 
                 BrotherPrintThis();
 
-                printPreviewDialog1.Document = printDocument1;
+                //printPreviewDialog1.Document = printDocument1;
 
-                //printDocument1.Print();
+                printDocument1.Print();
                 //printDocument1.Print();
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Show();
 
 
 
@@ -1020,7 +1020,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 520));
                 e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 545));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 565));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 695);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 595);
 
 
 

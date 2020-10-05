@@ -112,7 +112,7 @@ namespace EBEST
             {
                 MessageBox.Show("Error " + ex);
             }
-                c.enviarCorreo(txtEmisor.Text, txtPassword.Text, "Hora: " + txthorayfecha.Text +"\n Nombre: "+txtnombre.Text+"\nNumero: "+ txtnumero.Text+"\nModelo: "+ txtmodelo.Text+"\n Descripcion: "+txtobservaciones.Text+"\n Orden: "+txtorden.Text,txtnombre.Text + " " +txtmodelo.Text + " "+ txtorden.Text , "erick.tadeo@hotmail.com");
+                c.enviarCorreo(txtEmisor.Text, txtPassword.Text, "Hora: " + txthorayfecha.Text +"\n Nombre: "+txtnombre.Text+"\nNumero: "+ txtnumero.Text+"\nModelo: "+ txtmodelo.Text+"\n Descripcion: "+txtobservaciones.Text+"\n Orden: "+txtorden.Text,txtnombre.Text + " " +txtmodelo.Text + " "+ txtorden.Text , "ebest-clientes@outlook.com");
 
                 ZXing.BarcodeWriter br = new ZXing.BarcodeWriter();
                 br.Format = BarcodeFormat.QR_CODE;
@@ -139,15 +139,15 @@ namespace EBEST
 
                 //Imprimirrecibo();
 
-                printPreviewDialog1.Document = printDocument1;
-                
-                //printDocument1.Print();
+                //printPreviewDialog1.Document = printDocument1;
+                BrotherPrintThis();
+
+                printDocument1.Print();
              
 
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Show();
 
-                //BrotherPrintThis();
                 //printDocument1.Print();
 
 
