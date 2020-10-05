@@ -39,7 +39,12 @@ namespace EBEST
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            txthorayfecha.Text = DateTime.Now.ToString();
+            string fecha = DateTime.Now.ToShortDateString();
+            string hora = DateTime.Now.ToShortTimeString();
+
+
+
+            txthorayfecha.Text = fecha + "  " + hora;
 
         }
         String pedido = "";
@@ -996,7 +1001,7 @@ namespace EBEST
             e.Graphics.DrawImage(newImage, 30, 2);
 
             //e.Graphics.DrawImageUnscaledAndClipped(newImage,new Point(10,10));
-            e.Graphics.DrawString("            PEDIDO", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
+            e.Graphics.DrawString("            Pedido", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 150));
             e.Graphics.DrawString("                    GUGE900514C70", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 180));
             e.Graphics.DrawString("     Calle Pedro J. Mendez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
@@ -1039,7 +1044,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 560));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 605));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 660);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 635);
 
 
 
@@ -1095,7 +1100,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 580));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 625));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 680);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 655);
 
 
 
@@ -1152,7 +1157,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 600));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 645));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 700);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 675);
 
 
 
@@ -1217,7 +1222,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 620));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 665));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 720);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 695);
 
 
 
@@ -1290,7 +1295,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 640));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 665));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 685));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 730);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 715);
 
 
 
@@ -1358,7 +1363,7 @@ namespace EBEST
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 660));
                 e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 685));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 705));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 750);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 735);
 
 
 

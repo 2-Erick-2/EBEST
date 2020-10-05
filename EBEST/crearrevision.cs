@@ -266,7 +266,7 @@ namespace EBEST
         {
             txtEmisor.Text = "ebestprueba@gmail.com";
             txtPassword.Text = "ebest1234";
-            combodias.Text = "1 dia";
+            combodias.Text = "1 día";
             combohoras.Text = "1 hora";
         }
 
@@ -347,7 +347,7 @@ namespace EBEST
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 450));
             e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 475));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 490));
-            e.Graphics.DrawImage(pictureBox2.Image, 70, 550);
+            e.Graphics.DrawImage(pictureBox2.Image, 70, 520);
 
            // e.Graphics.DrawImage(pictureBox1.Image, 70, 600);
             
