@@ -144,6 +144,7 @@
             // txtabono
             // 
             this.txtabono.Location = new System.Drawing.Point(310, 517);
+            this.txtabono.MaxLength = 6;
             this.txtabono.Name = "txtabono";
             this.txtabono.Size = new System.Drawing.Size(308, 20);
             this.txtabono.TabIndex = 47;
@@ -385,6 +386,7 @@
             // txtparte1
             // 
             this.txtparte1.Location = new System.Drawing.Point(308, 256);
+            this.txtparte1.MaxLength = 27;
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
             this.txtparte1.TabIndex = 35;
@@ -393,6 +395,7 @@
             // txtprecioparte1
             // 
             this.txtprecioparte1.Location = new System.Drawing.Point(523, 255);
+            this.txtprecioparte1.MaxLength = 6;
             this.txtprecioparte1.Name = "txtprecioparte1";
             this.txtprecioparte1.Size = new System.Drawing.Size(93, 20);
             this.txtprecioparte1.TabIndex = 36;
@@ -428,6 +431,7 @@
             // txtprecioparte2
             // 
             this.txtprecioparte2.Location = new System.Drawing.Point(523, 296);
+            this.txtprecioparte2.MaxLength = 6;
             this.txtprecioparte2.Name = "txtprecioparte2";
             this.txtprecioparte2.Size = new System.Drawing.Size(93, 20);
             this.txtprecioparte2.TabIndex = 38;
@@ -440,6 +444,7 @@
             // txtparte2
             // 
             this.txtparte2.Location = new System.Drawing.Point(308, 297);
+            this.txtparte2.MaxLength = 27;
             this.txtparte2.Name = "txtparte2";
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
             this.txtparte2.TabIndex = 37;
@@ -473,6 +478,7 @@
             // txtparteprecio3
             // 
             this.txtparteprecio3.Location = new System.Drawing.Point(524, 339);
+            this.txtparteprecio3.MaxLength = 6;
             this.txtparteprecio3.Name = "txtparteprecio3";
             this.txtparteprecio3.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio3.TabIndex = 40;
@@ -485,6 +491,7 @@
             // txtparte3
             // 
             this.txtparte3.Location = new System.Drawing.Point(309, 340);
+            this.txtparte3.MaxLength = 27;
             this.txtparte3.Name = "txtparte3";
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
             this.txtparte3.TabIndex = 39;
@@ -518,6 +525,7 @@
             // txtparteprecio4
             // 
             this.txtparteprecio4.Location = new System.Drawing.Point(523, 375);
+            this.txtparteprecio4.MaxLength = 6;
             this.txtparteprecio4.Name = "txtparteprecio4";
             this.txtparteprecio4.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio4.TabIndex = 42;
@@ -530,6 +538,7 @@
             // txtparte4
             // 
             this.txtparte4.Location = new System.Drawing.Point(308, 376);
+            this.txtparte4.MaxLength = 27;
             this.txtparte4.Name = "txtparte4";
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
             this.txtparte4.TabIndex = 41;
@@ -563,6 +572,7 @@
             // txtparteprecio5
             // 
             this.txtparteprecio5.Location = new System.Drawing.Point(524, 411);
+            this.txtparteprecio5.MaxLength = 6;
             this.txtparteprecio5.Name = "txtparteprecio5";
             this.txtparteprecio5.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio5.TabIndex = 44;
@@ -575,6 +585,7 @@
             // txtparte5
             // 
             this.txtparte5.Location = new System.Drawing.Point(309, 412);
+            this.txtparte5.MaxLength = 27;
             this.txtparte5.Name = "txtparte5";
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
             this.txtparte5.TabIndex = 43;
@@ -608,6 +619,7 @@
             // txtparteprecio6
             // 
             this.txtparteprecio6.Location = new System.Drawing.Point(525, 451);
+            this.txtparteprecio6.MaxLength = 6;
             this.txtparteprecio6.Name = "txtparteprecio6";
             this.txtparteprecio6.Size = new System.Drawing.Size(93, 20);
             this.txtparteprecio6.TabIndex = 46;
@@ -620,6 +632,7 @@
             // txtparte6
             // 
             this.txtparte6.Location = new System.Drawing.Point(310, 452);
+            this.txtparte6.MaxLength = 27;
             this.txtparte6.Name = "txtparte6";
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
             this.txtparte6.TabIndex = 45;

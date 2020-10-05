@@ -126,10 +126,11 @@ namespace EBEST
                             String todo = "";
                             String destino = "erick.tadeo@hotmail.com";
                             string salto = "    Numero:  ";
-                            String obser = " \n   Observaciones:  ";
+
+                            //String obser = " \n   Observaciones:  ";
 
 
-                            todo = salto + txtnumero.Text + obser + txtobservaciones.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text;
+                            todo = salto + txtnumero.Text + "\n Nombre: " + txtnombre.Text +"\n    Hora y Fecha:   " + txthorayfecha.Text;
                             Console.WriteLine(todo);
                             string asunto = txtnombre.Text + "   " + pedido + " Orden: " + txtorden.Text;
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
@@ -345,7 +346,7 @@ namespace EBEST
                 string pedido2 = "Tipo pedido: " + pedido;
                 string nombre = "Nombre: " + txtnombre.Text;
                 string numero = "Numero: " + txtnumero.Text;
-                string obser = "Obs.: " + txtobservaciones.Text;
+                string obser =  txtobservaciones.Text;
                 string orden = "Numero orden: " + txtorden.Text;
                 string orden2 = txtorden.Text;
                 doc.GetObject("pedido").Text = pedido2;
@@ -983,7 +984,7 @@ namespace EBEST
             e.Graphics.DrawString("  Equipo en  cotización", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 150));
             e.Graphics.DrawString("                    GUGE900514C70", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 180));
-            e.Graphics.DrawString("     Calle Pedro J. Mendez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
+            e.Graphics.DrawString("     Calle Pedro J. Méndez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
             e.Graphics.DrawString("                  Reynosa Tamaulipas", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 220));
             e.Graphics.DrawString("                             88500", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 240));
             e.Graphics.DrawString("                  e-best@live.com.mx", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 260));
@@ -1017,7 +1018,7 @@ namespace EBEST
                 e.Graphics.DrawString("                                                      $"+txtprecioparte1.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 500));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 520));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 545));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 545));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 565));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 695);
 
@@ -1055,7 +1056,7 @@ namespace EBEST
 
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 520));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 540));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 565));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 565));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 585));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 610);
 
@@ -1104,7 +1105,7 @@ namespace EBEST
 
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 540));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 560));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 605));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 635);
 
@@ -1156,7 +1157,7 @@ namespace EBEST
 
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 560));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 580));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 625));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 655);
 
@@ -1217,7 +1218,7 @@ namespace EBEST
 
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 580));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 600));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 645));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 675);
 
@@ -1288,7 +1289,7 @@ namespace EBEST
 
                 e.Graphics.DrawString("                                            Total: " + "$" + txtcosto.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(5, 600));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 620));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 665));
                 e.Graphics.DrawImage(pictureBox2.Image, 70, 695);
 

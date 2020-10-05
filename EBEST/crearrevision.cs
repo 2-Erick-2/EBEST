@@ -147,7 +147,7 @@ namespace EBEST
 
                 printPreviewDialog1.Show();
 
-                BrotherPrintThis();
+                //BrotherPrintThis();
                 //printDocument1.Print();
 
 
@@ -280,16 +280,36 @@ namespace EBEST
 
         private void txtmodelo_TextChanged(object sender, EventArgs e)
         {
-            txtmodelo.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtmodelo.Text);
-            txtmodelo.SelectionStart = txtmodelo.Text.Length;
+
+
+            if (txtmodelo.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtmodelo.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtmodelo.Text = upmodelo;
+                txtmodelo.SelectionStart = txtmodelo.Text.Length;
+            }
         }
 
         private void txtobservaciones_TextChanged(object sender, EventArgs e)
         {
+            if (txtobservaciones.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtobservaciones.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtobservaciones.Text = upmodelo;
+                txtobservaciones.SelectionStart = txtobservaciones.Text.Length;
+            }
 
             
-            txtobservaciones.Text = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(txtobservaciones.Text.ToLower()));
-            txtobservaciones.SelectionStart = txtobservaciones.Text.Length;
 
 
 
@@ -345,7 +365,7 @@ namespace EBEST
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 410));
             e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 435));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 450));
-            e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 475));
+            e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 475));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 490));
             e.Graphics.DrawImage(pictureBox2.Image, 70, 520);
 

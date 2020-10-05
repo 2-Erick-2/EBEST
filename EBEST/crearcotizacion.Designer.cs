@@ -138,6 +138,7 @@
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(333, 132);
+            this.txtnombre.MaxLength = 27;
             this.txtnombre.Multiline = true;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(304, 20);
@@ -301,6 +302,7 @@
             // txtmodelo
             // 
             this.txtmodelo.Location = new System.Drawing.Point(333, 188);
+            this.txtmodelo.MaxLength = 27;
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(304, 20);
             this.txtmodelo.TabIndex = 57;

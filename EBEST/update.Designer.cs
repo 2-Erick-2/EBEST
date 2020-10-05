@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(update));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtorden = new System.Windows.Forms.TextBox();
@@ -101,9 +101,9 @@
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.combohoras = new System.Windows.Forms.ComboBox();
-            this.combodias = new System.Windows.Forms.ComboBox();
             this.printDocument3 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
+            this.combodias = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -116,23 +116,23 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(1, 78);
             this.dataGridView1.Name = "dataGridView1";
@@ -297,6 +297,7 @@
             // txtparteprecio6
             // 
             this.txtparteprecio6.Location = new System.Drawing.Point(673, 452);
+            this.txtparteprecio6.MaxLength = 6;
             this.txtparteprecio6.Name = "txtparteprecio6";
             this.txtparteprecio6.Size = new System.Drawing.Size(66, 20);
             this.txtparteprecio6.TabIndex = 128;
@@ -309,6 +310,7 @@
             // txtparte6
             // 
             this.txtparte6.Location = new System.Drawing.Point(453, 452);
+            this.txtparte6.MaxLength = 27;
             this.txtparte6.Name = "txtparte6";
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
             this.txtparte6.TabIndex = 127;
@@ -340,6 +342,7 @@
             // txtparteprecio5
             // 
             this.txtparteprecio5.Location = new System.Drawing.Point(299, 453);
+            this.txtparteprecio5.MaxLength = 6;
             this.txtparteprecio5.Name = "txtparteprecio5";
             this.txtparteprecio5.Size = new System.Drawing.Size(63, 20);
             this.txtparteprecio5.TabIndex = 124;
@@ -352,6 +355,7 @@
             // txtparte5
             // 
             this.txtparte5.Location = new System.Drawing.Point(84, 449);
+            this.txtparte5.MaxLength = 27;
             this.txtparte5.Name = "txtparte5";
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
             this.txtparte5.TabIndex = 123;
@@ -383,6 +387,7 @@
             // txtparteprecio4
             // 
             this.txtparteprecio4.Location = new System.Drawing.Point(673, 395);
+            this.txtparteprecio4.MaxLength = 6;
             this.txtparteprecio4.Name = "txtparteprecio4";
             this.txtparteprecio4.Size = new System.Drawing.Size(66, 20);
             this.txtparteprecio4.TabIndex = 120;
@@ -395,6 +400,7 @@
             // txtparte4
             // 
             this.txtparte4.Location = new System.Drawing.Point(451, 396);
+            this.txtparte4.MaxLength = 27;
             this.txtparte4.Name = "txtparte4";
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
             this.txtparte4.TabIndex = 119;
@@ -426,6 +432,7 @@
             // txtparteprecio3
             // 
             this.txtparteprecio3.Location = new System.Drawing.Point(299, 391);
+            this.txtparteprecio3.MaxLength = 6;
             this.txtparteprecio3.Name = "txtparteprecio3";
             this.txtparteprecio3.Size = new System.Drawing.Size(63, 20);
             this.txtparteprecio3.TabIndex = 116;
@@ -439,6 +446,7 @@
             // txtparte3
             // 
             this.txtparte3.Location = new System.Drawing.Point(84, 387);
+            this.txtparte3.MaxLength = 27;
             this.txtparte3.Name = "txtparte3";
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
             this.txtparte3.TabIndex = 115;
@@ -470,6 +478,7 @@
             // txtprecioparte2
             // 
             this.txtprecioparte2.Location = new System.Drawing.Point(673, 322);
+            this.txtprecioparte2.MaxLength = 6;
             this.txtprecioparte2.Name = "txtprecioparte2";
             this.txtprecioparte2.Size = new System.Drawing.Size(66, 20);
             this.txtprecioparte2.TabIndex = 112;
@@ -483,6 +492,7 @@
             // txtparte2
             // 
             this.txtparte2.Location = new System.Drawing.Point(451, 323);
+            this.txtparte2.MaxLength = 27;
             this.txtparte2.Name = "txtparte2";
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
             this.txtparte2.TabIndex = 111;
@@ -514,6 +524,7 @@
             // txtprecioparte1
             // 
             this.txtprecioparte1.Location = new System.Drawing.Point(299, 322);
+            this.txtprecioparte1.MaxLength = 6;
             this.txtprecioparte1.Name = "txtprecioparte1";
             this.txtprecioparte1.Size = new System.Drawing.Size(63, 20);
             this.txtprecioparte1.TabIndex = 108;
@@ -527,6 +538,7 @@
             // txtparte1
             // 
             this.txtparte1.Location = new System.Drawing.Point(84, 322);
+            this.txtparte1.MaxLength = 27;
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
             this.txtparte1.TabIndex = 107;
@@ -867,26 +879,6 @@
             this.combohoras.TabIndex = 158;
             this.combohoras.Visible = false;
             // 
-            // combodias
-            // 
-            this.combodias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.combodias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combodias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.combodias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combodias.ForeColor = System.Drawing.Color.White;
-            this.combodias.FormattingEnabled = true;
-            this.combodias.Items.AddRange(new object[] {
-            "1 dia",
-            "2 dias",
-            "3 dias",
-            "4 dias",
-            "5 dias"});
-            this.combodias.Location = new System.Drawing.Point(227, 571);
-            this.combodias.Name = "combodias";
-            this.combodias.Size = new System.Drawing.Size(121, 28);
-            this.combodias.TabIndex = 157;
-            this.combodias.Visible = false;
-            // 
             // printDocument3
             // 
             this.printDocument3.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument3_PrintPage);
@@ -901,6 +893,26 @@
             this.printPreviewDialog3.Name = "printPreviewDialog3";
             this.printPreviewDialog3.Visible = false;
             // 
+            // combodias
+            // 
+            this.combodias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.combodias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combodias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.combodias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combodias.ForeColor = System.Drawing.Color.White;
+            this.combodias.FormattingEnabled = true;
+            this.combodias.Items.AddRange(new object[] {
+            "1 día",
+            "2 días",
+            "3 días",
+            "4 días",
+            "5 días"});
+            this.combodias.Location = new System.Drawing.Point(221, 572);
+            this.combodias.Name = "combodias";
+            this.combodias.Size = new System.Drawing.Size(121, 28);
+            this.combodias.TabIndex = 159;
+            this.combodias.Visible = false;
+            // 
             // update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -908,8 +920,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::EBEST.Properties.Resources.fondoupdate2;
             this.ClientSize = new System.Drawing.Size(780, 792);
-            this.Controls.Add(this.combohoras);
             this.Controls.Add(this.combodias);
+            this.Controls.Add(this.combohoras);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox4);
@@ -1054,8 +1066,8 @@
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Windows.Forms.ComboBox combohoras;
-        private System.Windows.Forms.ComboBox combodias;
         private System.Drawing.Printing.PrintDocument printDocument3;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog3;
+        private System.Windows.Forms.ComboBox combodias;
     }
 }
