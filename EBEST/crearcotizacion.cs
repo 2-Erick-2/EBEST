@@ -282,14 +282,8 @@ namespace EBEST
                     txtcosto.Text = "  " + txtcosto.Text;
                 }
 
-
-
-
-
                 BrotherPrintThis();
-
                 //printPreviewDialog1.Document = printDocument1;
-
                 printDocument1.Print();
                 //printDocument1.Print();
 
@@ -957,12 +951,12 @@ namespace EBEST
         private void txtnombre_TextChanged(object sender, EventArgs e)
         {
             if (txtnombre.Text == "")
-                {
+            {
 
             }
             else
             {
- txtnombre.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtnombre.Text);
+            txtnombre.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtnombre.Text);
             txtnombre.SelectionStart = txtnombre.Text.Length;
             }
            
