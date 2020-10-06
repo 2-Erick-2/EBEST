@@ -38,7 +38,7 @@ namespace EBEST
             //AbrirFormEnPanel(new bienvenida());
             AbrirFormulario<bienvenida>();
             //MessageBox.Show("Bienvenido " + usuarios);
-            if(usuarios == "erick")
+            if(usuarios == "usuario")
             {
                 btninicio.Enabled = false;
                 btnupdate.Enabled = false;

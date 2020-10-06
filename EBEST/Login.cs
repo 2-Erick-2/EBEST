@@ -61,7 +61,7 @@ namespace EBEST
                 
                 popup.TitleText = "Contraseña correcta";
                 popup.Image = Properties.Resources.profile_picture_user_icon_153847;
-                popup.ContentText = "Bienvenid@ " + usuario;
+                popup.ContentText = "Bienvenido " + usuario;
                 popup.Popup();
 
                // MessageBox.Show("Contraseña correcta");

@@ -332,7 +332,7 @@ namespace EBEST
         {
             try
             {
-                string path = @"D:\EBEST\cartaebest.lbx";
+                string path = @"\\EBEST-AB78DLU\ebest\cartaebest.lbx";
 
                 bpac.Document doc = new bpac.Document();
                 doc.Open(path);
@@ -965,7 +965,7 @@ namespace EBEST
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {   
 
-            Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
+            Image newImage = Image.FromFile(@"\\EBEST-AB78DLU\ebest\ebestimprimr4.jpg");
 
             
             printDocument1.PrinterSettings.PrinterName = "TM-T20II";
