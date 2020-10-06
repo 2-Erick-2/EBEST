@@ -130,22 +130,22 @@ namespace EBEST
 
                 BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
                 Codigo.IncludeLabel = true;
-                pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden.Text, Color.Blue, Color.White, 150, 50);
+                pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden.Text, Color.Blue, Color.White,200, 60);
 
                 //pictureBox1.Image = MyBarCodeBitmap;
                 //pictureBox2.Image = MyBarCode.Image;
 
 
                 //Imprimirrecibo();
-
-                //printPreviewDialog1.Document = printDocument1;
                 BrotherPrintThis();
 
-                printDocument1.Print();
+                printPreviewDialog1.Document = printDocument1;
+
+                //printDocument1.Print();
              
 
 
-                //printPreviewDialog1.Show();
+                printPreviewDialog1.Show();
 
                 //printDocument1.Print();
 
@@ -366,7 +366,7 @@ namespace EBEST
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 450));
             e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 475));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 490));
-            e.Graphics.DrawImage(pictureBox2.Image, 70, 520);
+            e.Graphics.DrawImage(pictureBox2.Image, 40, 520);
 
            // e.Graphics.DrawImage(pictureBox1.Image, 70, 600);
             

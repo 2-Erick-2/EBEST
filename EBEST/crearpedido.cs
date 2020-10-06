@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using bpac;
-using IronBarCode;
 using System.Globalization;
+using BarcodeLib;
 
 
 namespace EBEST
@@ -157,12 +157,12 @@ namespace EBEST
                             String todo3 = salto + txtnumero.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "Parte 2: " + txtparte2.Text + "\n Precio parte 2: " + txtprecioparte2.Text + "Parte 3: " + txtparte3.Text + "\n Precio parte 3: " + txtparteprecio3.Text + "Parte 4: " + txtparte4.Text + "\n Precio parte 4: " + txtparteprecio4.Text + "Parte 5: " + txtparte5.Text + "\n Precio parte 5: " + txtparteprecio5.Text + "Parte 6: " + txtparte6.Text + "\n Precio parte 6: " + txtparteprecio6.Text +"\n Importe: "+txtcosto.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, destino);
 
-                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
-                MyBarCode.ResizeTo(150, 50).SetMargins(0);
-                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+                BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                Codigo.IncludeLabel = true;
+                pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden.Text, Color.Blue, Color.White, 150, 50);
 
                 //pictureBox1.Image = MyBarCodeBitmap;
-                pictureBox2.Image = MyBarCode.Image;
+                //pictureBox2.Image = MyBarCode.Image;
 
 
                 int lonp1 = txtprecioparte1.Text.Length;

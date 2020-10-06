@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using ZXing;
-using IronBarCode;
+using BarcodeLib;
 
 
 namespace EBEST
@@ -526,12 +526,12 @@ namespace EBEST
                                     MessageBox.Show("Error " + ex);
                                 }
                             c.enviarCorreo("ebestprueba@gmail.com", "ebest1234","Nombre: "+txtnombre.Text+"\n Numero: "+txtnumero.Text+"\n Hora y fecha: "+txthorayfecha.Text, "Actualizacion de revision a cotizacion. Orden: "+txtorden3.Text,"erick.tadeo@hotmail.com");
-                    GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden3.Text, BarcodeWriterEncoding.Code128);
-                    MyBarCode.ResizeTo(150, 50).SetMargins(0);
-                    Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+                    BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                    Codigo.IncludeLabel = true;
+                    pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden3.Text, Color.Blue, Color.White, 150, 50);
 
                     //pictureBox1.Image = MyBarCodeBitmap;
-                    pictureBox2.Image = MyBarCode.Image;
+                    //pictureBox2.Image = MyBarCode.Image;
 
 
 
@@ -686,12 +686,12 @@ namespace EBEST
                                 MessageBox.Show("Error " + ex);
                             }
                     c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Actualizacion de cotizacion a pedido. Orden: " + txtorden3.Text, "erick.tadeo@hotmail.com");
-                    GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden3.Text, BarcodeWriterEncoding.Code128);
-                    MyBarCode.ResizeTo(150, 50).SetMargins(0);
-                    Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+                    BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                    Codigo.IncludeLabel = true;
+                    pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden3.Text, Color.Blue, Color.White, 150, 50);
 
                     //pictureBox1.Image = MyBarCodeBitmap;
-                    pictureBox2.Image = MyBarCode.Image;
+                    // pictureBox2.Image = MyBarCode.Image;
 
 
 
@@ -708,6 +708,8 @@ namespace EBEST
                     BrotherPrintThis();
 
                     printDocument2.Print();
+                    printDocument2.Print();
+
 
                     //printPreviewDialog2.Show();
 
@@ -813,12 +815,12 @@ namespace EBEST
 
 
 
-                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
-                MyBarCode.ResizeTo(150, 50).SetMargins(0);
-                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
+                BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                Codigo.IncludeLabel = true;
+                pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden3.Text, Color.Blue, Color.White, 150, 50);
 
                 //pictureBox1.Image = MyBarCodeBitmap;
-                pictureBox2.Image = MyBarCode.Image;
+                //pictureBox2.Image = MyBarCode.Image;
 
 
                 

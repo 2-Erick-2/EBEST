@@ -12,7 +12,8 @@ using System.Globalization;
 using bpac;
 using ZXing;
 using System.Net.Http.Headers;
-using IronBarCode;
+using BarcodeLib;
+
 
 namespace EBEST
 {
@@ -136,12 +137,12 @@ namespace EBEST
                             c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
 
 
-                GeneratedBarcode MyBarCode = IronBarCode.BarcodeWriter.CreateBarcode(txtorden.Text, BarcodeWriterEncoding.Code128);
-                MyBarCode.ResizeTo(150, 50).SetMargins(0);
-                Bitmap MyBarCodeBitmap = MyBarCode.ToBitmap();
 
+                BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                Codigo.IncludeLabel = true;
+                pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden.Text, Color.Blue, Color.White, 150, 50);
                 //pictureBox1.Image = MyBarCodeBitmap;
-                pictureBox2.Image = MyBarCode.Image;
+                //pictureBox2.Image = MyBarCode.Image;
                 /*txtnombre.Text = "";
                 txtnumero.Text = "";
                 txtobservaciones.Text = "";
