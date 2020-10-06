@@ -19,7 +19,7 @@ namespace EBEST
         public revisiones()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=  \\TADEOEBEST\basededatoscompartida\Ebest_be.accdb; Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source= \\EBEST-AB78DLU\ebest\Ebest_be.accdb; Persist Security Info=False;";
 
         }
 
@@ -198,9 +198,6 @@ namespace EBEST
 
             dataGridView1.Columns[8].HeaderCell.Style.BackColor = Color.White;
             dataGridView1.Columns[8].DefaultCellStyle.BackColor = Color.LightBlue;
-
-            dataGridView1.Columns[9].HeaderCell.Style.BackColor = Color.White;
-            dataGridView1.Columns[9].DefaultCellStyle.BackColor = Color.LightBlue;
 
             /*dataGridView1.Columns[10].HeaderCell.Style.BackColor = Color.White;
             dataGridView1.Columns[10].DefaultCellStyle.BackColor = Color.LightBlue;
