@@ -13,6 +13,7 @@ using System.Globalization;
 using ZXing;
 using System.Net.Http.Headers;
 using BarcodeLib;
+using System.Drawing.Printing;
 
 
 
