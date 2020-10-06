@@ -124,14 +124,14 @@
     <ManifestKeyFile>EBEST_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.2.6\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
     <Reference Include="EasyTabs, Version=2.0.0.39, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyTabs.2.0.0\lib\net40\EasyTabs.dll</HintPath>
     </Reference>
     <Reference Include="Fizzler, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4ebff4844e382110, processorArchitecture=MSIL">
       <HintPath>..\packages\Fizzler.1.2.0\lib\netstandard2.0\Fizzler.dll</HintPath>
-    </Reference>
-    <Reference Include="IronBarCode, Version=2020.6.0.0, Culture=neutral, PublicKeyToken=b971bb3971bdf306, processorArchitecture=MSIL">
-      <HintPath>..\packages\BarCode.2020.6.0\lib\net40\IronBarCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyTabs.2.0.0\lib\net40\Microsoft.WindowsAPICodePack.dll</HintPath>
