@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(update));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtorden = new System.Windows.Forms.TextBox();
@@ -101,6 +101,8 @@
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.combohoras = new System.Windows.Forms.ComboBox();
+            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             this.combodias = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -114,23 +116,23 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(1, 78);
             this.dataGridView1.Name = "dataGridView1";
@@ -153,6 +155,7 @@
             this.txtorden.TabIndex = 1;
             this.txtorden.Text = "sin datos";
             this.txtorden.Visible = false;
+            this.txtorden.TextChanged += new System.EventHandler(this.txtorden_TextChanged);
             // 
             // txtobser
             // 
@@ -246,7 +249,7 @@
             // 
             // txttipo
             // 
-            this.txttipo.Location = new System.Drawing.Point(299, 739);
+            this.txttipo.Location = new System.Drawing.Point(289, 648);
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(73, 20);
             this.txttipo.TabIndex = 28;
@@ -257,7 +260,7 @@
             // 
             this.btnpagado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btnpagado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnpagado.Location = new System.Drawing.Point(584, 703);
+            this.btnpagado.Location = new System.Drawing.Point(584, 709);
             this.btnpagado.Name = "btnpagado";
             this.btnpagado.Size = new System.Drawing.Size(153, 44);
             this.btnpagado.TabIndex = 29;
@@ -294,6 +297,7 @@
             // txtparteprecio6
             // 
             this.txtparteprecio6.Location = new System.Drawing.Point(673, 452);
+            this.txtparteprecio6.MaxLength = 6;
             this.txtparteprecio6.Name = "txtparteprecio6";
             this.txtparteprecio6.Size = new System.Drawing.Size(66, 20);
             this.txtparteprecio6.TabIndex = 128;
@@ -306,10 +310,12 @@
             // txtparte6
             // 
             this.txtparte6.Location = new System.Drawing.Point(453, 452);
+            this.txtparte6.MaxLength = 27;
             this.txtparte6.Name = "txtparte6";
             this.txtparte6.Size = new System.Drawing.Size(124, 20);
             this.txtparte6.TabIndex = 127;
             this.txtparte6.Visible = false;
+            this.txtparte6.TextChanged += new System.EventHandler(this.txtparte6_TextChanged);
             // 
             // label18
             // 
@@ -336,6 +342,7 @@
             // txtparteprecio5
             // 
             this.txtparteprecio5.Location = new System.Drawing.Point(299, 453);
+            this.txtparteprecio5.MaxLength = 6;
             this.txtparteprecio5.Name = "txtparteprecio5";
             this.txtparteprecio5.Size = new System.Drawing.Size(63, 20);
             this.txtparteprecio5.TabIndex = 124;
@@ -348,10 +355,12 @@
             // txtparte5
             // 
             this.txtparte5.Location = new System.Drawing.Point(84, 449);
+            this.txtparte5.MaxLength = 27;
             this.txtparte5.Name = "txtparte5";
             this.txtparte5.Size = new System.Drawing.Size(124, 20);
             this.txtparte5.TabIndex = 123;
             this.txtparte5.Visible = false;
+            this.txtparte5.TextChanged += new System.EventHandler(this.txtparte5_TextChanged);
             // 
             // label16
             // 
@@ -378,6 +387,7 @@
             // txtparteprecio4
             // 
             this.txtparteprecio4.Location = new System.Drawing.Point(673, 395);
+            this.txtparteprecio4.MaxLength = 6;
             this.txtparteprecio4.Name = "txtparteprecio4";
             this.txtparteprecio4.Size = new System.Drawing.Size(66, 20);
             this.txtparteprecio4.TabIndex = 120;
@@ -390,10 +400,12 @@
             // txtparte4
             // 
             this.txtparte4.Location = new System.Drawing.Point(451, 396);
+            this.txtparte4.MaxLength = 27;
             this.txtparte4.Name = "txtparte4";
             this.txtparte4.Size = new System.Drawing.Size(124, 20);
             this.txtparte4.TabIndex = 119;
             this.txtparte4.Visible = false;
+            this.txtparte4.TextChanged += new System.EventHandler(this.txtparte4_TextChanged);
             // 
             // label14
             // 
@@ -420,6 +432,7 @@
             // txtparteprecio3
             // 
             this.txtparteprecio3.Location = new System.Drawing.Point(299, 391);
+            this.txtparteprecio3.MaxLength = 6;
             this.txtparteprecio3.Name = "txtparteprecio3";
             this.txtparteprecio3.Size = new System.Drawing.Size(63, 20);
             this.txtparteprecio3.TabIndex = 116;
@@ -428,14 +441,17 @@
             this.txtparteprecio3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtparteprecio3_MouseClick);
             this.txtparteprecio3.TextChanged += new System.EventHandler(this.txtparteprecio3_TextChanged);
             this.txtparteprecio3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparteprecio3_KeyPress);
+            this.txtparteprecio3.MouseLeave += new System.EventHandler(this.txtparteprecio3_MouseLeave);
             // 
             // txtparte3
             // 
             this.txtparte3.Location = new System.Drawing.Point(84, 387);
+            this.txtparte3.MaxLength = 27;
             this.txtparte3.Name = "txtparte3";
             this.txtparte3.Size = new System.Drawing.Size(124, 20);
             this.txtparte3.TabIndex = 115;
             this.txtparte3.Visible = false;
+            this.txtparte3.TextChanged += new System.EventHandler(this.txtparte3_TextChanged);
             // 
             // label12
             // 
@@ -462,11 +478,13 @@
             // txtprecioparte2
             // 
             this.txtprecioparte2.Location = new System.Drawing.Point(673, 322);
+            this.txtprecioparte2.MaxLength = 6;
             this.txtprecioparte2.Name = "txtprecioparte2";
             this.txtprecioparte2.Size = new System.Drawing.Size(66, 20);
             this.txtprecioparte2.TabIndex = 112;
             this.txtprecioparte2.Text = "0";
             this.txtprecioparte2.Visible = false;
+            this.txtprecioparte2.Click += new System.EventHandler(this.txtprecioparte2_Click);
             this.txtprecioparte2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtprecioparte2_MouseClick);
             this.txtprecioparte2.TextChanged += new System.EventHandler(this.txtprecioparte2_TextChanged);
             this.txtprecioparte2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte2_KeyPress);
@@ -474,10 +492,12 @@
             // txtparte2
             // 
             this.txtparte2.Location = new System.Drawing.Point(451, 323);
+            this.txtparte2.MaxLength = 27;
             this.txtparte2.Name = "txtparte2";
             this.txtparte2.Size = new System.Drawing.Size(124, 20);
             this.txtparte2.TabIndex = 111;
             this.txtparte2.Visible = false;
+            this.txtparte2.TextChanged += new System.EventHandler(this.txtparte2_TextChanged);
             // 
             // label10
             // 
@@ -504,11 +524,13 @@
             // txtprecioparte1
             // 
             this.txtprecioparte1.Location = new System.Drawing.Point(299, 322);
+            this.txtprecioparte1.MaxLength = 6;
             this.txtprecioparte1.Name = "txtprecioparte1";
             this.txtprecioparte1.Size = new System.Drawing.Size(63, 20);
             this.txtprecioparte1.TabIndex = 108;
             this.txtprecioparte1.Text = "0";
             this.txtprecioparte1.Visible = false;
+            this.txtprecioparte1.Click += new System.EventHandler(this.txtprecioparte1_Click);
             this.txtprecioparte1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtprecioparte1_MouseClick);
             this.txtprecioparte1.TextChanged += new System.EventHandler(this.txtprecioparte1_TextChanged);
             this.txtprecioparte1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioparte1_KeyPress);
@@ -516,10 +538,12 @@
             // txtparte1
             // 
             this.txtparte1.Location = new System.Drawing.Point(84, 322);
+            this.txtparte1.MaxLength = 27;
             this.txtparte1.Name = "txtparte1";
             this.txtparte1.Size = new System.Drawing.Size(124, 20);
             this.txtparte1.TabIndex = 107;
             this.txtparte1.Visible = false;
+            this.txtparte1.TextChanged += new System.EventHandler(this.txtparte1_TextChanged);
             // 
             // label7
             // 
@@ -568,10 +592,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(583, 507);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 20);
+            this.label20.Size = new System.Drawing.Size(71, 20);
             this.label20.TabIndex = 135;
             this.label20.Text = "Importe";
             this.label20.Visible = false;
@@ -596,10 +620,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(583, 555);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(64, 20);
+            this.label21.Size = new System.Drawing.Size(71, 20);
             this.label21.TabIndex = 137;
             this.label21.Text = "Importe";
             this.label21.Visible = false;
@@ -617,10 +641,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(588, 648);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 24);
+            this.label22.Size = new System.Drawing.Size(56, 24);
             this.label22.TabIndex = 141;
             this.label22.Text = "Total";
             this.label22.Visible = false;
@@ -640,10 +664,10 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(583, 601);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(67, 24);
+            this.label23.Size = new System.Drawing.Size(72, 24);
             this.label23.TabIndex = 139;
             this.label23.Text = "Abono";
             this.label23.Visible = false;
@@ -652,7 +676,7 @@
             // 
             this.btnabonar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btnabonar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnabonar.Location = new System.Drawing.Point(407, 709);
+            this.btnabonar.Location = new System.Drawing.Point(406, 709);
             this.btnabonar.Name = "btnabonar";
             this.btnabonar.Size = new System.Drawing.Size(156, 44);
             this.btnabonar.TabIndex = 143;
@@ -842,12 +866,32 @@
             "2 horas",
             "3 horas",
             "4 horas",
-            "5 horas"});
+            "5 horas",
+            "6 horas",
+            "7 horas",
+            "9 horas",
+            "10 horas",
+            "11 horas",
+            "12 horas"});
             this.combohoras.Location = new System.Drawing.Point(399, 570);
             this.combohoras.Name = "combohoras";
             this.combohoras.Size = new System.Drawing.Size(121, 28);
             this.combohoras.TabIndex = 158;
             this.combohoras.Visible = false;
+            // 
+            // printDocument3
+            // 
+            this.printDocument3.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument3_PrintPage);
+            // 
+            // printPreviewDialog3
+            // 
+            this.printPreviewDialog3.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog3.Enabled = true;
+            this.printPreviewDialog3.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog3.Icon")));
+            this.printPreviewDialog3.Name = "printPreviewDialog3";
+            this.printPreviewDialog3.Visible = false;
             // 
             // combodias
             // 
@@ -858,15 +902,15 @@
             this.combodias.ForeColor = System.Drawing.Color.White;
             this.combodias.FormattingEnabled = true;
             this.combodias.Items.AddRange(new object[] {
-            "1 dia",
-            "2 dias",
-            "3 dias",
-            "4 dias",
-            "5 dias"});
-            this.combodias.Location = new System.Drawing.Point(227, 571);
+            "1 día",
+            "2 días",
+            "3 días",
+            "4 días",
+            "5 días"});
+            this.combodias.Location = new System.Drawing.Point(221, 572);
             this.combodias.Name = "combodias";
             this.combodias.Size = new System.Drawing.Size(121, 28);
-            this.combodias.TabIndex = 157;
+            this.combodias.TabIndex = 159;
             this.combodias.Visible = false;
             // 
             // update
@@ -876,8 +920,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::EBEST.Properties.Resources.fondoupdate2;
             this.ClientSize = new System.Drawing.Size(780, 792);
-            this.Controls.Add(this.combohoras);
             this.Controls.Add(this.combodias);
+            this.Controls.Add(this.combohoras);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox4);
@@ -1022,6 +1066,8 @@
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Windows.Forms.ComboBox combohoras;
+        private System.Drawing.Printing.PrintDocument printDocument3;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog3;
         private System.Windows.Forms.ComboBox combodias;
     }
 }

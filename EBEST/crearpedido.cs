@@ -39,7 +39,12 @@ namespace EBEST
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            txthorayfecha.Text = DateTime.Now.ToString();
+            string fecha = DateTime.Now.ToShortDateString();
+            string hora = DateTime.Now.ToShortTimeString();
+
+
+
+            txthorayfecha.Text = fecha + "  " + hora;
 
         }
         String pedido = "";
@@ -109,9 +114,9 @@ namespace EBEST
                             connection.Open();
                             OleDbCommand command = new OleDbCommand();
                             command.Connection = connection;
-                            command.CommandText = "insert into pedidos (orden,tipopedido,nombre,numero,observaciones,horayfecha,importe,abono,pagorequerido,espera) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtcosto.Text + "','" + txtabono.Text + "','" + txtrestante.Text + "','" + espera + "')";
+                            command.CommandText = "insert into pedidos (orden,tipopedido,nombre,numero,observaciones,horayfecha,importe,abono,pagorequerido,espera,parte1,precio1,parte2,precio2,parte3,precio3,parte4,precio4,parte5,precio5,parte6,precio6,modelo) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','" + txtcosto.Text + "','" + txtabono.Text + "','" + txtrestante.Text + "','" + espera + "','" + txtparte1.Text + "','" + txtprecioparte1.Text + "','" + txtparte2.Text + "','" + txtprecioparte2.Text + "','" + txtparte3.Text + "','" + txtparteprecio3.Text + "','" + txtparte4.Text + "','" + txtparteprecio4.Text + "','" + txtparte5.Text + "','" + txtparteprecio5.Text + "','" + txtparte6.Text + "','" + txtparteprecio6.Text + "','" + txtmodelo.Text + "')";
                             command.ExecuteNonQuery();
-                            command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "')";
+                            command.CommandText = "insert into clientes (orden,tipopedido,nombre,numero,observaciones,horayfecha,modelo) values ('" + txtorden.Text + "','" + pedido + "','" + txtnombre.Text + "','" + txtnumero.Text + "','" + txtobservaciones.Text + "','" + txthorayfecha.Text + "','"+ txtmodelo.Text+"')";
                             command.ExecuteNonQuery();
                             connection.Close();
                             MessageBox.Show("Datos Guardados");
@@ -132,7 +137,7 @@ namespace EBEST
 
 
                         todo = salto + txtnumero.Text + obser +  "\n    Hora y Fecha:   " + txthorayfecha.Text;
-                        Console.WriteLine(todo);
+                       // Console.WriteLine(todo);
                         string asunto = txtnombre.Text + "   " + pedido + " Orden: " + txtorden.Text;
                         //c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
                         /*txtnombre.Text = "";
@@ -343,12 +348,12 @@ namespace EBEST
 
 
                 BrotherPrintThis();
-                printPreviewDialog1.Document = printDocument1;
+                //printPreviewDialog1.Document = printDocument1;
 
-                //printDocument1.Print();
-                //printDocument1.Print();
+                printDocument1.Print();
+                printDocument1.Print();
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Show();
 
 
 
@@ -384,7 +389,7 @@ namespace EBEST
                 string pedido2 = "Tipo pedido: " + pedido;
                 string nombre = "Nombre: " + txtnombre.Text;
                 string numero = "Numero: " + txtnumero.Text;
-                string obser = "Obs.: " + txtobservaciones.Text;
+                string obser = txtobservaciones.Text;
                 string orden = "Numero orden: " + txtorden.Text;
                 string orden2 = txtorden.Text;
                 doc.GetObject("pedido").Text = pedido2;
@@ -984,7 +989,7 @@ namespace EBEST
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-
+              
 
             Image newImage = Image.FromFile(@"D:\ebestimprimr4.jpg");
 
@@ -996,10 +1001,10 @@ namespace EBEST
             e.Graphics.DrawImage(newImage, 30, 2);
 
             //e.Graphics.DrawImageUnscaledAndClipped(newImage,new Point(10,10));
-            e.Graphics.DrawString("            PEDIDO", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
+            e.Graphics.DrawString("            Pedido", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 150));
             e.Graphics.DrawString("                    GUGE900514C70", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 180));
-            e.Graphics.DrawString("     Calle Pedro J. Mendez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
+            e.Graphics.DrawString("     Calle Pedro J. Méndez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
             e.Graphics.DrawString("                  Reynosa Tamaulipas", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 220));
             e.Graphics.DrawString("                             88500", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 240));
             e.Graphics.DrawString("                  e-best@live.com.mx", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 260));
@@ -1037,9 +1042,9 @@ namespace EBEST
 
 
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 560));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 585));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 605));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 660);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 635);
 
 
 
@@ -1093,9 +1098,9 @@ namespace EBEST
 
 
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 580));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 605));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 625));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 680);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 655);
 
 
 
@@ -1150,9 +1155,9 @@ namespace EBEST
 
 
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 600));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 625));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 645));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 700);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 675);
 
 
 
@@ -1215,9 +1220,9 @@ namespace EBEST
 
 
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 620));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 645));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 665));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 720);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 695);
 
 
 
@@ -1288,9 +1293,9 @@ namespace EBEST
 
 
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 640));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 665));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 665));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 685));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 730);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 715);
 
 
 
@@ -1356,9 +1361,9 @@ namespace EBEST
 
 
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 660));
-                e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 685));
+                e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 685));
                 e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 705));
-                e.Graphics.DrawImage(pictureBox2.Image, 70, 750);
+                e.Graphics.DrawImage(pictureBox2.Image, 70, 735);
 
 
 
@@ -1500,36 +1505,42 @@ namespace EBEST
 
         private void txtprecioparte1_Click(object sender, EventArgs e)
         {
-            txtprecioparte1.Text = "";
+            if (txtprecioparte1.Text == "0")
+                txtprecioparte1.Text = "";
         }
 
         private void txtprecioparte2_Click(object sender, EventArgs e)
         {
-            txtprecioparte2.Text = "";
+            if (txtprecioparte2.Text == "0")
+                txtprecioparte2.Text = "";
 
         }
 
         private void txtparteprecio3_Click(object sender, EventArgs e)
         {
-            txtparteprecio3.Text = "";
+            if (txtparteprecio3.Text == "0")
+                txtparteprecio3.Text = "";
 
         }
 
         private void txtparteprecio4_Click(object sender, EventArgs e)
         {
-            txtparteprecio4.Text = "";
+            if (txtparteprecio4.Text == "0")
+                txtparteprecio4.Text = "";
 
         }
 
         private void txtparteprecio5_Click(object sender, EventArgs e)
         {
-            txtparteprecio5.Text = "";
+            if (txtparteprecio5.Text == "0")
+                txtparteprecio5.Text = "";
 
         }
 
         private void txtparteprecio6_Click(object sender, EventArgs e)
         {
-            txtparteprecio6.Text = "";
+            if (txtparteprecio6.Text == "0")
+                txtparteprecio6.Text = "";
 
         }
 

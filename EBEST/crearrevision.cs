@@ -112,7 +112,7 @@ namespace EBEST
             {
                 MessageBox.Show("Error " + ex);
             }
-                c.enviarCorreo(txtEmisor.Text, txtPassword.Text, "Hora: " + txthorayfecha.Text +"\nNumero: "+ txtnumero.Text+"\nModelo: "+ txtmodelo.Text+"\n Descripcion: "+txtobservaciones.Text+"\n Orden: "+txtorden.Text,txtnombre.Text + " " +txtmodelo.Text + " "+ txtorden.Text , "erick.tadeo@hotmail.com");
+                c.enviarCorreo(txtEmisor.Text, txtPassword.Text, "Hora: " + txthorayfecha.Text +"\n Nombre: "+txtnombre.Text+"\nNumero: "+ txtnumero.Text+"\nModelo: "+ txtmodelo.Text+"\n Descripcion: "+txtobservaciones.Text+"\n Orden: "+txtorden.Text,txtnombre.Text + " " +txtmodelo.Text + " "+ txtorden.Text , "ebest-clientes@outlook.com");
 
                 ZXing.BarcodeWriter br = new ZXing.BarcodeWriter();
                 br.Format = BarcodeFormat.QR_CODE;
@@ -140,14 +140,14 @@ namespace EBEST
                 //Imprimirrecibo();
 
                 //printPreviewDialog1.Document = printDocument1;
-                
+                BrotherPrintThis();
+
                 printDocument1.Print();
              
 
 
                 //printPreviewDialog1.Show();
 
-                BrotherPrintThis();
                 //printDocument1.Print();
 
 
@@ -252,7 +252,13 @@ namespace EBEST
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            txthorayfecha.Text = DateTime.Now.ToString();
+            //txthorayfecha.Text = DateTime.Now.ToString();
+            string fecha = DateTime.Now.ToShortDateString();
+            string hora = DateTime.Now.ToShortTimeString();
+
+
+
+            txthorayfecha.Text = fecha + "  "+hora;
 
         }
 
@@ -260,7 +266,7 @@ namespace EBEST
         {
             txtEmisor.Text = "ebestprueba@gmail.com";
             txtPassword.Text = "ebest1234";
-            combodias.Text = "1 dia";
+            combodias.Text = "1 día";
             combohoras.Text = "1 hora";
         }
 
@@ -274,16 +280,36 @@ namespace EBEST
 
         private void txtmodelo_TextChanged(object sender, EventArgs e)
         {
-            txtmodelo.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtmodelo.Text);
-            txtmodelo.SelectionStart = txtmodelo.Text.Length;
+
+
+            if (txtmodelo.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtmodelo.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtmodelo.Text = upmodelo;
+                txtmodelo.SelectionStart = txtmodelo.Text.Length;
+            }
         }
 
         private void txtobservaciones_TextChanged(object sender, EventArgs e)
         {
+            if (txtobservaciones.Text == "")
+            {
+
+            }
+            else
+            {
+                string upmodelo = txtobservaciones.Text;
+                upmodelo = upmodelo.Substring(0, 1).ToUpper() + upmodelo.Substring(1).ToLower();
+                txtobservaciones.Text = upmodelo;
+                txtobservaciones.SelectionStart = txtobservaciones.Text.Length;
+            }
 
             
-            txtobservaciones.Text = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(txtobservaciones.Text.ToLower()));
-            txtobservaciones.SelectionStart = txtobservaciones.Text.Length;
 
 
 
@@ -317,7 +343,7 @@ namespace EBEST
             e.Graphics.DrawString("   Equipo en  revisión", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(5, 100));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 150));
             e.Graphics.DrawString("                    GUGE900514C70", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 180));
-            e.Graphics.DrawString("     Calle Pedro J. Mendez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
+            e.Graphics.DrawString("     Calle Pedro J. Méndez No.1082-A OTE.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 200));
             e.Graphics.DrawString("                  Reynosa Tamaulipas", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 220));
             e.Graphics.DrawString("                             88500", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 240));
             e.Graphics.DrawString("                  e-best@live.com.mx", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 260));
@@ -339,9 +365,9 @@ namespace EBEST
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 410));
             e.Graphics.DrawString("               Orden: " + txtorden.Text, new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 435));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 450));
-            e.Graphics.DrawString("                  Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 470));
+            e.Graphics.DrawString("                      Diagnóstico gratis", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(5, 475));
             e.Graphics.DrawString("  =================", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(5, 490));
-            e.Graphics.DrawImage(pictureBox2.Image, 70, 550);
+            e.Graphics.DrawImage(pictureBox2.Image, 70, 520);
 
            // e.Graphics.DrawImage(pictureBox1.Image, 70, 600);
             
