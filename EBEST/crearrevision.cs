@@ -139,13 +139,13 @@ namespace EBEST
                 //Imprimirrecibo();
                 BrotherPrintThis();
 
-                printPreviewDialog1.Document = printDocument1;
+               // printPreviewDialog1.Document = printDocument1;
 
-                //printDocument1.Print();
+                printDocument1.Print();
              
 
 
-                printPreviewDialog1.Show();
+                //printPreviewDialog1.Show();
 
                 //printDocument1.Print();
 
