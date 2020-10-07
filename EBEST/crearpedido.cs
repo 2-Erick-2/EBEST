@@ -131,7 +131,7 @@ namespace EBEST
 
                        
                         String todo = "";
-                        String destino = "erick.tadeo@hotmail.com";
+                        //String destino = "erick.tadeo@hotmail.com";
                         string salto = "    Numero:  ";
                         String obser = " \n   Observaciones:  ";
 
@@ -155,7 +155,7 @@ namespace EBEST
                         
                             String asunto3 = "Pedido"+ "Orden: "+ txtorden.Text;
                             String todo3 = salto + txtnumero.Text + "\n    Hora y Fecha:   " + txthorayfecha.Text + "Parte 1: " + txtparte1.Text + "\n Precio parte 1: " + txtprecioparte1.Text + "Parte 2: " + txtparte2.Text + "\n Precio parte 2: " + txtprecioparte2.Text + "Parte 3: " + txtparte3.Text + "\n Precio parte 3: " + txtparteprecio3.Text + "Parte 4: " + txtparte4.Text + "\n Precio parte 4: " + txtparteprecio4.Text + "Parte 5: " + txtparte5.Text + "\n Precio parte 5: " + txtparteprecio5.Text + "Parte 6: " + txtparte6.Text + "\n Precio parte 6: " + txtparteprecio6.Text +"\n Importe: "+txtcosto.Text + "\n Abonado: " + txtabono.Text + "\n Restante: " + txtrestante.Text;
-                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, destino);
+                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo3, asunto3, "ebest-clientes@outlook.com");
 
                 BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
                 Codigo.IncludeLabel = true;

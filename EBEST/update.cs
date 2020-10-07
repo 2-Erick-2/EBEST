@@ -525,7 +525,7 @@ namespace EBEST
                                 {
                                     MessageBox.Show("Error " + ex);
                                 }
-                            c.enviarCorreo("ebestprueba@gmail.com", "ebest1234","Nombre: "+txtnombre.Text+"\n Numero: "+txtnumero.Text+"\n Hora y fecha: "+txthorayfecha.Text, "Actualizacion de revision a cotizacion. Orden: "+txtorden3.Text,"erick.tadeo@hotmail.com");
+                            c.enviarCorreo("ebestprueba@gmail.com", "ebest1234","Nombre: "+txtnombre.Text+"\n Numero: "+txtnumero.Text+"\n Hora y fecha: "+txthorayfecha.Text, "Actualizacion de revision a cotizacion. Orden: "+txtorden3.Text, "ebest-clientes@outlook.com");
                     BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
                     Codigo.IncludeLabel = true;
                     pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden3.Text, Color.Blue, Color.White, 200, 60);
@@ -685,7 +685,7 @@ namespace EBEST
                             {
                                 MessageBox.Show("Error " + ex);
                             }
-                    c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Actualizacion de cotizacion a pedido. Orden: " + txtorden3.Text, "erick.tadeo@hotmail.com");
+                    c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Actualizacion de cotizacion a pedido. Orden: " + txtorden3.Text, "ebest-clientes@outlook.com");
                     BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
                     Codigo.IncludeLabel = true;
                     pictureBox2.Image = Codigo.Encode(BarcodeLib.TYPE.CODE128, txtorden3.Text, Color.Blue, Color.White, 200, 60);
@@ -810,7 +810,7 @@ namespace EBEST
                 {
                     MessageBox.Show("Error " + ex);
                 }
-                c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Pagado. Orden: " + txtorden.Text, "erick.tadeo@hotmail.com");
+                c.enviarCorreo("ebestprueba@gmail.com", "ebest1234", "Nombre: " + txtnombre.Text + "\n Numero: " + txtnumero.Text + "\n Hora y fecha: " + txthorayfecha.Text, "Pagado. Orden: " + txtorden.Text, "ebest-clientes@outlook.com");
 
 
 
@@ -1388,7 +1388,7 @@ namespace EBEST
 
         private void btnabonar_Click(object sender, EventArgs e)
         {
-            try
+             try
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();

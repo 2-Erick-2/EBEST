@@ -125,7 +125,7 @@ namespace EBEST
                                 MessageBox.Show("Error " + ex);
                             }
                             String todo = "";
-                            String destino = "erick.tadeo@hotmail.com";
+                            //String destino = "erick.tadeo@hotmail.com";
                             string salto = "    Numero:  ";
 
                             //String obser = " \n   Observaciones:  ";
@@ -134,7 +134,7 @@ namespace EBEST
                             todo = salto + txtnumero.Text + "\n Nombre: " + txtnombre.Text +"\n    Hora y Fecha:   " + txthorayfecha.Text;
                             //Console.WriteLine(todo);
                             string asunto = txtnombre.Text + "   " + pedido + " Orden: " + txtorden.Text;
-                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, destino);
+                            c.enviarCorreo(txtEmisor.Text, txtPassword.Text, todo, asunto, "ebest-clientes@outlook.com");
 
 
 
