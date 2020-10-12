@@ -290,8 +290,6 @@ namespace EBEST
 
                 //printPreviewDialog1.Show();
 
-
-
             }
 
 
@@ -468,8 +466,7 @@ namespace EBEST
                     if (txtparteprecio3.Text == "")
                     {
                         //MessageBox.Show("Introduce una cantidad");
-                        //txtparteprecio3.Text = "0";
-
+                        //txtparteprecio3.Text = \
                     }
                     else
                     {
@@ -570,6 +567,7 @@ namespace EBEST
             {
                 if (txtprecioparte1.Text != null && txtprecioparte2.Text != null && txtparteprecio3.Text != null && txtparteprecio4.Text != null && txtparteprecio5.Text != null && txtparteprecio6.Text != null)
                 {
+
                     int suma1 = Convert.ToInt32(txtprecioparte1.Text);
 
                     if (txtparteprecio6.Text == "")
